@@ -1,0 +1,70 @@
+.container {
+    flex-direction: column;
+    width: 100%;
+}
+
+.name-text{
+    font-size: 18px;
+    font-weight:500;
+}
+
+.msg-text{
+    font-size: 16px;
+    font-weight:300;
+}
+
+.date-text{
+    font-size: 12px;
+    font-weight:300;
+}
+
+.toolbar image{
+    width: 24px;
+    object-fit: contain;
+    margin-start: 16px;
+}
+
+.list{
+    width: 100%;
+    columns: 1;
+}
+
+.listItem{
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #DEDEDE;
+}
+
+.list image{
+    width: 50px;
+    margin-end: 10px;
+    object-fit: contain;
+}
+
+.left-right-line{
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.navbar {
+    flex-direction: row;
+    position: fixed;
+    bottom: 0px;
+}
+
+.navbar>div{
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar image{
+    height: 24px;
+    object-fit: contain;
+
+}
+
+.navbar text{
+    font-size: 14px;
+}
