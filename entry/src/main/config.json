@@ -48,7 +48,11 @@
     "js": [
       {
         "pages": [
-          "pages/index/index"
+          "pages/index/index",
+          "pages/personalPage/personalPage",
+          "pages/message/message",
+          "pages/findpages/find/find"
+
         ],
         "name": "default",
         "window": {

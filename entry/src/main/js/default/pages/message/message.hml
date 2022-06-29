@@ -1,0 +1,51 @@
+<div class="container">
+    <div style="flex-direction: column;background-color: orange;position: fixed;top: 0px;height: {{topHeight}};padding: 10px;">
+        <div style="flex-direction: row;justify-content: space-between;width: 100%;">
+            <div on:click="clear">
+                <text style="font-size: 24px;">消息</text>
+                <text style="font-size: 16px; margin-start: 16px;">清除未读</text>
+                <image src="/common/icons/clear.png" style="width:16px;object-fit: contain;"></image>
+            </div>
+            <div class="toolbar">
+                <image src="/common/icons/people.png"></image>
+                <image src="/common/icons/plus.png"></image>
+            </div>
+        </div>
+        <search hint="搜索联系人" on:submit="search"></search>
+    </div>
+
+    <div style="height: 1000px;margin-top: {{topHeight}};">
+        <list class="list">
+            <list-item for="{{array}}" class="listItem">
+                <div>
+                    <image src="{{$item.avatar}}"></image>
+                    <div style="flex-direction: column;">
+                        <div class="left-right-line">
+                            <text class="name-text">{{$item.username}}</text>
+                            <text class="date-text">{{$item.date}}</text>
+                        </div>
+                        <div class="left-right-line">
+                            <text class="msg-text">{{$item.msg}}</text>
+                            <div if="{{$item.msgCount>0}}" style="width: 16px;height: 16px;background-color: orange;border-radius: 8px;justify-content: center;align-items: center;">
+                                    <text style="font-size: 10px;color: white;">{{$item.msgCount}}</text>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </list-item>
+        </list>
+    </div>
+    
+    <div class="navbar">
+        <div for="{{menudata}}" onclick="changeMenu({{$idx}})">
+            <block if="{{defaultIndex==$idx}}">
+                <image src="{{$item.iconActive}}"></image>
+                <text>{{$item.title}}</text>
+            </block>
+            <block else>
+                <image src="{{$item.icon}}"></image>
+                <text>{{$item.title}}</text>
+            </block>
+        </div>
+    </div>
+</div>
