@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="div">
+        <div style="width: 60px;">
+            <image src="/common/images/camera.png"></image>
+        </div>
+        <div style="flex-direction: row;align-items: center;justify-content: center;width: 100%;">
+            <text style="margin-right: 10px;">关注</text>
+            <text style="margin-right: 10px;">发现</text>
+            <text style="margin-right: 10px;">视频</text>
+        </div>
+        <div style="width: 80px;">
+            <image style="border-radius: 50px;height: 50px;width: 50px; background-color: black;"></image>
+        </div>
+    </div>
+    <div class="div">
+        <search hint="请输入搜索内容" searchbutton="搜索" @search="search">
+        </search>
+    </div>
+</div>
