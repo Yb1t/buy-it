@@ -1,0 +1,7 @@
+.container {
+    flex-direction: column;
+    width: 100%;
+}
+.textsize{
+    font-size: 20px;
+}

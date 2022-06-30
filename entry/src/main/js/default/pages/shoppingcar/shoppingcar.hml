@@ -1,0 +1,37 @@
+<div class="container">
+
+<!--    顶部导航-->
+    <div style="flex-direction : row; justify-content : space-between; height : 50px; background-color : antiquewhite;
+            width : 100%; padding-top : 10px;">
+        <div style="justify-content : space-between; width : 60%;">
+            <div>
+                <text style="font-size : 25px; font-weight : 600;">购物车</text>
+                <text style="font-size : 20px;">(1)</text>
+            </div>
+
+            <text class="textsize">降价</text>
+            <text class="textsize">常购</text>
+        </div>
+        <menu id="apiMenu" onselected="onMenuSelected">
+            <option value="1" icon="/common/images/shopping-cart-one.png">分享</option>
+            <option value="2" icon="/common/images/shopping-cart-one.png">搜索</option>
+            <option value="3" icon="/common/images/shopping-cart-one.png">管理</option>
+        </menu>
+        <text class="textsize" onclick="onTextClick">更多</text>
+
+    </div>
+<!--    购物车抄作业-->
+    <div style="height : 40px;
+            background-color : aquamarine;">
+        <div style="flex-wrap : wrap;padding-top: 5px;">
+            <image src="/common/images/shopping-cart-one.png"
+                   style="height : 20px; width : 20px; border-radius : 100px; background-color : chocolate;"></image>
+            <text style="font-size : 20px;">购物车抄作业</text>
+        </div>
+        <div style="flex-wrap: wrap; padding-top: 10px;">
+            <text style="font-size : 15px;">3000万人分享了购物车</text>
+            <image src="/common/images/right.png" style="height : 20px; width : 20px;"></image>
+        </div>
+    </div>
+
+</div>
