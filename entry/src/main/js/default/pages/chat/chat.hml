@@ -1,0 +1,24 @@
+<div class="container">
+    <div style="flex-direction: column;background-color: orange;position: fixed;top: 0px;height: {{topHeight}};padding: 10px;">
+        <div style="flex-direction: row;justify-content: space-between;width: 100%;">
+            <text style="font-size: 24px;">名字</text>
+            <div class="toolbar">
+                <image src="/common/icons/people.png" onclick="goUser"></image>
+            </div>
+        </div>
+        <div style="flex-direction: row;justify-content: space-around;width: 100%;">
+            <button value="电话联系" type="capsule" class="button"></button>
+            <button value="屏蔽消息" type="capsule" class="button"></button>
+        </div>
+<!--        <search hint="搜索联系人" on:submit="search"></search>-->
+    </div>
+
+    <div class="message-input">
+        <div class="search-item">
+            <input class="search" type="text" enterkeytype="send" placeholder="输入消息">
+            </input>
+            <button type="capsule" value="发送" on:click="send" class="button"></button>
+        </div>
+    </div>
+
+</div>
