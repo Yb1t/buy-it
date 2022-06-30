@@ -51,9 +51,11 @@
     "js": [
       {
         "pages": [
-          "pages/chat/chat",
           "pages/index/index",
-          "pages/message/message"
+          "pages/personalPage/personalPage",
+          "pages/message/message",
+          "pages/findpages/find/find"
+
         ],
         "name": "default",
         "window": {

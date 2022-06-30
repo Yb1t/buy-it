@@ -1,0 +1,128 @@
+<div class="personal">
+
+<!--头像部分-->
+    <div class="first-item">
+        <image class="head-photo" src="/common/images/head.jpg"></image>
+        <div class="fitem-detail">
+            <text style="font-size: 20px;">南国第壹金娃</text>
+            <text style="font-size: 16px;">账号名：扛枪大帅</text>
+            <text style="font-size: 16px;">关注：1  |   粉丝：0</text>
+        </div>
+        <image src="/common/images/icon_config .png" style="width: 40px;height: 40px;"></image>
+    </div>
+    <!--收藏.....-->
+    <div class="collction">
+        <div>
+            <image src="/common/images/icon_star.png"></image>
+            <text>收藏</text>
+        </div>
+        <div>
+            <image src="/common/images/icon_star.png"></image>
+            <text>收藏</text>
+        </div>
+        <div>
+            <image src="/common/images/icon_star.png"></image>
+            <text>收藏</text>
+        </div>
+        <div>
+            <image src="/common/images/icon_star.png"></image>
+            <text>收藏</text>
+        </div>
+
+    </div>
+    <!--我的订单-->
+    <div class="my-order">
+        <div class="my-order-text">
+            <text style="flex-shrink : 0; font-size : 20px;">我的订单</text>
+            <text style="width : 100%; text-align : right; font-size : 14px;">全部</text>
+            <image src="/common/images/ge.png" style="width : 20px; height : 20px;"></image>
+        </div>
+
+        <div class="my-order-icon">
+            <div>
+                <image src="/common/images/icon_transporter.png"></image>
+                <text>待收货</text>
+            </div>
+            <div>
+                <image src="/common/images/icon_transporter.png"></image>
+                <text>待收货</text>
+            </div>
+            <div>
+                <image src="/common/images/icon_transporter.png"></image>
+                <text>待收货</text>
+            </div>
+            <div>
+                <image src="/common/images/icon_transporter.png"></image>
+                <text>待收货</text>
+            </div>
+            <div>
+                <image src="/common/images/icon_transporter.png"></image>
+                <text>待收货</text>
+            </div>
+        </div>
+
+    </div>
+    <!--会员中心.....-->
+    <div class="vip">
+        <div>
+            <image src="/common/images/vip_vip-one.png"></image>
+            <text style="font-size: 16px;">会员中心</text>
+            <text style="font-size: 14px;margin-top: 5px;">查看权益</text>
+        </div>
+        <div>
+            <image src="/common/images/vip_vip-one.png"></image>
+            <text style="font-size: 16px;">会员中心</text>
+            <text style="font-size: 14px;margin-top: 5px;">查看权益</text>
+        </div>
+        <div>
+            <image src="/common/images/vip_vip-one.png"></image>
+            <text style="font-size: 16px;">会员中心</text>
+            <text style="font-size: 14px;margin-top: 5px;">查看权益</text>
+        </div>
+        <div>
+            <image src="/common/images/vip_vip-one.png"></image>
+            <text style="font-size: 16px;">会员中心</text>
+            <text style="font-size: 14px;margin-top: 5px;">查看权益</text>
+        </div>
+    </div>
+    <!--试用领取-->
+    <div class="try">
+        <div class="try-one">
+            <div>
+                <image src="/common/images/icon_local.png"></image>
+                <text>收货地址</text>
+            </div>
+            <div>
+                <image src="/common/images/icon_local.png"></image>
+                <text>收货地址</text>
+            </div>
+            <div>
+                <image src="/common/images/icon_local.png"></image>
+                <text>收货地址</text>
+            </div>
+            <div>
+                <image src="/common/images/icon_local.png"></image>
+                <text>收货地址</text>
+            </div>
+        </div>
+        <div class="try-one">
+            <div>
+                <image src="/common/images/icon_local.png"></image>
+                <text>收货地址</text>
+            </div>
+            <div>
+                <image src="/common/images/icon_local.png"></image>
+                <text>收货地址</text>
+            </div>
+            <div>
+                <image src="/common/images/icon_local.png"></image>
+                <text>收货地址</text>
+            </div>
+            <div>
+                <image src="/common/images/icon_local.png"></image>
+                <text>收货地址</text>
+            </div>
+        </div>
+    </div>
+
+</div>
