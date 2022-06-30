@@ -67,7 +67,7 @@
       },
       {
         "pages": [
-          "pages/index/index"
+          "pages/navbar/navbar"
         ],
         "name": "navbar",
         "window": {
