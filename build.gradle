@@ -5,7 +5,7 @@ apply plugin: 'com.huawei.ohos.app'
 ohos {
     compileSdkVersion 7
 }
-	
+
 buildscript {
     repositories {
         maven {
