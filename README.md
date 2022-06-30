@@ -85,6 +85,14 @@ https://gitee.com/HRui66/buy-it-backend
 | 收藏商品 | int |    | product |
 
 
+购物车表
+| 数据项   | 类型       | 长度 | 备注      |
+|-------|----------|----|---------|
+| 购物车id | int      |    | 主键      |
+| 商品    | int      |    | product |
+| 用户    | int      |    | user    |
+| 创建时间  | datetime |    |         |
+| 商品数量  | int      |    |         |
 
 
 
