@@ -12,6 +12,9 @@
     "package": "com.group1.buyit",
     "name": ".MyApplication",
     "mainAbility": "com.group1.buyit.MainAbility",
+    "reqPermissions": [{
+      "name": "ohos.permission.INTERNET"
+    }],
     "deviceType": [
       "phone",
       "tablet",
@@ -48,9 +51,9 @@
     "js": [
       {
         "pages": [
+          "pages/chat/chat",
           "pages/index/index",
-          "pages/message/message",
-          "pages/findpages/find/find"
+          "pages/message/message"
         ],
         "name": "default",
         "window": {
