@@ -7,7 +7,13 @@
       "name": "1.0.0"
     }
   },
-  "deviceConfig": {},
+  "deviceConfig": {
+    "default": {
+      "network": {
+        "cleartextTraffic": true
+      }
+    }
+  },
   "module": {
     "package": "com.group1.buyit",
     "name": ".MyApplication",
@@ -53,8 +59,8 @@
     "js": [
       {
         "pages": [
-          "pages/index/index",
           "pages/chat/chat",
+          "pages/index/index",
           "pages/personalPage/personalPage",
           "pages/message/message",
           "pages/findpages/find/find"
