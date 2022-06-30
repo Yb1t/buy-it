@@ -94,6 +94,12 @@ https://gitee.com/HRui66/buy-it-backend
 | 创建时间  | datetime |    |         |
 | 商品数量  | int      |    |         |
 
+未送达消息表
+| 数据项   | 类型       | 长度 | 备注      |
+|-------------|---------|---|---|
+| 发送者id | int     |   |   |
+| 消息内容  | varchar | 250  |   |
+| 接收者id  | int     |   |   |
 
 
 
