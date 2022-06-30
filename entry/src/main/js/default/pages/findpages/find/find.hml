@@ -1,19 +1,39 @@
 <div class="container">
     <div class="div">
-        <div style="width: 60px;">
+        <div style="width : 60px;">
             <image src="/common/images/camera.png"></image>
         </div>
-        <div style="flex-direction: row;align-items: center;justify-content: center;width: 100%;">
-            <text style="margin-right: 10px;">关注</text>
-            <text style="margin-right: 10px;">发现</text>
-            <text style="margin-right: 10px;">视频</text>
+        <div style="flex-direction : row; align-items : center; justify-content : center; width : 100%;">
+            <text style="margin-right : 10px;">关注</text>
+            <text style="margin-right : 10px;">发现</text>
+            <text style="margin-right : 10px;">视频</text>
         </div>
-        <div style="width: 80px;">
-            <image style="border-radius: 50px;height: 50px;width: 50px; background-color: black;"></image>
+        <div style="width : 80px;">
+            <image style="border-radius : 50px; height : 50px; width : 50px; background-color : black;"></image>
         </div>
     </div>
     <div class="div">
         <search hint="请输入搜索内容" searchbutton="搜索" @search="search">
         </search>
+    </div>
+    <div style="flex-direction : column;">
+        <tabs style="width : 100%;">
+            <tab-bar style="width : 100%;">
+                <text> 全部</text>
+                <text>美食</text>
+            </tab-bar>
+            <tab-content style="width: 100%;height: 250px; flex-wrap: wrap;justify-content: space-between;align-items: center;" >
+                <div  style="flex-direction: column;width: 48%;" for="{{dynamic}}">
+                    <div style="flex-direction: column;width: 100%;height: 200px;">
+                        <image src="{{$item.image}}" style="object-fit: cover;"></image>
+                        <text>{{$item.content}}</text>
+                    </div>
+                    <div style="flex-direction: row;width: 100%;height: 50px;">
+                        <image src="{{$item.imagesrc}}" style="object-fit: contain;"></image>
+                        <text style="justify-content: center;align-items: center;">{{$item.name}}</text>
+                    </div>
+                </div>
+            </tab-content>
+        </tabs>
     </div>
 </div>
