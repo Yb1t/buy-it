@@ -57,7 +57,8 @@
           "pages/chat/chat",
           "pages/personalPage/personalPage",
           "pages/message/message",
-          "pages/findpages/find/find"
+          "pages/findpages/find/find",
+          "pages/shoppingcar/shoppingcar"
         ],
         "name": "default",
         "window": {
