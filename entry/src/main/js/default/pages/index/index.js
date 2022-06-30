@@ -1,8 +1,10 @@
 export default {
     data: {
-        title: ""
+        title: "",
+        selectedPage: 2
     },
-    onInit() {
-        this.title = this.$t('strings.world');
+    changePage(e){
+        console.log(e.detail.index)
+        this.selectedPage = e.detail.index
     }
 }
