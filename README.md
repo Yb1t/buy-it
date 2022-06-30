@@ -18,14 +18,24 @@ https://gitee.com/HRui66/buy-it-backend
 | 商品分类  | vachar         | 10  | 唯一      |
 | 商品名   | varchar        | 50  |         |
 | 价格    | decimal(20, 2) |     |         |
+| 库存| int |     |         |
 | 商品主图  | varchar        | 200 |         |
 | 商品图id | int            |     | 与商品图表关联 |
-| 发布人   | int            |     | user    |
+| 商家   | int            |     | business|
 | 购买人   | int            |     | user    |
 | 发布时间  | datetime       |     |         |
 | 购买时间  | datetime       |      | |
 |状态    |    varchar    |    5    |    |
 |介绍    |    text |     |        |
+
+商家表   
+| 数据项  | 类型      | 长度 | 备注 |
+|------|---------|----|----|
+| 商家id | int     |    | 主键 |
+| 商家名  | varchar | 10 |    |
+| 账号   | int     |    |    |
+| 密码   | varchar | 15 |    |
+
 
   用户表
 | 数据项  | 类型       | 长度  | 备注 |
@@ -58,12 +68,21 @@ https://gitee.com/HRui66/buy-it-backend
 | 订单id | int            |     | 主键      |
 | 购买人  | int            |     | user    |
 | 发货人  | int            |     | user    |
+| 创建时间 | detetime |    | |
 | 收货地址 | varchar        | 100 |         |
 | 发货地址 | varchar        | 100 |         |
 | 订单状态 | int            |     |         |
 | 支付金额 | decimal(20 ,2) |     |         |
 | 备注   | varchar        | 250 |         |
 | 商品   | int            |     | product |
+
+收藏表
+| 数据项  | 类型  | 长度 | 备注      |
+|------|-----|----|---------|
+| 收藏id | int |    | 主键      |
+| 收藏时间 | detetime |    | |
+| 收藏人  | int |    | user    |
+| 收藏商品 | int |    | product |
 
 
 
