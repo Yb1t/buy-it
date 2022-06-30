@@ -1,5 +1,16 @@
+<element name="navbar" src="../../../navbar/pages/index/index.hml"></element>
+<element src="../findpages/find/find.hml" name="findPage"></element>
+<element src="../message/message.hml" name="messagePage"></element>
+<element src="../personalPage/personalPage.hml" name="personalPage"></element>
 <div class="container">
-    <text class="title">
-        {{ $t('strings.hello') }} {{ title }}
-    </text>
+    <block if="{{selectedPage==1}}">
+        <findpage></findpage>
+    </block>
+    <block if="{{selectedPage == 2}}">
+        <messagePage></messagePage>
+    </block>
+    <block if="{{selectedPage==4}}">
+        <personalpage></personalpage>
+    </block>
+    <navbar @on-change-menu="changePage"></navbar>
 </div>

@@ -48,23 +48,3 @@
     align-items: flex-start;
 }
 
-.navbar {
-    flex-direction: row;
-    position: fixed;
-    bottom: 0px;
-}
-
-.navbar>div{
-    flex-direction: column;
-    align-items: center;
-}
-
-.navbar image{
-    height: 24px;
-    object-fit: contain;
-
-}
-
-.navbar text{
-    font-size: 14px;
-}

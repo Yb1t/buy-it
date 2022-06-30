@@ -9,7 +9,6 @@ export default {
             {icon:"/common/icons/message.png", title:"消息", iconActive:"/common/icons/message_active.png"},
             {icon:"/common/icons/message.png", title:"消息", iconActive:"/common/icons/message_active.png"}
         ],
-        defaultIndex:0,
         array: [
             {avatar:"/common/icons/user.png", username: "阿猫", msg:"你好你好你好",msgCount:"1", date:"22/06/29"},
             {avatar:"/common/icons/user.png", username: "阿狗", msg:"你好你好你好",msgCount:"10", date:"22/06/29"},
@@ -20,10 +19,6 @@ export default {
     },
     search(event){
         console.log(event.text)
-    },
-    changeMenu(idx){
-        console.log(idx)
-        this.defaultIndex = idx
     },
     clear(){
         console.log("清除未读")

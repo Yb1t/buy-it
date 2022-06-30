@@ -12,9 +12,11 @@
     "package": "com.group1.buyit",
     "name": ".MyApplication",
     "mainAbility": "com.group1.buyit.MainAbility",
-    "reqPermissions": [{
-      "name": "ohos.permission.INTERNET"
-    }],
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.INTERNET"
+      }
+    ],
     "deviceType": [
       "phone",
       "tablet",
@@ -52,15 +54,25 @@
       {
         "pages": [
           "pages/index/index",
+          "pages/chat/chat",
           "pages/personalPage/personalPage",
           "pages/message/message",
           "pages/findpages/find/find"
-
         ],
         "name": "default",
         "window": {
           "designWidth": 720,
           "autoDesignWidth": true
+        }
+      },
+      {
+        "pages": [
+          "pages/index/index"
+        ],
+        "name": "navbar",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": false
         }
       }
     ]
