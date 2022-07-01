@@ -29,11 +29,17 @@
     background-color: #F1F3F5;
 }
 
-.button {
+.text-button {
     background-color: orange;
     text-color: black;
     border-color: black;
     border: 2px;
+}
+
+.circle-button{
+    background-color: orange;
+    icon-width: 24px;
+    icon-height: 24px;
 }
 
 .list{

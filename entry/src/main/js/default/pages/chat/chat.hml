@@ -3,7 +3,7 @@
     <div style="flex-direction: column;background-color: orange;position: fixed;top: 0px;height: {{topHeight}};padding: 10px;">
         <div style="flex-direction: row;justify-content: space-between;width: 100%;">
             <div style="align-items: center;">
-                <text style="font-size: 24px;">{{sendTo}}</text>
+                <text style="font-size: 24px;">{{sendTo.username}}</text>
                 <div if="{{isOnline}}" class="status-point" style="background-color: greenyellow;"></div>
                 <div else class="status-point" style="background-color: tomato;"></div>
             </div>
@@ -12,36 +12,34 @@
             </div>
         </div>
         <div if="{{!isFriend}}" style="flex-direction: row;justify-content: space-around;width: 100%;">
-            <button value="加好友" type="capsule" class="button"></button>
-            <button value="屏蔽消息" type="capsule" class="button"></button>
+            <button value="加好友" type="capsule" class="text-button"></button>
+            <button value="屏蔽消息" type="capsule" class="text-button"></button>
         </div>
     </div>
 
-    <div style="margin-top: {{topHeight}};height: 1000px;">
-        <list class="list">
-            <list-item for="{{array}}" class="listItem">
-                <div style="flex-direction: column;">
-                    <div style="justify-content: center;align-items: center;width: 100%;">
-                        <text class="date-text">{{$item.date}}</text>
-                    </div>
-                    <div if="{{$item.username == sendTo}}" style="flex-direction: row;">
-                        <image src="{{$item.avatar}}"></image>
-                        <text class="msg-text" style="background-color: cornsilk;">{{$item.msg}}</text>
-                    </div>
-                    <div else style="flex-direction: row;width: 100%;justify-content: flex-end;">
-                        <text class="msg-text" style="background-color: orange;">{{$item.msg}}</text>
-                        <image src="{{$item.avatar}}"></image>
-                    </div>
+    <list id="chatList" class="list" style="margin-top: {{topHeight}};">
+        <list-item for="{{array}}" class="listItem">
+            <div style="flex-direction: column;">
+                <div style="justify-content: center;align-items: center;width: 100%;">
+                    <text class="date-text">{{$item.date}}</text>
                 </div>
-            </list-item>
-        </list>
-    </div>
+                <div if="{{$item.sender == sendTo.userId}}" style="flex-direction: row;">
+                    <image src="{{sendTo.avatar}}"></image>
+                    <text class="msg-text" style="background-color: cornsilk;">{{$item.msg}}</text>
+                </div>
+                <div else style="flex-direction: row;width: 100%;justify-content: flex-end;">
+                    <text class="msg-text" style="background-color: orange;">{{$item.msg}}</text>
+                    <image src="{{user.avatar}}"></image>
+                </div>
+            </div>
+        </list-item>
+    </list>
 
     <div class="message-input">
         <div class="search-item">
-            <input class="search" type="text" enterkeytype="send" placeholder="输入消息" value="{{input}}">
+            <input class="search" type="text" enterkeytype="send" placeholder="输入消息" onchange="changInput">
             </input>
-            <button type="capsule" value="发送" on:click="send" class="button"></button>
+            <button type="circle" icon="/common/icons/send.png" waiting="{{isSending}}" on:click="send" class="circle-button"></button>
         </div>
     </div>
 
