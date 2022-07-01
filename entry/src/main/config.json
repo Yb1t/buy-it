@@ -23,14 +23,6 @@
         "name": "ohos.permission.INTERNET"
       }
     ],
-    "metaData": {
-      "customizeData": [
-        {
-          "name": "hwc-theme",
-          "value": "androidhwext:style/Theme.Emui.NoTitleBar"
-        }
-      ]
-    },
     "deviceType": [
       "phone",
       "tablet",
@@ -72,7 +64,10 @@
           "pages/personalPage/personalPage",
           "pages/message/message",
           "pages/findpages/find/find",
-          "pages/shoppingcar/shoppingcar"
+          "pages/shoppingcar/shoppingcar",
+          "pages/findpages/videofind/videofind",
+          "pages/findpages/attentionpage/attentionpage",
+          "pages/findpages/mainpages/mainpages"
         ],
         "name": "default",
         "window": {
