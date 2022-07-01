@@ -1,9 +1,14 @@
 .container {
     flex-direction: column;
     width: 100%;
-    height: 100px;
 }
 
+.status-point{
+    height: 16px;
+    width: 16px;
+    margin-start: 10px;
+    border-radius: 8px;
+}
 .toolbar image{
     width: 24px;
     object-fit: contain;
@@ -29,4 +34,39 @@
     text-color: black;
     border-color: black;
     border: 2px;
+}
+
+.list{
+    width: 100%;
+    columns: 1;
+}
+
+.listItem{
+    width: 100%;
+    padding: 10px;
+}
+
+.list image{
+    width: 50px;
+    margin-end: 10px;
+    object-fit: contain;
+}
+
+.left-right-line{
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.date-text{
+    font-size: 16px;
+    font-weight:300;
+    margin-bottom: 10px;
+}
+.msg-text{
+    font-size: 20px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
