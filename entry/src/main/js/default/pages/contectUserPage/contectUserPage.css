@@ -1,0 +1,36 @@
+.container {
+    flex-direction: column;
+    width: 100%;
+}
+
+.list{
+    width: 100%;
+    columns: 1;
+/*    animation: Go 1s ;*/
+}
+
+.list list-item{
+    height: 100px;
+    padding: 20px;
+    border-bottom: 1px solid #DEDEDE;
+}
+
+.list list-item>div{
+    flex-direction: column;
+}
+
+.title{
+    color: orange;
+    font-size: 14px;
+}
+
+.content{
+    font-size: 16px;
+}
+
+@keyframes Go
+{
+    from { transform: translateY(-300px); }
+    to { transform: translateY(0px); }
+
+}

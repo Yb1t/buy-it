@@ -1,0 +1,35 @@
+<div class="container">
+    <div style="justify-content: center;align-items: center;background-color: orange;position: fixed;top: 0px;height: {{topHeight}};padding: 10px;width: 100%;">
+        <div style="align-items: center;flex-direction: column;">
+            <image src="/common/icons/user.png" style="width: 100px;object-fit: contain;"></image>
+            <text style="font-size: 24px;">{{user.username}}</text>
+            <text style="background-color: coral;font-size: 14px;height: 16px;border-radius: 6px;padding-left: 6px;padding-right: 6px;">level {{level}}</text>
+        </div>
+    </div>
+
+    <div style="margin-top: {{topHeight}};height: 100%;">
+        <list class="list">
+            <list-item>
+                <div>
+                    <text class="title">个人简介</text>
+                    <text class="content">{{user.quote}}</text>
+                </div>
+            </list-item>
+            <list-item>
+                <div>
+                    <text class="title">电话</text>
+                    <text class="content">{{user.phone}}</text>
+                </div>
+            </list-item>
+            <list-item>
+                <div>
+                    <text class="title">邮箱</text>
+                    <text class="content">{{user.email}}</text>
+                </div>
+            </list-item>
+
+        </list>
+    </div>
+
+
+</div>
