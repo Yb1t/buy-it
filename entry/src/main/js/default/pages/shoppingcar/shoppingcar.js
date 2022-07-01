@@ -1,7 +1,9 @@
 import prompt from '@system.prompt';
 export default {
     data: {
-        title: 'World'
+        title: 'World',
+        goodsdata:[{},{},{}],
+        business:[{},{}]
     },
     onTextClick() {
         this.$element("apiMenu").show({x:380,y:38});

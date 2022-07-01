@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="background-color : whitesmoke;">
 
 <!--    顶部导航-->
     <div style="flex-direction : row; justify-content : space-between; height : 50px; background-color : antiquewhite;
@@ -8,7 +8,6 @@
                 <text style="font-size : 25px; font-weight : 600;">购物车</text>
                 <text style="font-size : 20px;">(1)</text>
             </div>
-
             <text class="textsize">降价</text>
             <text class="textsize">常购</text>
         </div>
@@ -18,20 +17,63 @@
             <option value="3" icon="/common/images/shopping-cart-one.png">管理</option>
         </menu>
         <text class="textsize" onclick="onTextClick">更多</text>
-
     </div>
+
 <!--    购物车抄作业-->
-    <div style="height : 40px;
-            background-color : aquamarine;">
-        <div style="flex-wrap : wrap;padding-top: 5px;">
+    <div style="height : 40px; background-color : aquamarine; margin-top : 10px;">
+        <div style="flex-wrap : wrap; padding-top : 5px;">
             <image src="/common/images/shopping-cart-one.png"
-                   style="height : 20px; width : 20px; border-radius : 100px; background-color : chocolate;"></image>
+                   style="height : 20px; width : 20px; border-radius : 10px; background-color : chocolate;"></image>
             <text style="font-size : 20px;">购物车抄作业</text>
         </div>
-        <div style="flex-wrap: wrap; padding-top: 10px;">
+        <div style="flex-wrap : wrap; padding-top : 10px;">
             <text style="font-size : 15px;">3000万人分享了购物车</text>
             <image src="/common/images/right.png" style="height : 20px; width : 20px;"></image>
         </div>
     </div>
+
+<!--    购物车主体-->
+    <div for="{{business}}" style="margin-top : 10px; flex-direction : column; background-color : antiquewhite; radius : 20px;">
+        <block>
+            <div style="height : 40px; background-color : cadetblue; justify-content : space-between;
+                    flex-wrap : wrap;">
+                <div style="flex-wrap : wrap; width : 80%;">
+                    <image src="/common/images/shopping-cart-one.png"
+                           style="height : 30px; width : 25px; border-radius : 10px; background-color : chocolate;
+                                   margin-right : 5px;"></image>
+                    <image src="/common/images/shopping-cart-one.png"
+                           style="height : 30px; width : 25px; border-radius : 10px; background-color : chocolate;">
+                    </image>
+                    <text class="textsize">广西商店</text>
+                    <image src="/common/images/right.png" style="height : 20px; width : 20px;"></image>
+                </div>
+                <text class="textsize">领卷</text>
+            </div>
+            <div for="goodsdata">
+                <block>
+                    <div style="height : 110px; background-color : aqua; width : 100%;">
+                        <image src="/common/images/shopping-cart-one.png"
+                               style="height : 30px; width : 25px; border-radius : 10px; background-color : chocolate;
+                                       margin-right : 10px;"></image>
+                        <image src="/common/images/shopping-cart-one.png"
+                               style="height : 100px; width : 100px; border-radius : 10px; background-color : chocolate;
+                                       margin-right : 10px;">
+                        </image>
+                        <div style="flex-direction : column; width : 50%;">
+                            <text style="font-size : 20px;">商品名</text>
+                            <text style="font-size : 20px;">商品类型</text>
+                            <div style="align-content : space-between; justify-content : space-between;
+                                    flex-wrap : wrap;">
+                                <text style="font-size : 25px;">$35</text>
+                                <text style="font-size : 20px;">数量</text>
+                            </div>
+                        </div>
+                    </div>
+                </block>
+            </div>
+        </block>
+        
+    </div>
+
 
 </div>
