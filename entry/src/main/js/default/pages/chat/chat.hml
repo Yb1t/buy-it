@@ -25,10 +25,10 @@
                 </div>
                 <div if="{{$item.sender == sendTo.userId}}" style="flex-direction: row;">
                     <image src="{{sendTo.avatar}}"></image>
-                    <text class="msg-text" style="background-color: cornsilk;">{{$item.msg}}</text>
+                    <text class="msg-text" style="background-color: cornsilk;">{{$item.content}}</text>
                 </div>
                 <div else style="flex-direction: row;width: 100%;justify-content: flex-end;">
-                    <text class="msg-text" style="background-color: orange;">{{$item.msg}}</text>
+                    <text class="msg-text" style="background-color: orange;">{{$item.content}}</text>
                     <image src="{{user.avatar}}"></image>
                 </div>
             </div>
