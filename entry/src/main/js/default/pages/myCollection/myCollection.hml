@@ -1,0 +1,49 @@
+<div class="my-collection">
+    <div class="my-collection-head">
+        <image style="width: 30px;height: 30px;background-color: red;margin-top: 5px;"></image>
+        <text style="font-size: 18px;">我的收藏（num）</text>
+        <image style="width: 30px;height: 30px;background-color: red;margin-top: 5px;"></image>
+        <text style="font-size: 16px;">管理</text>
+    </div>
+
+    <div class="my-collection-tab">
+        <text>宝贝</text>
+        <text>图文</text>
+        <text>视频</text>
+        <text>话题</text>
+        <text>清单</text>
+    </div>
+
+    <div class="my-collection-select">
+        <list-item-group >
+            <list-item><text class="group">宝贝状态</text></list-item>
+            <list-item><text class="groupValue">文本内容</text></list-item>
+            <list-item><text class="groupValue">文本内容</text></list-item>
+            <list-item><text class="groupValue">文本内容</text></list-item>
+        </list-item-group>
+        <list-item-group>
+            <list-item><text class="group">收藏时间</text></list-item>
+            <list-item><text class="groupValue">文本内容</text></list-item>
+            <list-item><text class="groupValue">文本内容</text></list-item>
+            <list-item><text class="groupValue">文本内容</text></list-item>
+        </list-item-group>
+        <list-item-group>
+            <list-item><text class="group">全部分类</text></list-item>
+            <list-item><text class="groupValue">文本内容</text></list-item>
+            <list-item><text class="groupValue">文本内容</text></list-item>
+            <list-item><text class="groupValue">文本内容</text></list-item>
+        </list-item-group>
+    </div>
+
+    <div class="my-collection-main">
+        <image style="width: 200px;height: 200px;"></image>
+        <div class="my-collection-mian-text">
+            <text style="font-size: 20px;">商品名商品名商品名商品名商品名商品名商品名</text>
+            <text style="font-size: 16px;">10万+人收藏</text>
+            <text style="font-size: 18px;">￥价格</text>
+            <button style="width: 65px;height: 30px;position: absolute;right: 0px;bottom: 0px;">找相似</button>
+        </div>
+
+
+    </div>
+</div>
