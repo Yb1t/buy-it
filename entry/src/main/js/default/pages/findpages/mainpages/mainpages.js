@@ -5,7 +5,6 @@ export default {
         local:1,
     },
     click(e){
-        console.log(e)
         this.local= e
     }
 

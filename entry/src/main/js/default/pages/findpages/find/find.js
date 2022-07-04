@@ -10,7 +10,7 @@ export default {
                  ]
     },
     tabchange(e){
-        console.info("Tab index: " + e.index )
+//        console.info("Tab index: " + e.index )
 
     }
 }
