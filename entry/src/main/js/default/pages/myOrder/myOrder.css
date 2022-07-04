@@ -1,33 +1,39 @@
 .my-order{
     flex-direction: column;
+    background-color: #f2f2f2;
     width: 100%;
+    height: 100%;
 }
 
 .order-search{
-    background-color: aliceblue;
+    background-color: #f2f2f2;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     height: 50px;
     width: 100%;
 }
 
 .top-navbar{
-    background-color: burlywood;
     flex-direction: row;
-    align-content: center;
+    align-items: center;
     justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
     width: 100%;
     height: 50px;
 }
 
 .top-navbar text{
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .order{
     border-radius: 10px;
-    background-color: bisque;
-    margin: 10px;
+    background-color: #fefefe;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
     height: 200px;
     width: 100%;
     flex-direction: column;
@@ -35,15 +41,15 @@
 }
 
 .order-title{
-    background-color: aqua;
+    padding: 0px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 25px;
+    height: 30px;
+    width: 100%;
 }
 
 .order-main{
-    background-color: azure;
     flex-direction: row;
     justify-content: space-between;
     height: 120px;
@@ -55,18 +61,18 @@
 }
 
 .order-main-info-title{
-    background-color: brown;
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 5px;
 
 }
 
 .order-main-info-type{
-    background-color: cadetblue;
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 5px;
 }
 
 .order-main-button{
@@ -74,11 +80,13 @@
     width: 100%;
     flex-direction: row;
     justify-content: space-around;
+    color: black;
 }
 
 .order-main-button button{
-    background-color: black;
+    background-color: orange;
     width: 80px;
-    height: 40px;
+    height: 30px;
+    color: black;
 
 }
