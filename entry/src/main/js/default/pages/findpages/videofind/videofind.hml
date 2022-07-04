@@ -1,3 +1,28 @@
 <div class="container">
-    <text>视频页</text>
+    <stack style="width : 100%; height : 100%;">
+        <swiper autoplay="false" duration="500" vertical="true" style="height : 100%; width : 100%;">
+            <block for="{{ videoData }}">
+                <video id="myVideo" onfinish="onfinish" loop="true" controls="false" autoplay="true"
+                       style="object-fit : contain;" src="{{ $item }}"></video>
+            </block>
+        </swiper>
+        <div style="flex-direction : column; justify-content : space-between;">
+            <div></div>
+            <div style="flex-direction : column;">
+                <div style="flex-direction: column;">
+                    <image src="/common/icons/thumbs-up.png" style="height: 32px;width: 32px;"></image>
+                    <text>111</text>
+                </div>
+                <div style="flex-direction: column;">
+                    <image src="/common/icons/star.png" style="height: 32px;width: 32px;"></image>
+                    <text>111</text>
+                </div>
+                <div style="flex-direction: column;">
+                    <image src="/common/icons/comment.png" style="height: 32px;width: 32px;"></image>
+                    <text>111</text>
+                </div>
+            </div>
+        </div>
+    </stack>
+
 </div>

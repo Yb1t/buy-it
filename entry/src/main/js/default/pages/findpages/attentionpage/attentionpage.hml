@@ -1,64 +1,85 @@
 <div class="container">
     <tabs onchange="tabChange1">
-        <tab-bar  >
-            <text style="font-size: 20px;">看过的人</text>
-<!--            <image style="height: 20px;width: 20px;" src="/common/icons/help.png"></image>-->
-            <text style="font-size: 20px;">更多</text>
+        <tab-bar>
+            <text style="font-size : 20px;">看过的人</text>
+
+        <!--            <image style="height: 20px;width: 20px;" src="/common/icons/help.png"></image>-->
+            <text style="font-size : 20px;">更多</text>
         </tab-bar>
         <tab-content>
-            <div style="justify-content: center;flex-direction: column;align-items: center;">
-<!--                未发现更多内容-->
-                <div style="justify-content: center;flex-direction: column;align-items: center;height: 250px;width: 100%;">
-                    <image src="/common/images/more1.png" style="object-fit: cover;height: 200px;width: 100%;"></image>
-                    <text style="font-size: 20fp;">看过的人没有更多的内容</text>
-                    <text style="font-size: 15fp; color: darkgrey;">喜欢就多看看TA的内容，TA就会出现在这里</text>
+
+        <!--            看多的人页面内容-->
+            <div style="justify-content : center; flex-direction : column; align-items : center;">
+
+            <!--                未发现更多内容-->
+                <div style="justify-content : center; flex-direction : column; align-items : center; height : 250px;
+                        width : 100%;">
+                    <image src="/common/images/more1.png" style="object-fit : cover; height : 200px; width : 100%;">
+                    </image>
+                    <text style="font-size : 20fp;">看过的人没有更多的内容</text>
+                    <text style="font-size : 15fp; color : darkgrey;">喜欢就多看看TA的内容，TA就会出现在这里</text>
                 </div>
-<!--                博主页-->
-                <div style="height: 300px;width: 100%;flex-direction: column;margin-top: 10px;" for="{{bloggerData}}">
-                    <div style="flex-direction: row;justify-content: space-between;width: 100%;">
-                        <image src="{{$item.image}}" style="height: 80px;width: 80px;object-fit: contain; border-radius: 800px; background-color: red;margin-top: 20px;"></image>
-                        <div style="flex-direction: column;">
-                            <text style="height: 50px;font-size: 20px;"> {{$item.name}}</text>
-                            <div style="height: 35px;font-size: 15px;max-lines: 1;text-overflow: ellipsis;">
-                                <text>{{$item.certification}}</text>
-                                <text>|{{$item.email}}</text>
+
+            <!--                博主页-->
+                <div style="height : 300px; width : 100%; flex-direction : column; margin-top : 10px;"
+                     for="{{ bloggerData }}">
+                    <div style="flex-direction : row; justify-content : space-between; width : 100%;">
+                        <image src="{{ $item.image }}"
+                               style="height : 80px; width : 80px; object-fit : contain; border-radius : 800px;
+                                       background-color : red; margin-top : 20px;"></image>
+                        <div style="flex-direction : column;">
+                            <text style="height : 50px; font-size : 20px;"> {{ $item.name }}</text>
+                            <div style="height : 35px; font-size : 15px; max-lines : 1; text-overflow : ellipsis;">
+                                <text>{{ $item.certification }}</text>
+                                <text>|{{ $item.email }}</text>
                             </div>
-                            <text style="height: 35px;font-size: 15px;">粉丝{{$item.num}}万</text>
+                            <text style="height : 35px; font-size : 15px;">粉丝{{ $item.num }}万</text>
                         </div>
-                        <button style="height: 30px;justify-content: center;align-items: center;margin-top: 50px;">看看TA</button>
+                        <button style="height : 30px; justify-content : center; align-items : center;
+                                margin-top : 50px;">看看TA</button>
                     </div>
-                    <div style="flex-direction: row;height: 180px;width: 100%;">
-                        <image src="{{$item.images1}}" style="object-fit: contain;"></image>
-                        <image src="{{$item.images2}}" style="object-fit: contain;"></image>
-                        <image src="{{$item.images3}}" style="object-fit: contain;"></image>
+                    <div style="flex-direction : row; height : 180px; width : 100%;">
+                        <image src="{{ $item.images1 }}" style="object-fit : contain;"></image>
+                        <image src="{{ $item.images2 }}" style="object-fit : contain;"></image>
+                        <image src="{{ $item.images3 }}" style="object-fit : contain;"></image>
                     </div>
                 </div>
             </div>
-            <div style="justify-content: center;flex-direction: column;align-items: center;">
+
+        <!--            更多页面内容-->
+            <div style="justify-content : center; flex-direction : column; align-items : center;">
+
             <!--                未发现更多内容-->
-                <div style="justify-content: center;flex-direction: column;align-items: center;height: 250px;width: 100%;">
-                    <image src="/common/images/more1.png" style="object-fit: cover;height: 200px;width: 100%;"></image>
-                    <text style="font-size: 20fp;">没有更多的内容哦</text>
-                    <text style="font-size: 15fp; color: darkgrey;">下面这些你可能会喜欢</text>
+                <div style="justify-content : center; flex-direction : column; align-items : center; height : 250px;
+                        width : 100%;">
+                    <image src="/common/images/more1.png" style="object-fit : cover; height : 200px; width : 100%;">
+                    </image>
+                    <text style="font-size : 20fp;">没有更多的内容哦</text>
+                    <text style="font-size : 15fp; color : darkgrey;">下面这些你可能会喜欢</text>
                 </div>
+
             <!--                博主页-->
-                <div style="height: 300px;width: 100%;flex-direction: column;margin-top: 10px;" for="{{bloggerData}}">
-                    <div style="flex-direction: row;justify-content: space-between;width: 100%;">
-                        <image src="{{$item.image}}" style="height: 80px;width: 80px;object-fit: contain; border-radius: 800px; background-color: red;margin-top: 20px;"></image>
-                        <div style="flex-direction: column;">
-                            <text style="height: 50px;font-size: 20px;"> {{$item.name}}</text>
-                            <div style="height: 35px;font-size: 15px;max-lines: 1;text-overflow: ellipsis;">
-                                <text>{{$item.certification}}</text>
-                                <text>|{{$item.email}}</text>
+                <div style="height : 300px; width : 100%; flex-direction : column; margin-top : 10px;"
+                     for="{{ bloggerData }}">
+                    <div style="flex-direction : row; justify-content : space-between; width : 100%;">
+                        <image src="{{ $item.image }}"
+                               style="height : 80px; width : 80px; object-fit : contain; border-radius : 800px;
+                                       background-color : red; margin-top : 20px;"></image>
+                        <div style="flex-direction : column;">
+                            <text style="height : 50px; font-size : 20px;"> {{ $item.name }}</text>
+                            <div style="height : 35px; font-size : 15px; max-lines : 1; text-overflow : ellipsis;">
+                                <text>{{ $item.certification }}</text>
+                                <text>|{{ $item.email }}</text>
                             </div>
-                            <text style="height: 35px;font-size: 15px;">粉丝{{$item.num}}万</text>
+                            <text style="height : 35px; font-size : 15px;">粉丝{{ $item.num }}万</text>
                         </div>
-                        <button style="height: 30px;justify-content: center;align-items: center;margin-top: 50px;">看看TA</button>
+                        <button style="height : 30px; justify-content : center; align-items : center;
+                                margin-top : 50px;">看看TA</button>
                     </div>
-                    <div style="flex-direction: row;height: 180px;width: 100%;">
-                        <image src="{{$item.images1}}" style="object-fit: contain;"></image>
-                        <image src="{{$item.images2}}" style="object-fit: contain;"></image>
-                        <image src="{{$item.images3}}" style="object-fit: contain;"></image>
+                    <div style="flex-direction : row; height : 180px; width : 100%;">
+                        <image src="{{ $item.images1 }}" style="object-fit : contain;"></image>
+                        <image src="{{ $item.images2 }}" style="object-fit : contain;"></image>
+                        <image src="{{ $item.images3 }}" style="object-fit : contain;"></image>
                     </div>
                 </div>
             </div>
