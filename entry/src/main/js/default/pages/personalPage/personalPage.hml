@@ -1,3 +1,5 @@
+<element src="../../../navbar/pages/navbar/navbar.hml" name="navbar"></element>
+
 <div class="personal">
 
 <!--头像部分-->
@@ -125,4 +127,5 @@
         </div>
     </div>
 
+    <navbar></navbar>
 </div>

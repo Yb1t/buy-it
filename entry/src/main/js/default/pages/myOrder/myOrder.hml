@@ -1,0 +1,80 @@
+<div class="my-order">
+    <!--搜索-->
+    <div class="order-search" >
+        <search style="background-color: red;"></search>
+        <image style="background-color: chocolate;width: 20px;"></image>
+        <text style="font-size: 12px;width: 30px;">筛选</text>
+        <image style="background-color: chocolate;width: 20px;"></image>
+    </div>
+    <!--顶部导航栏-->
+    <div class="top-navbar">
+        <text>全部</text>
+        <text>待付款</text>
+        <text>待发货</text>
+        <text>待收货</text>
+        <text>待评价</text>
+    </div>
+
+    <div class="order">
+        <div class="order-title">
+            <image style="background-color: red;"></image>
+            <text style="font-size: 14px; width: 150px;">店铺名</text>
+            <image style="background-color: red;"></image>
+            <text style="font-size: 14px; width: 180px;">交易状态</text>
+        </div>
+        <div class="order-main">
+            <image style="width: 150px;height: 150px;"></image>
+            <div class="order-main-info">
+                <div class="order-main-info-title">
+                    <text style="font-size: 16px; width: 100px;">商品名</text>
+                    <text style="font-size: 14px;width: 50px;">￥ 价格</text>
+                </div>
+                <div class="order-main-info-type">
+                    <text style="font-size: 16px; width: 100px;">商品自身详细分类</text>
+                    <text style="font-size: 14px; width: 50px;">x 数量</text>
+                </div>
+                <text style="font-size: 15px; width: 100%;">七天无理由退换   全程价保</text>
+                
+                <text style="font-size: 15px; width: 100%;text-align: end;">实际付款 ￥价格</text>
+            </div>
+        </div>
+        <div class="order-main-button">
+            <text style="font-size: 16px;width: 80px;">更多</text>
+            <button>加入购物车</button>
+            <button>追加评价</button>
+            <button>查看物流</button>
+        </div>
+    </div>
+
+    <div class="order">
+        <div class="order-title">
+            <image style="background-color: red;"></image>
+            <text style="font-size: 14px; width: 150px;">店铺名</text>
+            <image style="background-color: red;"></image>
+            <text style="font-size: 14px; width: 180px;">交易状态</text>
+        </div>
+        <div class="order-main">
+            <image style="width: 150px;height: 150px;"></image>
+            <div class="order-main-info">
+                <div class="order-main-info-title">
+                    <text style="font-size: 16px; width: 100px;">商品名</text>
+                    <text style="font-size: 14px;width: 50px;">￥ 价格</text>
+                </div>
+                <div class="order-main-info-type">
+                    <text style="font-size: 16px; width: 100px;">商品自身详细分类</text>
+                    <text style="font-size: 14px; width: 50px;">x 数量</text>
+                </div>
+                <text style="font-size: 15px; width: 100%;">七天无理由退换   全程价保</text>
+
+                <text style="font-size: 15px; width: 100%;text-align: end;">实际付款 ￥价格</text>
+            </div>
+        </div>
+        <div class="order-main-button">
+            <text style="font-size: 16px;width: 80px;">更多</text>
+            <button>加入购物车</button>
+            <button>追加评价</button>
+            <button>查看物流</button>
+        </div>
+    </div>
+
+</div>
