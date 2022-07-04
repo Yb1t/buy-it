@@ -7,13 +7,7 @@
       "name": "1.0.0"
     }
   },
-  "deviceConfig": {
-    "default": {
-      "network": {
-        "cleartextTraffic": true
-      }
-    }
-  },
+  "deviceConfig": {},
   "module": {
     "package": "com.group1.buyit",
     "name": ".MyApplication",
@@ -67,8 +61,7 @@
           "pages/shoppingcar/shoppingcar",
           "pages/findpages/videofind/videofind",
           "pages/findpages/attentionpage/attentionpage",
-          "pages/findpages/mainpages/mainpages",
-          "pages/account/account"
+          "pages/findpages/mainpages/mainpages"
         ],
         "name": "default",
         "window": {

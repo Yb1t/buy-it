@@ -4,12 +4,13 @@
         <text style="font-size: 26px;width: 100%;">我的收货地址</text>
         <text style="font-size: 18px;width: 50px;">管理</text>
     </div>
+
     <div class="address">
         <image style="height: 80px;width: 80px;"></image>
         <div class="address-main">
             <div class="address-name-phone">
                 <text style="font-size: 18px;">联系人</text>
-                <text style="font-size: 14px;">电话</text>
+                <text style="font-size: 14px;margin-left: 10px;">电话</text>
                 <image style="height: 80px;width: 80px;"></image>
             </div>
             <text style="font-size: 16px;">地址地址地址地址地址地址地址地址地址地址地址地址</text>
