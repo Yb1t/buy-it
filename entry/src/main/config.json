@@ -67,7 +67,8 @@
           "pages/shoppingcar/shoppingcar",
           "pages/findpages/videofind/videofind",
           "pages/findpages/attentionpage/attentionpage",
-          "pages/findpages/mainpages/mainpages"
+          "pages/findpages/mainpages/mainpages",
+          "pages/account/account"
         ],
         "name": "default",
         "window": {
