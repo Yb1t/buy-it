@@ -25,11 +25,9 @@
 
 .div2 {
     flex-direction: column;
-    background-color: white;
+
 }
-.div3{
-    flex-direction: column;
-}
+
 .image{
     height: 32px;width: 32px;
 }
