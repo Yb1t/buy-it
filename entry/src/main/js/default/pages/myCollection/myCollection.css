@@ -1,0 +1,70 @@
+.my-collection{
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.my-collection-head{
+    background-color: cadetblue;
+    width: 100%;
+    height: 40px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.my-collection-tab{
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: brown;
+    width: 100%;
+    height: 50px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.my-collection-tab text{
+    background-color: azure;
+    font-size: 20px;
+    width: 40px;
+}
+
+.my-collection-select{
+    height: 60px;
+    background-color: cadetblue;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.my-collection-select list-item-group{
+    margin: 5px;
+    background-color: aqua;
+}
+.group{
+    font-size: 20px;
+    
+}
+.groupValue{
+    font-size: 16px;
+}
+
+.my-collection-main{
+    background-color: bisque;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+}
+
+.my-collection-mian-text{
+    background-color: azure;
+    flex-direction: column;
+    width: 100%;
+    height: 150px;
+
+}

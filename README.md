@@ -6,6 +6,8 @@
 #### 买为后端仓库链接
 https://gitee.com/HRui66/buy-it-backend
 
+#### 主题色 #FFA500 / DevEco studio 内 orange 
+
 #### 软件架构
 
 #### 消息数据组成设计

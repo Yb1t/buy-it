@@ -1,0 +1,92 @@
+.my-order{
+    flex-direction: column;
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 100%;
+}
+
+.order-search{
+    background-color: #f2f2f2;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+}
+
+.top-navbar{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    height: 50px;
+}
+
+.top-navbar text{
+    font-size: 18px;
+}
+
+.order{
+    border-radius: 10px;
+    background-color: #fefefe;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    height: 200px;
+    width: 100%;
+    flex-direction: column;
+
+}
+
+.order-title{
+    padding: 0px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+}
+
+.order-main{
+    flex-direction: row;
+    justify-content: space-between;
+    height: 120px;
+    width: 100%;
+}
+
+.order-main-info{
+    flex-direction: column;
+}
+
+.order-main-info-title{
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+
+}
+
+.order-main-info-type{
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.order-main-button{
+    margin-top: 10px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    color: black;
+}
+
+.order-main-button button{
+    background-color: orange;
+    width: 80px;
+    height: 30px;
+    color: black;
+
+}

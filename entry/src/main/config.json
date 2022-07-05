@@ -7,13 +7,7 @@
       "name": "1.0.0"
     }
   },
-  "deviceConfig": {
-    "default": {
-      "network": {
-        "cleartextTraffic": true
-      }
-    }
-  },
+  "deviceConfig": {},
   "module": {
     "package": "com.group1.buyit",
     "name": ".MyApplication",
@@ -59,6 +53,7 @@
     "js": [
       {
         "pages": [
+          "pages/findpages/mainpages/mainpages",
           "pages/chat/chat",
           "pages/index/index",
           "pages/personalPage/personalPage",
@@ -67,7 +62,8 @@
           "pages/shoppingcar/shoppingcar",
           "pages/findpages/videofind/videofind",
           "pages/findpages/attentionpage/attentionpage",
-          "pages/findpages/mainpages/mainpages"
+
+          "pages/myOrder/myOrder"
         ],
         "name": "default",
         "window": {

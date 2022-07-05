@@ -4,3 +4,30 @@
     align-items: center;
     width: 100%;
 }
+
+.stack {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper {
+    height: 100%;
+    width: 100%;
+}
+
+.div1 {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.div2 {
+    flex-direction: column;
+
+}
+
+.image{
+    height: 32px;width: 32px;
+}

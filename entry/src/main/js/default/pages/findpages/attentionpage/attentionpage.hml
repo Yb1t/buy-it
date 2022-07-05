@@ -1,3 +1,82 @@
 <div class="container">
-    <text>关注页</text>
+    <tabs onchange="tabChange1">
+        <tab-bar>
+            <text style="font-size : 20px;">看过的人</text>
+
+        <!--            <image style="height: 20px;width: 20px;" src="/common/icons/help.png"></image>-->
+            <text style="font-size : 20px;">更多</text>
+        </tab-bar>
+        <tab-content>
+
+        <!--            看多的人页面内容-->
+            <div class="div1">
+
+            <!--                未发现更多内容-->
+                <div class="div2">
+                    <image src="/common/images/more1.png" class="image">
+                    </image>
+                    <text style="font-size : 20fp;">看过的人没有更多的内容</text>
+                    <text style="font-size : 15fp; color : darkgrey;">喜欢就多看看TA的内容，TA就会出现在这里</text>
+                </div>
+
+            <!--                博主页-->
+                <div class="div3"
+                     for="{{ bloggerData }}">
+                    <div class="div4">
+                        <image src="{{ $item.image }}"
+                               class="image1"></image>
+                        <div style="flex-direction : column;">
+                            <text style="height : 50px; font-size : 20px;"> {{ $item.name }}</text>
+                            <div class="div5">
+                                <text>{{ $item.certification }}</text>
+                                <text>|{{ $item.email }}</text>
+                            </div>
+                            <text style="height : 35px; font-size : 15px;">粉丝{{ $item.num }}万</text>
+                        </div>
+                        <button class="button">看看TA</button>
+                    </div>
+                    <div class="div6">
+                        <image src="{{ $item.images1 }}" style="object-fit : contain;"></image>
+                        <image src="{{ $item.images2 }}" style="object-fit : contain;"></image>
+                        <image src="{{ $item.images3 }}" style="object-fit : contain;"></image>
+                    </div>
+                </div>
+            </div>
+
+        <!--            更多页面内容-->
+            <div class="div1">
+
+            <!--                未发现更多内容-->
+                <div class="div2">
+                    <image src="/common/images/more1.png" class="image">
+                    </image>
+                    <text style="font-size : 20fp;">没有更多的内容哦</text>
+                    <text style="font-size : 15fp; color : darkgrey;">下面这些你可能会喜欢</text>
+                </div>
+
+            <!--                博主页-->
+                <div class="div3"
+                     for="{{ bloggerData }}">
+                    <div class="div4">
+                        <image src="{{ $item.image }}"
+                               class="image1"></image>
+                        <div style="flex-direction : column;">
+                            <text style="height : 50px; font-size : 20px;"> {{ $item.name }}</text>
+                            <div class="div5">
+                                <text>{{ $item.certification }}</text>
+                                <text>|{{ $item.email }}</text>
+                            </div>
+                            <text style="height : 35px; font-size : 15px;">粉丝{{ $item.num }}万</text>
+                        </div>
+                        <button class="button">看看TA</button>
+                    </div>
+                    <div class="div6">
+                        <image src="{{ $item.images1 }}" style="object-fit : contain;"></image>
+                        <image src="{{ $item.images2 }}" style="object-fit : contain;"></image>
+                        <image src="{{ $item.images3 }}" style="object-fit : contain;"></image>
+                    </div>
+                </div>
+            </div>
+        </tab-content>
+    </tabs>
 </div>

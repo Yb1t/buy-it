@@ -160,19 +160,19 @@
 
     </div>
 <!--结算栏-->
-    <div style="height: 70px;background-color: orange;position: fixed;bottom: 50px;width: 100%;justify-content: space-between;">
-        <div>
-            <image src="/common/images/shopping-cart-one.png"
-                   style="height : 30px; width : 25px; border-radius : 10px; background-color : chocolate;
-                           margin-right : 5px;"></image>
-            <text>123</text>
+    <div style="height: 50px;background-color: azure;position: fixed;bottom: 50px;width: 100%;justify-content: space-between;">
+        <div style="margin-top: 7px;">
+            <image src="{{selall}}" onclick="selectall"
+                   style="height : 30px; width : 25px; border-radius : 10px; background-color: orangered;
+                           margin-right : 5px;border-width: 1fp;border-color: silver;object-fit: cover;"></image>
+            <text style="font-size: 15px;">全选</text>
         </div>
-        <div style="width: 50%;">
-            <text >23</text>
-            <text>￥</text>
-            <text>12</text>
-            <div style="justify-content :center;width: 50%;height:100%;background-color: navy;border-radius: 20px;">
-                <text style="color: white;">结算</text>
+        <div style="width: 45%;margin-top: 7px;">
+            <text style="font-size: 15px;">合计</text>
+            <text style="font-size: 10px;color: orangered;">￥</text>
+            <text style="font-size: 18px;color: orangered;">12</text>
+            <div style="justify-content :center;width: 60%;height:80%;background-color: orangered;border-radius: 20px;">
+                <text style="color: white;font-size: 20px;">结算</text>
             </div>
         </div>
 

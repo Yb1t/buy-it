@@ -1,0 +1,36 @@
+.my-address{
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+.my-address-titile{
+    background-color: bisque;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+.address{
+    background-color: aqua;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+}
+.address-main{
+    background-color: cadetblue;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+}
+.address-name-phone{
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+    margin-bottom: 10px;
+}
+

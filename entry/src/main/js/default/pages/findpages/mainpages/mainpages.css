@@ -10,5 +10,16 @@
     width: 100%;
     height: 50px;
 }
-
+.div1{
+    flex-direction : column; align-items : center; justify-content : center; width : 100%;
+}
+.text1{
+    margin-right : 5px;color: red;
+}
+.text2{
+    margin-right : 5px;
+}
+.image{
+    border-radius : 50px; height : 50px; width : 50px;
+}
 

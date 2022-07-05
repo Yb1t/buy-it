@@ -1,0 +1,187 @@
+<div class="container">
+<!-- 确认订单-->
+    <div style="flex-direction : row; height : 50px; background-color: white;
+            width : 100%; padding-top : 10px; position : fixed; top : 0px;">
+        <image src="/common/images/left.png" style="width : 10px; height : 100%;"></image>
+        <text style="font-size : 25px; margin-left : 10px;">确认订单</text>
+    </div>
+<!--收货地址-->
+    <div style="height : 70px; width : 100%; background-color : white; margin-top : 60px;
+            justify-content : space-between;">
+        <div>
+            <image src="/common/images/local-two.png"
+                   style="height : 30px; width : 30px; border-radius : 15px; background-color: coral;
+                           margin-top : 20px;">
+            </image>
+            <div style="flex-direction : column; margin-left : 5px; margin-top : 10px;">
+                <text style="font-size : 22px; font-weight : 600;">桂林电子科技大学</text>
+                <text style="font-size : 18px; font-weight : 200;">{{ username }} {{ number }}</text>
+            </div>
+        </div>
+        <image src="/common/images/right.png" style="height : 30px; width : 20px; margin-top : 20px;"></image>
+    </div>
+
+    <div style="width : 100%; background-color : bisque; margin-top : 12px; flex-direction : column;">
+        <div style="margin-top : 20px;">
+            <image src="/common/images/shopping-cart-one.png"
+                   style="height : 30px; width : 30px; border-radius : 10px; background-color : chocolate;">
+            </image>
+            <text style="font-size : 18px; font-weight : 600; margin-left : 10px;">店铺</text>
+        </div>
+        <div>
+            <image src="/common/images/shopping-cart-one.png"
+                   style="height : 100px; width : 100px; border-radius : 10px; background-color : chocolate;
+                           margin-top : 15px;">
+            </image>
+            <div style="flex-direction : column; width : 70%; margin-left : 10px; margin-top : 15px;">
+                <div style="align-content : space-between; justify-content : space-between;
+                        flex-wrap : wrap;">
+                    <text style="font-size : 18px;">shangp</text>
+                    <text style="font-size : 18px;">45</text>
+                </div>
+                <div style="align-content : space-between; justify-content : space-between;
+                        flex-wrap : wrap;">
+                    <text style="font-size : 18px;">尺码</text>
+                    <text style="font-size : 18px;">5</text>
+                </div>
+                <text style="font-size : 15px;">ni</text>
+                <text style="font-size : 13px;">gongji</text>
+            </div>
+        </div>
+
+
+        <div style="height : 50px; background-color : springgreen; justify-content : space-between; flex-wrap : wrap;
+                margin-top : 10px;">
+            <text style="font-size : 18px;">配送服务</text>
+            <div>
+                <div style="flex-direction : column; margin-top : 5px;">
+                    <text style="font-size : 15px; text-align : right; font-weight : 600;">快递 免邮</text>
+                    <text style="font-size : 15px; font-weight : 600;">付款后7天内发货</text>
+                </div>
+                <image src="/common/images/right.png"
+                       style="height : 20px; width : 20px; border-radius : 10px; margin-top : 15px;">
+                </image>
+            </div>
+        </div>
+        <div style="height : 50px; background-color : springgreen; justify-content : space-between; flex-wrap : wrap;
+                margin-top : 5px;">
+            <text style="font-size : 18px;">运费险</text>
+            <div>
+                <div style="flex-direction : column; margin-top : 5px;">
+                    <text style="font-size : 15px; text-align : right; font-weight : 600;">未选择</text>
+                    <text style="font-size : 15px;">退换货可赔付10元</text>
+                </div>
+                <image src="/common/images/right.png"
+                       style="height : 20px; width : 20px; border-radius : 10px; margin-top : 15px;">
+                </image>
+            </div>
+        </div>
+        <div style="height : 50px; background-color : springgreen; justify-content : space-between; flex-wrap : wrap;
+                margin-top : 5px;">
+            <text style="font-size : 18px;">订单备注</text>
+            <div>
+                <div style="flex-direction : column; margin-top : 5px;">
+                    <text style="font-size : 15px; text-align : right; margin-top : 10px;">无备注</text>
+
+                </div>
+                <image src="/common/images/right.png"
+                       style="height : 20px; width : 20px; border-radius : 10px; margin-top : 15px;">
+                </image>
+            </div>
+        </div>
+    </div>
+
+    <div style="width : 100%; background-color : bisque; margin-top : 12px; flex-direction : column;">
+        <div style="justify-content : space-between; flex-wrap : wrap; height : 40px; background-color : springgreen;
+                margin-top : 5px; padding-top : 8px;">
+            <div>
+                <image src="/common/images/shopping-cart-one.png"
+                       style="height : 25px; width : 25px; border-radius : 10px; background-color : chocolate;">
+                </image>
+                <text style="font-size : 20px; font-weight : 600; margin-left : 5px;">支付宝</text>
+            </div>
+            <image src="{{ selall }}" onclick="selectall"
+                   style="height : 25px; width : 25px; border-radius : 10px; background-color : orangered;
+                           margin-right : 5px; border-width : 1fp; border-color : silver; object-fit : cover;">
+            </image>
+        </div>
+        <div style="justify-content : space-between; flex-wrap : wrap; height : 40px; background-color : springgreen;
+                margin-top : 5px;">
+            <div>
+                <div style="padding-top : 8px;">
+                    <image src="/common/images/shopping-cart-one.png"
+                           style="height : 25px; width : 25px; border-radius : 10px; background-color : chocolate;">
+                    </image>
+                </div>
+                <div style="flex-direction : column; margin-left : 5px;">
+                    <text style="font-size : 20px; font-weight : 600;">找朋友帮忙支付</text>
+                    <text style="font-size : 14px;">找朋友帮忙付</text>
+                </div>
+            </div>
+            <div style="padding-top : 8px;">
+                <image src="{{ selall }}" onclick="selectall"
+                       style="height : 25px; width : 25px; border-radius : 10px; background-color : orangered;
+                               margin-right : 5px; border-width : 1fp; border-color : silver; object-fit : cover;">
+                </image>
+            </div>
+
+        </div>
+        <div style="justify-content : space-between; flex-wrap : wrap; height : 40px; background-color : springgreen;
+                margin-top : 5px;">
+            <div>
+                <div style="padding-top : 8px;">
+                    <image src="/common/images/shopping-cart-one.png"
+                           style="height : 25px; width : 25px; border-radius : 10px; background-color : chocolate;">
+                    </image>
+                </div>
+                <div style="flex-direction : column; margin-left : 5px;">
+                    <text style="font-size : 20px; font-weight : 600;">零钱</text>
+                    <text style="font-size : 14px;">找人充零钱，不用绑卡也能随意买买买</text>
+                </div>
+            </div>
+            <div style="padding-top : 8px;">
+                <image src="/common/images/gray.png" disabled="false"
+                       style="height : 25px; width : 25px; border-radius : 10px;
+                               margin-right : 5px; border-width : 1fp; border-color : silver; object-fit : cover;">
+                </image>
+            </div>
+        </div>
+    </div>
+    <div style="height: 70px;background-color: orange;margin-top: 20px;margin-bottom: 100px;">
+        <div style="justify-content : space-between; flex-wrap : wrap; height : 40px; background-color : springgreen;
+                margin-top : 15px;">
+            <div>
+                <div style="padding-top : 8px;">
+                    <image src="/common/images/shopping-cart-one.png"
+                           style="height : 25px; width : 25px; border-radius : 10px; background-color : chocolate;">
+                    </image>
+                </div>
+                <div style="flex-direction : column; margin-left : 5px;">
+                    <text style="font-size : 20px; font-weight : 600;">号码保护</text>
+                    <text style="font-size : 14px;">隐藏收件人真实手机号，保护隐私</text>
+                </div>
+            </div>
+            <div style="padding-top : 8px;">
+                <image src="{{ selall }}" onclick="selectall"
+                       style="height : 25px; width : 25px; border-radius : 10px; background-color : orangered;
+                               margin-right : 5px; border-width : 1fp; border-color : silver; object-fit : cover;">
+                </image>
+            </div>
+        </div>
+    </div>
+<!-- 提交订单-->
+    <div style="height: 50px;background-color: azure;position: fixed;bottom: 0px;width: 100%;justify-content: space-between;">
+        <div></div>
+        <div style=" margin-top: 7px; ">
+            <text style="font-size: 10px;margin-right: 2px;">共1件</text>
+            <text style="font-size: 15px;">合计</text>
+            <text style="font-size: 10px;color: orangered;">￥</text>
+            <text style="font-size: 25px;color: orangered;">45</text>
+            <text style="font-size: 18px;color: orangered;margin-left: 5px;">.00</text>
+            <div style="justify-content :center;width:100px;height:35px;background-color: orangered;border-radius: 20px;">
+                <text style="color: white;font-size: 20px;margin-top: 2px;">提交订单</text>
+            </div>
+        </div>
+
+    </div>
+</div>
