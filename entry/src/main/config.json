@@ -7,7 +7,13 @@
       "name": "1.0.0"
     }
   },
-  "deviceConfig": {},
+  "deviceConfig": {
+    "default": {
+      "network": {
+        "cleartextTraffic": true
+      }
+    }
+  },
   "module": {
     "package": "com.group1.buyit",
     "name": ".MyApplication",
@@ -53,8 +59,9 @@
     "js": [
       {
         "pages": [
-          "pages/findpages/mainpages/mainpages",
           "pages/chat/chat",
+          "pages/findpages/mainpages/mainpages",
+          "pages/contectUserPage/contectUserPage",
           "pages/index/index",
           "pages/personalPage/personalPage",
           "pages/message/message",
@@ -62,7 +69,6 @@
           "pages/shoppingcar/shoppingcar",
           "pages/findpages/videofind/videofind",
           "pages/findpages/attentionpage/attentionpage",
-
           "pages/myOrder/myOrder"
         ],
         "name": "default",
@@ -76,6 +82,16 @@
           "pages/navbar/navbar"
         ],
         "name": "navbar",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": false
+        }
+      },
+      {
+        "pages": [
+          "pages/index/productMessageComponent"
+        ],
+        "name": "productMessageComponent",
         "window": {
           "designWidth": 720,
           "autoDesignWidth": false
