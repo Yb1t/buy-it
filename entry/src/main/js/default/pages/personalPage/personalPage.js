@@ -1,3 +1,4 @@
+import router from '@system.router';
 export default {
     data: {
         title: 'World',
@@ -32,5 +33,24 @@ export default {
             {"tryOneDataIcons":"/common/icons/icon_vip.png","tryOneDataName":"店铺会员"},
             {"tryOneDataIcons":"/common/icons/icon_system.png","tryOneDataName":"更多"}
         ]
-    }
+    },
+    toMyOrder(){
+        router.push({
+            uri:"pages/myOrder/myOrder"
+        })
+    },
+    toMyCollection(idx){
+        if(idx == 0){
+            router.push({
+                uri:"pages/myCollection/myCollection"
+            })
+        }
+    },
+    toMyAddress(idx){
+        if (idx == 0) {
+            router.push({
+                uri:"pages/myAddress/myAddress"
+            })
+        }
+    },
 }

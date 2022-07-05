@@ -15,14 +15,14 @@
     <!--收藏.....-->
     <div class="collction">
 
-        <div for="{{collectionData}}">
+        <div for="{{collectionData}}" onclick="toMyCollection($idx)">
             <image src="{{$item.collectionDataIcons}}"></image>
             <text>{{$item.collectionDataName}}</text>
         </div>
 
     </div>
     <!--我的订单-->
-    <div class="my-order">
+    <div class="my-order" onclick="toMyOrder">
         <div class="my-order-text">
             <text style="font-weight: 600;flex-shrink : 0; font-size : 16px;">我的订单</text>
             <text style="color: darkgray;width : 100%; text-align : right; font-size : 12px;">全部</text>
@@ -51,7 +51,7 @@
     <!--试用领取-->
     <div class="try">
         <div class="try-one">
-            <div for="{{tryOneData}}">
+            <div for="{{tryOneData}}" onclick="toMyAddress($idx)">
                 <image src="{{$item.tryOneDataIcons}}"></image>
                 <text>{{$item.tryOneDataName}}</text>
             </div>
