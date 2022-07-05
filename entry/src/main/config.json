@@ -23,6 +23,14 @@
         "name": "ohos.permission.INTERNET"
       }
     ],
+    "metaData": {
+      "customizeData": [
+        {
+          "name": "hwc-theme",
+          "value": "androidhwext:style/Theme.Emui.NoTitleBar"
+        }
+      ]
+    },
     "deviceType": [
       "phone",
       "tablet",
@@ -59,9 +67,9 @@
     "js": [
       {
         "pages": [
+          "pages/chat/chat",
           "pages/index/index",
           "pages/findpages/mainpages/mainpages",
-          "pages/chat/chat",
           "pages/contectUserPage/contectUserPage",
           "pages/personalPage/personalPage",
           "pages/message/message",
