@@ -37,6 +37,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 }
 
 .div3 {
@@ -52,7 +53,8 @@
 }
 
 .image {
-    bject-fit: cover;
+    margin-top: 10px;
+    object-fit: cover;
     height: 180px;
     border-radius: 20px;
 }
@@ -69,9 +71,10 @@
 }
 
 .image1 {
-    object-fit: contain;
+    object-fit: cover;
     height: 50px;
-    width: 40px;
+    width: 50px;
+    border-radius: 25px;
 }
 
 .text2 {

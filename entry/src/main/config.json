@@ -53,6 +53,7 @@
     "js": [
       {
         "pages": [
+          "pages/findpages/mainpages/mainpages",
           "pages/chat/chat",
           "pages/index/index",
           "pages/personalPage/personalPage",
@@ -61,7 +62,6 @@
           "pages/shoppingcar/shoppingcar",
           "pages/findpages/videofind/videofind",
           "pages/findpages/attentionpage/attentionpage",
-          "pages/findpages/mainpages/mainpages",
           "pages/myOrder/myOrder",
           "pages/account/account",
           "pages/myOrder/myOrder",
