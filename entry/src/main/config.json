@@ -62,7 +62,8 @@
           "pages/findpages/videofind/videofind",
           "pages/findpages/attentionpage/attentionpage",
           "pages/findpages/mainpages/mainpages",
-          "pages/myOrder/myOrder"
+          "pages/myOrder/myOrder",
+          "pages/account/account"
         ],
         "name": "default",
         "window": {
