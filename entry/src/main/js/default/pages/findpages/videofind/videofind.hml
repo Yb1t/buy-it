@@ -1,33 +1,36 @@
 <div class="container">
-    <stack style="width : 100%; height : 100%;">
-        <swiper indicator="false" autoplay="false" duration="500" vertical="true" style="height : 100%; width : 100%;">
+    <stack class="stack">
+        <swiper indicator="false" autoplay="false" duration="500" vertical="true" class="swiper">
             <block for="{{ videoData }}">
                 <video id="myVideo" onfinish="onfinish" loop="true" controls="false" autoplay="true"
                        style="object-fit : contain;" src="{{ $item }}"></video>
             </block>
         </swiper>
-        <div style="flex-direction : row; justify-content : space-between;align-items: center;width: 100%;height: 100%;">
-            <div style="flex-direction: column;background-color: white;">
+
+    <!--        点赞收藏-->
+        <div class="div1">
+            <div class="div2">
             </div>
-            <div style="flex-direction : column;">
-                <div style="flex-direction: column;">
-                    <image src="{{likeSrc}}" id="like" style="height: 32px;width: 32px;" onclick="likeClick"></image>
-                    <text style="font-size: 20px;color: white;">111</text>
+            <div class="div3">
+                <div class="div3">
+                    <image src="{{ likeSrc }}" id="like" class="image" onclick="likeClick"></image>
+                    <text style="font-size : 20px; color : white;">111</text>
                 </div>
-                <div style="flex-direction: column;margin-top: 30px;">
-                    <image src="{{saveSrc}}" style="height: 32px;width: 32px;" onclick="saveClick"></image>
-                    <text style="font-size: 20px;color: white;">111</text>
+                <div style="margin-top : 30px;" class="div3">
+                    <image src="{{ saveSrc }}" class="image" onclick="saveClick"></image>
+                    <text style="font-size : 20px; color : white;">111</text>
                 </div>
-                <div style="flex-direction: column;margin-top: 30px;">
-                    <image src="/common/icons/comment1.png" style="height: 32px;width: 32px;"></image>
-                    <text style="font-size: 20px;color: white;">111</text>
+                <div style="margin-top : 30px;" class="div3">
+                    <image src="/common/icons/comment1.png" class="image"></image>
+                    <text style="font-size : 20px; color : white;">111</text>
                 </div>
-                <div style="flex-direction: column;margin-top: 30px;">
-                    <image src="/common/icons/share-two.png" style="height: 32px;width: 32px;" onclick="shareClick"></image>
-                    <text style="font-size: 20px;color: white;">111</text>
+                <div style="margin-top : 30px;" class="div3">
+                    <image src="/common/icons/share-two.png" class="image" onclick="shareClick"></image>
+                    <text style="font-size : 20px; color : white;">111</text>
                 </div>
             </div>
         </div>
+
     </stack>
 
 </div>
