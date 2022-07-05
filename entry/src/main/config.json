@@ -59,17 +59,20 @@
     "js": [
       {
         "pages": [
-          "pages/chat/chat",
-          "pages/findpages/mainpages/mainpages",
-          "pages/contectUserPage/contectUserPage",
           "pages/index/index",
+          "pages/findpages/mainpages/mainpages",
+          "pages/chat/chat",
+          "pages/contectUserPage/contectUserPage",
           "pages/personalPage/personalPage",
           "pages/message/message",
           "pages/findpages/find/find",
           "pages/shoppingcar/shoppingcar",
           "pages/findpages/videofind/videofind",
           "pages/findpages/attentionpage/attentionpage",
-          "pages/myOrder/myOrder"
+          "pages/myOrder/myOrder",
+          "pages/account/account",
+          "pages/myCollection/myCollection",
+          "pages/myAddress/myAddress"
         ],
         "name": "default",
         "window": {
@@ -82,16 +85,6 @@
           "pages/navbar/navbar"
         ],
         "name": "navbar",
-        "window": {
-          "designWidth": 720,
-          "autoDesignWidth": false
-        }
-      },
-      {
-        "pages": [
-          "pages/index/productMessageComponent"
-        ],
-        "name": "productMessageComponent",
         "window": {
           "designWidth": 720,
           "autoDesignWidth": false

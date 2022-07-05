@@ -29,16 +29,16 @@
                             <text style="height : 50px; font-size : 20px;"> {{ $item.name }}</text>
                             <div class="div5">
                                 <text>{{ $item.certification }}</text>
-                                <text>|{{ $item.email }}</text>
+                                <text> | {{ $item.email }}</text>
                             </div>
                             <text style="height : 35px; font-size : 15px;">粉丝{{ $item.num }}万</text>
                         </div>
-                        <button class="button">看看TA</button>
+                        <button class="button" style="background-color: beige;text-color: black;">看看TA</button>
                     </div>
                     <div class="div6">
-                        <image src="{{ $item.images1 }}" style="object-fit : contain;"></image>
-                        <image src="{{ $item.images2 }}" style="object-fit : contain;"></image>
-                        <image src="{{ $item.images3 }}" style="object-fit : contain;"></image>
+                        <image src="{{ $item.images1 }}" style="object-fit : cover;"></image>
+                        <image src="{{ $item.images2 }}" style="object-fit : cover;"></image>
+                        <image src="{{ $item.images3 }}" style="object-fit : cover;"></image>
                     </div>
                 </div>
             </div>
@@ -64,16 +64,16 @@
                             <text style="height : 50px; font-size : 20px;"> {{ $item.name }}</text>
                             <div class="div5">
                                 <text>{{ $item.certification }}</text>
-                                <text>|{{ $item.email }}</text>
+                                <text> | {{ $item.email }}</text>
                             </div>
                             <text style="height : 35px; font-size : 15px;">粉丝{{ $item.num }}万</text>
                         </div>
-                        <button class="button">看看TA</button>
+                        <button class="button" style="background-color: beige;text-color: black;">看看TA</button>
                     </div>
                     <div class="div6">
-                        <image src="{{ $item.images1 }}" style="object-fit : contain;"></image>
-                        <image src="{{ $item.images2 }}" style="object-fit : contain;"></image>
-                        <image src="{{ $item.images3 }}" style="object-fit : contain;"></image>
+                        <image src="{{ $item.images1 }}" style="object-fit : cover;"></image>
+                        <image src="{{ $item.images2 }}" style="object-fit : cover;"></image>
+                        <image src="{{ $item.images3 }}" style="object-fit : cover;"></image>
                     </div>
                 </div>
             </div>

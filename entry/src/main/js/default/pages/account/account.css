@@ -3,3 +3,242 @@
     background-color: #ebebeb;
 }
 
+.container-body {
+    justify-content: center;
+}
+
+.container-top {
+    flex-direction: row;
+    height: 50px;
+    background-color: white;
+    width: 100%;
+    padding-top: 10px;
+    position: fixed;
+    top: 0px;
+}
+
+.images-top {
+    width: 10px;
+    height: 100%;
+    margin-left: 5px;
+}
+
+.text-top {
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.container-address {
+    height: 70px;
+    width: 98%;
+    background-color: white;
+    margin-top: 60px;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.images-address {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.div-address {
+    flex-direction: column;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.text-address1 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.text-address2 {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.images-address-right {
+    height: 30px;
+    width: 20px;
+    margin-top: 20px;
+}
+
+.container-goods {
+    width: 98%;
+    background-color: white;
+    margin-top: 12px;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.images-business {
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    background-color: chocolate;
+    margin-left: 5px;
+}
+
+.text-business {
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.images-goods {
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: chocolate;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.div-goods1 {
+    flex-direction: column;
+    width: 65%;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.div-goods2 {
+    align-content: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container-condition1 {
+    height: 50px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.container-condition2 {
+    height: 50px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.div-condition1 {
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.images-condition {
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.text-condition1 {
+    font-size: 15px;
+    text-align: right;
+    font-weight: 600;
+}
+
+.text-condition2 {
+    font-size: 18px;
+}
+
+.text-condition3 {
+    font-size: 15px;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.div-alipay {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 5px;
+    padding-top: 8px;
+}
+
+.images-select {
+    height: 25px;
+    width: 25px;
+    border-radius: 10px;
+}
+
+.div-findfriend {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.div-change {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.images-change {
+    height: 25px;
+    width: 25px;
+    border-radius: 10px;
+    background-color: orangered;
+    margin-right: 5px;
+    border-width: 1fp;
+    border-color: silver;
+    object-fit: cover;
+}
+
+.container-number {
+    height: 70px;
+    width: 98%;
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    border-radius: 10px;
+}
+
+.div-number {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 40px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.images-question {
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    margin-left: 4px;
+}
+
+.text-select {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.container-bottom {
+    height: 50px;
+    background-color: white;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.div-bottom {
+    justify-content: center;
+    width: 100px;
+    height: 35px;
+    background-color: orangered;
+    border-radius: 20px;
+}

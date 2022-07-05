@@ -1,7 +1,7 @@
 export default {
     data: {
-        username:"12",
-        number:123456,
+        username:"名字",
+        number:21345789,
         allnum:0,
         selall:"/common/images/white.png",
     },

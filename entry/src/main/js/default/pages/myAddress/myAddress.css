@@ -1,27 +1,36 @@
 .my-address{
+    background-color: #f2f2f2;
     flex-direction: column;
     align-content: center;
     width: 100%;
     height: 100%;
 }
 .my-address-titile{
-    background-color: bisque;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 50px;
 }
+.my-address-body{
+    background-color: #fefefe;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px;
 
+}
 .address{
-    background-color: aqua;
+    background-color: #fefefe;
+    border-radius: 10px;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 100px;
 }
 .address-main{
-    background-color: cadetblue;
+    background-color: #fefefe;
     flex-direction: column;
     width: 100%;
     height: 100%;

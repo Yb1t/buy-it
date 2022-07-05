@@ -19,7 +19,7 @@
         <div class="order-title">
             <image style="width: 30px;height: 30px;"src="/common/icons/icon_application.png"></image>
             <text style="font-weight: 600;font-size: 18px; width: 55px;">店铺名</text>
-            <image style="width: 30px;height: 30px;"src="/common/icons/icon_circle-double-right.png"></image>
+            <image style="width: 20px;height: 20px;"src="/common/icons/icon_circle-double-right.png"></image>
             <text style="font-size: 13px; width: 180px;text-align: right;color: #eb612a;">交易状态</text>
         </div>
         
@@ -39,11 +39,10 @@
                     <text style="font-size: 15px; width: 100%;text-align: end;color: darkgray;">含运费险服务</text>
                     <text style="font-size: 16px; width: 100%;text-align: end;font-weight: 600;">实际付款 ￥价格</text>
                 </div>
-
             </div>
         </div>
         <div class="order-main-button">
-            <text style="font-size: 16px;width: 80px;color: darkgray;padding-left: 5px;">更多</text>
+            <text style="font-size: 14px;width: 80px;color: darkgray;padding-left: 5px;">更多</text>
             <button>加入购物车</button>
             <button>追加评价</button>
             <button>查看物流</button>
@@ -54,7 +53,7 @@
         <div class="order-title">
             <image style="width: 30px;height: 30px;"src="/common/icons/icon_application.png"></image>
             <text style="font-weight: 600;font-size: 18px; width: 55px;">店铺名</text>
-            <image style="width: 30px;height: 30px;"src="/common/icons/icon_circle-double-right.png"></image>
+            <image style="width: 20px;height: 20px;"src="/common/icons/icon_circle-double-right.png"></image>
             <text style="font-size: 13px; width: 180px;text-align: right;color: #eb612a;">交易状态</text>
         </div>
 
@@ -74,11 +73,10 @@
                     <text style="font-size: 15px; width: 100%;text-align: end;color: darkgray;">含运费险服务</text>
                     <text style="font-size: 16px; width: 100%;text-align: end;font-weight: 600;">实际付款 ￥价格</text>
                 </div>
-
             </div>
         </div>
         <div class="order-main-button">
-            <text style="font-size: 16px;width: 80px;color: darkgray;padding-left: 5px;">更多</text>
+            <text style="font-size: 14px;width: 80px;color: darkgray;padding-left: 5px;">更多</text>
             <button>加入购物车</button>
             <button>追加评价</button>
             <button>查看物流</button>

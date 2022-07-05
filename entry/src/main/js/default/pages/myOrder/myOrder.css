@@ -26,6 +26,7 @@
 
 .top-navbar text{
     font-size: 18px;
+    color: #eb612a;
 }
 
 .order{
@@ -41,9 +42,10 @@
 }
 
 .order-title{
-    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 30px;
     width: 100%;
@@ -84,9 +86,10 @@
 }
 
 .order-main-button button{
-    background-color: orange;
+    background-color: #f2f2f2;
     width: 80px;
     height: 30px;
-    color: black;
+    text-color: black;
+    font-size: 12px;
 
 }
