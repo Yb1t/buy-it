@@ -17,25 +17,37 @@
         </div>
     </div>
 
-    <list id="chatList" class="list" style="margin-top: {{topHeight}};">
+    <list id="chatList" class="list" style="margin-top: {{topHeight}};margin-bottom: {{bottomHeight}};">
         <list-item for="{{array}}" class="listItem">
             <div style="flex-direction: column;">
+
                 <div style="justify-content: center;align-items: center;width: 100%;">
                     <text class="date-text">{{$item.date}}</text>
                 </div>
+
                 <div if="{{$item.sender == sendTo.userId}}" style="flex-direction: row;">
-                    <image src="{{sendTo.avatar}}"></image>
-                    <text class="msg-text" style="background-color: cornsilk;">{{$item.content}}</text>
+                    <image class="img-avatar" src="{{sendTo.avatar}}"></image>
+                    <text if="{{$item.type==1}}" class="msg-text" style="background-color: cornsilk;">{{$item.content}}</text>
+                    <div elif="{{$item.type==2}}" class="msg-text" style="background-color: cornsilk;" onclick="goProduct">
+                        <image src="{{$item.content.img}}"></image>
+                        <text>{{$item.content.title}}</text>
+                    </div>
                 </div>
+
                 <div else style="flex-direction: row;width: 100%;justify-content: flex-end;">
-                    <text class="msg-text" style="background-color: orange;">{{$item.content}}</text>
-                    <image src="{{user.avatar}}"></image>
+                    <text if="{{$item.type==1}}" class="msg-text" style="background-color: orange;">{{$item.content}}</text>
+                    <div elif="{{$item.type==2}}" class="msg-text" style="background-color: orange;" onclick="goProduct">
+                        <image src="{{$item.content.img}}"></image>
+                        <text>{{$item.content.title}}</text>
+                    </div>
+                    <image class="img-avatar" src="{{user.avatar}}"></image>
                 </div>
+
             </div>
         </list-item>
     </list>
 
-    <div class="message-input">
+    <div class="message-input" style="height: {{bottomHeight}};">
         <div class="search-item">
             <input class="search" type="text" enterkeytype="send" placeholder="输入消息" onchange="changInput">
             </input>

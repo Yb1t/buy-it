@@ -71,8 +71,25 @@
     margin-bottom: 10px;
 }
 .msg-text{
+    max-width: 80%;
     font-size: 20px;
     border-radius: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
+}
+
+.msg-text image{
+    max-height: 100px;
+    max-width: 100px;
+    min-width: 100px;
+    min-height: 100px;
+}
+
+.msg-text text{
+    padding-right: 20px;
+/*    text-overflow: ellipsis;*/
+}
+
+.img-avatar{
+    width: 50px;
+    height: 50px;
 }
