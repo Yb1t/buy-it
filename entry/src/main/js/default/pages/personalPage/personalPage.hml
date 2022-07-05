@@ -14,21 +14,10 @@
     </div>
     <!--收藏.....-->
     <div class="collction">
-        <div>
-            <image src="/common/images/icon_star.png"></image>
-            <text>收藏</text>
-        </div>
-        <div>
-            <image src="/common/images/icon_star.png"></image>
-            <text>收藏</text>
-        </div>
-        <div>
-            <image src="/common/images/icon_star.png"></image>
-            <text>收藏</text>
-        </div>
-        <div>
-            <image src="/common/images/icon_star.png"></image>
-            <text>收藏</text>
+
+        <div for="{{collectionData}}">
+            <image src="{{$item.collectionDataIcons}}"></image>
+            <text>{{$item.collectionDataName}}</text>
         </div>
 
     </div>
@@ -41,50 +30,20 @@
         </div>
 
         <div class="my-order-icon">
-            <div>
-                <image src="/common/images/icon_transporter.png"></image>
-                <text>待收货</text>
+            <div for="{{orderDate}}">
+                <image src="{{$item.orderIcons}}"></image>
+                <text>{{$item.orderName}}</text>
             </div>
-            <div>
-                <image src="/common/images/icon_transporter.png"></image>
-                <text>待收货</text>
-            </div>
-            <div>
-                <image src="/common/images/icon_transporter.png"></image>
-                <text>待收货</text>
-            </div>
-            <div>
-                <image src="/common/images/icon_transporter.png"></image>
-                <text>待收货</text>
-            </div>
-            <div>
-                <image src="/common/images/icon_transporter.png"></image>
-                <text>待收货</text>
-            </div>
+
         </div>
 
     </div>
     <!--会员中心.....-->
     <div class="vip">
-        <div>
-            <image src="/common/images/vip_vip-one.png"></image>
-            <text style="font-weight:600;font-size: 13px;">会员中心</text>
-            <text style="font-size: 12px;margin-top: 5px;color: darkgray;">查看权益</text>
-        </div>
-        <div>
-            <image src="/common/images/vip_vip-one.png"></image>
-            <text style="font-weight:600;font-size: 13px;">会员中心</text>
-            <text style="font-size: 12px;margin-top: 5px;color: darkgray;">查看权益</text>
-        </div>
-        <div>
-            <image src="/common/images/vip_vip-one.png"></image>
-            <text style="font-weight:600;font-size: 13px;">会员中心</text>
-            <text style="font-size: 12px;margin-top: 5px;color: darkgray;">查看权益</text>
-        </div>
-        <div>
-            <image src="/common/images/vip_vip-one.png"></image>
-            <text style="font-weight:600;font-size: 13px;">会员中心</text>
-            <text style="font-size: 12px;margin-top: 5px;color: darkgray;">查看权益</text>
+        <div for="{{vipData}}">
+            <image src="{{$item.vipDataIcons}}"></image>
+            <text style="font-weight:600;font-size: 13px;">{{$item.vipDataName}}</text>
+            <text style="font-size: 12px;margin-top: 5px;color: darkgray;">{{$item.vipDataDital}}</text>
         </div>
 
 
@@ -92,40 +51,18 @@
     <!--试用领取-->
     <div class="try">
         <div class="try-one">
-            <div>
-                <image src="/common/images/icon_local.png"></image>
-                <text>收货地址</text>
+            <div for="{{tryOneData}}">
+                <image src="{{$item.tryOneDataIcons}}"></image>
+                <text>{{$item.tryOneDataName}}</text>
             </div>
-            <div>
-                <image src="/common/images/icon_local.png"></image>
-                <text>收货地址</text>
-            </div>
-            <div>
-                <image src="/common/images/icon_local.png"></image>
-                <text>收货地址</text>
-            </div>
-            <div>
-                <image src="/common/images/icon_local.png"></image>
-                <text>收货地址</text>
-            </div>
+
         </div>
         <div class="try-one">
-            <div>
-                <image src="/common/images/icon_local.png"></image>
-                <text>收货地址</text>
+            <div for="{{tryTwoData}}">
+                <image src="{{$item.tryOneDataIcons}}"></image>
+                <text>{{$item.tryOneDataName}}</text>
             </div>
-            <div>
-                <image src="/common/images/icon_local.png"></image>
-                <text>收货地址</text>
-            </div>
-            <div>
-                <image src="/common/images/icon_local.png"></image>
-                <text>收货地址</text>
-            </div>
-            <div>
-                <image src="/common/images/icon_local.png"></image>
-                <text>收货地址</text>
-            </div>
+
         </div>
     </div>
 
