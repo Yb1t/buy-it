@@ -54,10 +54,11 @@
 .image {
     bject-fit: cover;
     height: 180px;
+    border-radius: 20px;
 }
 
 .text1 {
-    height: 20px;
+    height: 30px;
     font-size: 20fp;
 }
 
