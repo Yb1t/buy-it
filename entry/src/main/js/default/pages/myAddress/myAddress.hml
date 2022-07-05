@@ -1,20 +1,22 @@
 <div class="my-address">
     <div class="my-address-titile">
         <image style="width: 30px;height: 30px;"></image>
-        <text style="font-size: 26px;width: 100%;">我的收货地址</text>
-        <text style="font-size: 18px;width: 50px;">管理</text>
+        <text style="font-size: 18px;width: 100%;">我的收货地址</text>
+        <text style="font-size: 16px;width: 50px;color: #eb5d2a;">管理</text>
+    </div>
+    <div class="my-address-body">
+        <div class="address">
+            <image style="height: 40px;width: 40px;margin: 10px;"src="/common/icons/icon_home-two.png"></image>
+            <div class="address-main">
+                <div class="address-name-phone">
+                    <text style="font-size: 16px;font-weight: 600;">联系人</text>
+                    <text style="font-size: 12px;margin-left: 10px;color: darkgray;">电话</text>
+                    <image style="height: 80px;width: 80px;"></image>
+                </div>
+                <text style="font-size: 14px;font-weight: 400;">地址地址 地址地址地址地址地 址地址地址 地址地址地址</text>
+            </div>
+            <image style="height: 20px;width: 20px;margin: 5px;"src="/common/icons/icon_edit.png"></image>
+        </div>
     </div>
 
-    <div class="address">
-        <image style="height: 80px;width: 80px;"></image>
-        <div class="address-main">
-            <div class="address-name-phone">
-                <text style="font-size: 18px;">联系人</text>
-                <text style="font-size: 14px;margin-left: 10px;">电话</text>
-                <image style="height: 80px;width: 80px;"></image>
-            </div>
-            <text style="font-size: 16px;">地址地址地址地址地址地址地址地址地址地址地址地址</text>
-        </div>
-        <image style="height: 80px;width: 80px;"></image>
-    </div>
 </div>
