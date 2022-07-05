@@ -6,16 +6,16 @@
         <div style="width : 200px;">
             <image src="/common/images/camera.png"></image>
         </div>
-        <div style="flex-direction : column; align-items : center; justify-content : center; width : 100%;" for="{{menu}}" onclick="click({{$idx}})">
+        <div class="div1" for="{{menu}}" onclick="click({{$idx}})">
             <block if="{{local==$idx}}">
-                <text style="margin-right : 5px;color: red;">{{$item}}</text>
+                <text class="text1">{{$item}}</text>
             </block>
             <block else>
-                <text style="margin-right : 5px;">{{$item}}</text>
+                <text class="text2">{{$item}}</text>
             </block>
         </div>
         <div style="width : 200px;">
-            <image style="border-radius : 50px; height : 50px; width : 50px; " src="/common/icons/user.png"></image>
+            <image class="image" src="/common/icons/user.png"></image>
         </div>
     </div>
     <div>

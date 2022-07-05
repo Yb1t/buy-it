@@ -1,33 +1,50 @@
 <div class="container">
-    <stack style="width : 100%; height : 100%;">
-        <swiper indicator="false" autoplay="false" duration="500" vertical="true" style="height : 100%; width : 100%;">
+    <stack class="stack">
+        <swiper indicator="false" autoplay="false" duration="500" vertical="true" class="swiper">
             <block for="{{ videoData }}">
                 <video id="myVideo" onfinish="onfinish" loop="true" controls="false" autoplay="true"
-                       style="object-fit : contain;" src="{{ $item }}"></video>
+                       style="object-fit : contain;" src="{{ $item }}" muted="{{mute}}" ></video>
             </block>
         </swiper>
-        <div style="flex-direction : row; justify-content : space-between;align-items: center;width: 100%;height: 100%;">
-            <div style="flex-direction: column;background-color: white;">
+
+    <!--        点赞收藏-->
+        <div class="div1">
+<!--            左部布局-->
+            <div class="div2">
+                <image style="margin-top : 300px; height : 32px; width : 32px;" src="{{voiceSrc}}" onclick="voiceClick">
+                </image>
+                <div style="flex-direction: row;height: 50px;">
+                    <text style="font-size: 25fp;color: white;"> @跑酷达人</text>
+                    <button style="background-color: yellow;text-color: black;">+关注</button>
+                </div>
+                <text style="color: white;font-size: 20fp;">近日一小伙在街边跑酷</text>
             </div>
-            <div style="flex-direction : column;">
-                <div style="flex-direction: column;">
-                    <image src="{{likeSrc}}" id="like" style="height: 32px;width: 32px;" onclick="likeClick"></image>
-                    <text style="font-size: 20px;color: white;">111</text>
+<!--            右部布局-->
+            <div class="div2">
+                <div class="div2">
+                    <image src="/common/icons/people.png" id="like" class="image"></image>
                 </div>
-                <div style="flex-direction: column;margin-top: 30px;">
-                    <image src="{{saveSrc}}" style="height: 32px;width: 32px;" onclick="saveClick"></image>
-                    <text style="font-size: 20px;color: white;">111</text>
+                <div class="div2">
+                    <image src="{{ likeSrc }}" id="like" class="image" onclick="likeClick" style="margin-top : 30px;">
+                    </image>
+                    <text style="font-size : 20px; color : white;">111</text>
                 </div>
-                <div style="flex-direction: column;margin-top: 30px;">
-                    <image src="/common/icons/comment1.png" style="height: 32px;width: 32px;"></image>
-                    <text style="font-size: 20px;color: white;">111</text>
+                <div style="margin-top : 30px;" class="div2">
+                    <image src="{{ saveSrc }}" class="image" onclick="saveClick"></image>
+                    <text style="font-size : 20px; color : white;">111</text>
                 </div>
-                <div style="flex-direction: column;margin-top: 30px;">
-                    <image src="/common/icons/share-two.png" style="height: 32px;width: 32px;" onclick="shareClick"></image>
-                    <text style="font-size: 20px;color: white;">111</text>
+                <div style="margin-top : 30px;" class="div2">
+                    <image src="/common/icons/comment1.png" class="image"></image>
+                    <text style="font-size : 20px; color : white;">111</text>
+                </div>
+                <div style="margin-top : 30px;" class="div2">
+                    <image src="/common/icons/share-two.png" class="image" onclick="shareClick"></image>
+                    <text style="font-size : 20px; color : white;">111</text>
                 </div>
             </div>
         </div>
+        <progress style="color: white;"></progress>
+
     </stack>
 
 </div>

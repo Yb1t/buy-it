@@ -4,7 +4,8 @@
     align-items: center;
     width: 100%;
 }
-.div{
+
+.div {
     flex-direction: row;
     width: 100%;
     height: 50px;
@@ -15,4 +16,66 @@
     text-align: center;
     width: 200px;
     height: 100px;
+}
+
+.div2 {
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.tab-bar {
+    width: 100%;
+    height: 100px;
+}
+
+.text {
+    font-size: 30px;
+}
+
+.divContent {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div3 {
+    width: 48%;
+    height: 250px;
+    flex-direction: column;
+}
+
+.div4 {
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+}
+
+.image {
+    bject-fit: cover;
+    height: 180px;
+    border-radius: 20px;
+}
+
+.text1 {
+    height: 30px;
+    font-size: 20fp;
+}
+
+.div5 {
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+}
+
+.image1 {
+    object-fit: contain;
+    height: 50px;
+    width: 40px;
+}
+
+.text2 {
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
 }
