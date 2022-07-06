@@ -1,18 +1,28 @@
 <div class="my-collection">
     <div class="my-collection-head">
         <image style="width: 100px;height: 30px;margin-top: 5px;"></image>
-        <text style="font-size: 18px;font-weight: 600;text-align: center;">我的收藏（num）</text>
+        <text style="font-size: 18px;font-weight: 600;text-align: center;">我的收藏（{{ myCollection[0].collectionNum }}）</text>
         <image style="width: 20px;height: 20px;margin-start: 20px;"src="/common/icons/icon_search.png"></image>
         <text style="font-size: 16px;width: 50px;text-align: end;margin-end: 10px;">管理</text>
     </div>
 
-    <div class="my-collection-tab">
+<!--    <div class="my-collection-tab">
         <text>宝贝</text>
         <text>图文</text>
         <text>视频</text>
         <text>话题</text>
         <text>清单</text>
-    </div>
+    </div>-->
+
+    <tabs class="tabs" onchange="tabChange">
+        <tab-bar class="tabBar">
+            <text class="tabBarItem">宝贝</text>
+            <text class="tabBarItem">图文</text>
+            <text class="tabBarItem">视频</text>
+            <text class="tabBarItem">话题</text>
+            <text class="tabBarItem">清单</text>
+        </tab-bar>
+    </tabs>
 
     <div class="my-collection-body">
         <div class="my-collection-select">

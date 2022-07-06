@@ -1,4 +1,6 @@
+
 import router from '@system.router';
+import http from '@ohos.net.http';
 export default {
     data: {
         title: 'World',
@@ -32,7 +34,73 @@ export default {
             {"tryOneDataIcons":"/common/icons/icon_financing-one.png","tryOneDataName":"来摇现金"},
             {"tryOneDataIcons":"/common/icons/icon_vip.png","tryOneDataName":"店铺会员"},
             {"tryOneDataIcons":"/common/icons/icon_system.png","tryOneDataName":"更多"}
-        ]
+        ],
+        myResult:{
+            "body":{
+                "userId": 1,
+                "userName": "哟壹",
+                "userAccount": 123456,
+                "userPassword": "123456",
+                "userPhone": "110",
+                "userEmail": "298505@qq.com",
+                "headPhoto": "http://localhost:8080/images/2022.07.05/2.png",
+                "userCreatetime": "2022-06-30T08:35:11.000+00:00",
+                "userAddress": "桂林电子科技大学花江校区",
+                "userRole": "管理员",
+                "userLevel": 100,
+                "userIntroduce": null,
+                "userStatus": 0,
+                "money": 1.0E10
+            },
+            "code":100,
+            "msg":"街火速成功"
+        },
+        userData: {
+            "userId": 1,
+            "userName": "哟壹",
+            "userAccount": 123456,
+            "userPassword": "123456",
+            "userPhone": "110",
+            "userEmail": "298505@qq.com",
+            "headPhoto": "http://localhost:8080/images/2022.07.05/2.png",
+            "userCreatetime": "2022-06-30T08:35:11.000+00:00",
+            "userAddress": "桂林电子科技大学花江校区",
+            "userRole": "管理员",
+            "userLevel": 100,
+            "userIntroduce": null,
+            "userStatus": 0,
+            "money": 1.0E10
+        }
+
+    },
+    onInit() {
+        // 每一个httpRequest对应一个http请求任务，不可复用
+        let httpRequest = http.createHttp();
+        httpRequest.request(
+        // 填写http请求的url地址，可以带参数也可以不带参数。URL地址需要开发者自定义。GET请求的参数可以在extraData中指定
+            "http://huangrui.vaiwan.com/users/account/123456789",
+            {
+
+            }, (err, data) => {
+            if (!err) {
+                // data.result为http响应内容，可根据业务需要进行解析
+                console.info('Result:' + data.result);
+                console.info('code:' + data.responseCode);
+                // data.header为http响应头，可根据业务需要进行解析
+                console.info('header:' + data.header);
+
+                this.myResult = JSON.parse(data.result);
+                this.userData = this.myResult.body;
+
+                console.info("接受到的code数据: "+this.myResult.code)
+                console.info("接受到的msg数据: "+this.myResult.msg)
+                console.info("接受到的order数据: "+this.userData.toString())
+
+            } else {
+                console.info('error:' + err.message);
+            }
+        });
+
     },
     toMyOrder(){
         router.push({

@@ -22,4 +22,9 @@
         
     </div>
 
+    <div class="my-address-button">
+        <button>添加收货地址</button>
+    </div>
+
+
 </div>

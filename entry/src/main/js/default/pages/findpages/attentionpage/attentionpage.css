@@ -48,9 +48,8 @@
 .image1 {
     height: 80px;
     width: 80px;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 800px;
-    background-color: red;
     margin-top: 20px;
 }
 
@@ -72,4 +71,9 @@
     flex-direction: row;
     height: 180px;
     width: 100%;
+}
+.image-pic{
+    object-fit : cover;
+    border-radius: 10px;
+    margin-right: 5px;
 }
