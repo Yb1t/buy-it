@@ -16,14 +16,14 @@
                 </div>
                 <text style="font-size: 14px;font-weight: 400;">{{$item.addressMain}}</text>
             </div>
-            <image style="height: 20px;width: 20px;margin: 5px;"src="/common/icons/icon_edit.png"></image>
+            <image style="height: 20px;width: 20px;margin: 5px;"src="/common/icons/icon_edit.png"onclick="toUpdate"></image>
         </div>
         
         
     </div>
 
     <div class="my-address-button">
-        <button>添加收货地址</button>
+        <button onclick="toAdd">添加收货地址</button>
     </div>
 
 

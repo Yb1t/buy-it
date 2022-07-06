@@ -21,7 +21,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    pupdateing: 10px;
+    padding: 10px;
     height: 60px;
 }
 
@@ -45,7 +45,7 @@
     height: 80px;
     flex-direction: row;
     justify-content: space-between;
-    pupdateing: 10px;
+    padding: 10px;
     align-items: center;
 }
 

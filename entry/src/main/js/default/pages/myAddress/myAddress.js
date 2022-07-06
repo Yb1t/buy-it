@@ -1,4 +1,5 @@
 import http from '@ohos.net.http';
+import router from '@system.router';
 export default {
     data: {
         title: 'World',
@@ -21,6 +22,16 @@ export default {
             }
         ]
     },
+    toUpdate(){
+        router.push({
+            uri:"pages/updateAddress/updateAddress"
+        })
+    },
+    toAdd(){
+        router.push({
+            uri:"pages/addAddress/addAddress"
+        })
+    }
     /*onInit() {
         // 每一个httpRequest对应一个http请求任务，不可复用
         let httpRequest = http.createHttp();
