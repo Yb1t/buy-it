@@ -1,5 +1,5 @@
 <div class="container">
-    <tabs onchange="tabChange1">
+    <tabs id="attentionPageTabs" onchange="tabChange1">
         <tab-bar>
             <text style="font-size : 20px;">看过的人</text>
 

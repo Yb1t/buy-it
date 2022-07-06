@@ -3,6 +3,7 @@ import document from '@ohos.document';
 export default {
     data: {
         title: ['全部', '美食', '音乐', '居家', '穿搭'],
+        value:0,
         dynamic: [{
                       "image": "/common/findImage/image11.png",
                       "content": "好吃的",
@@ -27,6 +28,37 @@ export default {
                       "imagesrc": "/common/icons/boy.png",
                       "name": "桂电一号"
                   },
+                  {
+                      "image": "/common/icons/boy.png",
+                      "content": "111不谢",
+                      "imagesrc": "/common/icons/boy.png",
+                      "name": "桂电一号"
+                  },
+                  {
+                      "image": "/common/icons/boy.png",
+                      "content": "111不谢",
+                      "imagesrc": "/common/icons/boy.png",
+                      "name": "桂电一号"
+                  },
+                  {
+                      "image": "/common/icons/boy.png",
+                      "content": "111不谢",
+                      "imagesrc": "/common/icons/boy.png",
+                      "name": "桂电一号"
+                  },
+                  {
+                      "image": "/common/icons/boy.png",
+                      "content": "111不谢",
+                      "imagesrc": "/common/icons/boy.png",
+                      "name": "桂电一号"
+                  },
+                  {
+                      "image": "/common/icons/boy.png",
+                      "content": "111不谢",
+                      "imagesrc": "/common/icons/boy.png",
+                      "name": "桂电一号"
+                  }
+
         ],
         familyData: [{
                          "image": "/common/findImage/jujia (1).png",
@@ -52,6 +84,7 @@ export default {
                          "imagesrc": "/common/findImage/2 (3).png",
                          "name": "桂电一号"
                      },
+
         ],
         musicData: [{
                         "image": "/common/findImage/music (1).png",
@@ -102,6 +135,12 @@ export default {
                        "imagesrc": "/common/findImage/2 (3).png",
                        "name": "桂电一号"
                    },
+                   {
+                       "image": "/common/findImage/food (4).png",
+                       "content": "明明可以直接抢钱，他还给我一根雪糕",
+                       "imagesrc": "/common/findImage/2 (3).png",
+                       "name": "桂电一号"
+                   },
         ],
         clothesData: [{
                           "image": "/common/findImage/clothes (1).png",
@@ -130,7 +169,11 @@ export default {
         ]
     },
     tabchange(e) {
-        //        console.info("Tab index: " + e.index )
+                console.info("Tab index: " + e.index )
 
-    }
+    },
+//    titleClick(e){
+//        this.value=e
+//        console.log(""+this.value)
+//    }
 }
