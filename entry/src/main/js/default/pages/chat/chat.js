@@ -10,7 +10,7 @@ export default {
         topHeight: "100px",
         bottomHeight: "50px",
         ws: null,
-        url: "ws://haotest.vaiwan.com/ws/",
+        url: "ws://huangrui.vaiwan.com/ws/",
         user: {
             userId: 1,
             username: "hao",
@@ -25,34 +25,31 @@ export default {
         isOnline: false,
         isSending: false,
         input: "",
-        isExpand: false,
-        maxLine: 2,
-        expandText: "展开",
         array: [
-            {type:1, receiver: 1, sender: 2, content:"你好", date: "22/06/29 12:00"},
-            {type:1, receiver: 2, sender: 1, content:"balbalba", date:"22/06/29 12:00"},
-            {type:1, receiver: 1, sender: 2, content:"你好你好你好", date:"22/06/29 00:00"},
-            {type:1, receiver: 2, sender: 1, content:"啦啦啦啦啦", date:"22/06/29 12:00"},
+            {type:1, receiver: 1, sender: 2, content:"你好"},//, date: "22/06/29 12:00"},
+            {type:1, receiver: 2, sender: 1, content:"balbalba"},// date:"22/06/29 12:00"},
+            {type:1, receiver: 1, sender: 2, content:"你好你好你好"},// date:"22/06/29 00:00"},
+            {type:1, receiver: 2, sender: 1, content:"啦啦啦啦啦"},// date:"22/06/29 12:00"},
             {type:2, receiver: 1, sender: 2,
                 content: {
                     title:"中文测试我是老六老六老六老六",
                     link: "https://item.taobao.com/item.htm?spm=a21bo.jianhua.201876.6.5af911d9JMzA3P&id=599695626728&scm=1007.40986.275655.0&pvid=27c7e238-02a6-400c-a907-92c0767cc23e",
                     imgUrl: "https://gw.alicdn.com/bao/uploaded/i1/2261059285/O1CN01bLCsxK2ISa85jthDm_!!0-item_pic.jpg_300x300q90.jpg",
-                    },
-                date:"22/06/29 20:00"},
+                    }
+            },
             {type:2, receiver: 2, sender: 1,
                 content: {
                     title:"中英测试这是一条中eng商品标题测试测试测试shank you shank you",
                     link: "https://item.taobao.com/item.htm?spm=a21bo.jianhua.201876.6.5af911d9JMzA3P&id=599695626728&scm=1007.40986.275655.0&pvid=27c7e238-02a6-400c-a907-92c0767cc23e",
                     imgUrl: "https://gw.alicdn.com/bao/uploaded/i3/1624565934/O1CN01RTTRFy1thoztFTvWl_!!0-item_pic.jpg_300x300q90.jpg",
                 },
-                date:"22/06/29 20:00"}
+            }
         ],
 
     },
     onInit(){
         this.url = this.url + this.user.userId;
-//        if (this.shareProduct!='') {
+//        if (this.productId!='') {
             this.initProduct();
 //        }
         this.initWS();
@@ -60,34 +57,54 @@ export default {
     changInput(e){
         this.input = e.value
     },
-    send(){
+    sendMessage(){
+        this.send({
+            sender: this.user.userId,
+            target: this.sendTo.userId,
+            type: 1,
+            content: this.input
+        });
+    },
+    sendProduct(){
+        this.send({
+            type: 2,
+            sender: this.user.userId,
+            target: this.sendTo.userId,
+            content: {
+                title:this.product.proName,
+                proId: this.product.proId,
+                imgUrl: this.product.proMainPicture
+            },
+        })
+    },
+    send(object){
         this.isSending = true;
-
-        var time = new Date().toLocaleString('zh-CN');
-        this.array.push(
-            {receiver: this.sendTo.userId, sender: this.user.userId, content: this.input, date: time}
-        );
-
-//        var jsonString = JSON.stringify({
-//            "type": 1,
-////            "sender": this.user.userId,
-//            "target": this.sendTo.userId,
-//            "content": this.input
-//        })
-
-        if(this.ws!=null) {
-//            try{
-//                this.ws.send(jsonString, (err, value) => {
-//                    if (!err) {
-//                        console.log("send success");
-//                    } else {
-//                        console.log("send fail, err:" + JSON.stringify(err));
-//                    }
-//                });
-//            }catch(err){
-//                console.log(JSON.stringify(err))
-//            }
+//        object.set({name: 'sender'}, this.user.userId);
+//        object.set({name:'receiver'}, this.sendTo.userId);
+        let sendObject = {}
+        if (object.type == 1){
+            sendObject = object
+        }else if(object.type == 2){
+            sendObject = {
+                type: object.type,
+                sender: object.sender,
+                target: object.target,
+                content: JSON.stringify(object.content)
+            }
         }
+        let jsonString = JSON.stringify(sendObject);
+        console.debug(jsonString);
+        if(this.ws!=null) {
+            this.ws.send(jsonString, (err, value) => {
+                if (!err) {
+                    console.log("send success");
+                } else {
+                    console.log("send fail, err:" + JSON.stringify(err));
+                }
+            });
+        }
+        this.array.push(object);
+
         this.isSending = false;
         //TODO this.$element('chatList').scrollBottom(true);  //滚动到底部，无效
     },
@@ -96,7 +113,7 @@ export default {
         router.push({
             uri: 'pages/contectUserPage/contectUserPage',
             params: {
-                userId: this.sendTo
+                userId: this.sendTo.userId
             }
         })
     },
@@ -104,13 +121,13 @@ export default {
         let httpRequest = http.createHttp();
         httpRequest.request("http://huangrui.vaiwan.com/products/id/"+this.productId, (err, data) => {
             if (!err) {
-                this.product = JSON.parse(data.result);
+                this.product = JSON.parse(data.result).body;
                 console.info('Result:' + data.result);
                 console.info('code:' + data.responseCode);
                 console.info('header:' + data.header);
                 prompt.showDialog({
                     title: '分享商品',
-                    message: this.product.body.proName,
+                    message: this.product.proName,
                     buttons: [
                         {
                             text: '取消',
@@ -121,10 +138,8 @@ export default {
                             color: '#FFA500',
                         }
                     ],
-                    success: function(data) {
-                        if (data.index==1){
-                            console.log('发送，，dialog success callback，click button : ' + data.index);
-                        }
+                    success: (data)=>{
+                        this.sendProduct();
                     },
                     cancel: function() {
                         console.log('dialog cancel callback');
@@ -139,51 +154,35 @@ export default {
         this.ws = webSocket.createWebSocket();
         this.ws.on('open', (err, value) => {
             console.log("on open, status:" + value.status + ", message:" + value.message);
-            prompt.showToast("成功连接服务器")
+            prompt.showToast({message: "成功连接websocket服务器"});
         });
         this.ws.on('message', (err, value) => {
             console.log("on message, message:" + value);
-//            var message = JSON.parse(value);
-//            if (message.type === 0){
-//                prompt.showToast({
-//                    message: '对方已屏蔽您的消息'
-//                })
-//            }else{
-//                this.array.push({
-//                    sender: message.sender,
-//                    receiver: message.target,
-//                    content: message.content,
-//                    date: new Date().toLocaleString('zh-CN')
-//                })
-//            }
+            var object = JSON.parse(value);
+            if (object.type == 3){
+                prompt.showToast({message: '对方已屏蔽您的消息'});
+            }else if(object.type == 2) {
+                object.content = JSON.parse(object.content);
+            }
+            this.array.push(object);
         });
         this.ws.on('close', (err, value) => {
             console.log("on close, code is " + value.code + ", reason is " + value.reason);
         });
         this.ws.on('error', (err) => {
-//            console.log("on error, error:" + JSON.stringify(err));
+            console.log("on error, error:" + JSON.stringify(err));
         });
         this.ws.connect(this.url, (err, value) => {
             if (!err) {
                 console.log("connect success");
             } else {
-//                console.log("connect fail, err:" + JSON.stringify(err));
+                console.log("connect fail, err:" + JSON.stringify(err));
             }
         });
     },
     goProduct(url){
         console.log("跳转商品页面"+url);
 //        TODO 跳转
-    },
-    expand(){
-        this.isExpand = !this.isExpand
-        if (this.isExpand) {
-            this.expandText = "收起"
-            this.maxLine=1000
-        }else{
-            this.expandText = "展开"
-            this.maxLine=2
-        }
     }
 }
 
