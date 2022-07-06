@@ -1,6 +1,7 @@
 <element src="../find/find.hml" name="find"></element>
 <element src="../attentionpage/attentionpage.hml" name="attention"></element>
 <element src="../videofind/videofind.hml" name="videofind"></element>
+<element src="../../../../navbar/pages/navbar/navbar.hml" name="navbar"></element>
 <div class="container">
     <div class="div">
         <div style="width : 200px;">

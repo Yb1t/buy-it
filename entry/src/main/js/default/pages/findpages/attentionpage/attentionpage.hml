@@ -36,9 +36,9 @@
                         <button class="button" style="background-color: beige;text-color: black;">看看TA</button>
                     </div>
                     <div class="div6">
-                        <image src="{{ $item.images1 }}" style="object-fit : cover;"></image>
-                        <image src="{{ $item.images2 }}" style="object-fit : cover;"></image>
-                        <image src="{{ $item.images3 }}" style="object-fit : cover;"></image>
+                        <image src="{{ $item.images1 }}" class="image-pic"></image>
+                        <image src="{{ $item.images2 }}" class="image-pic"></image>
+                        <image src="{{ $item.images3 }}" class="image-pic"></image>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
 
             <!--                博主页-->
                 <div class="div3"
-                     for="{{ bloggerData }}">
+                     for="{{ bloggerData1 }}">
                     <div class="div4">
                         <image src="{{ $item.image }}"
                                class="image1"></image>
@@ -71,9 +71,9 @@
                         <button class="button" style="background-color: beige;text-color: black;">看看TA</button>
                     </div>
                     <div class="div6">
-                        <image src="{{ $item.images1 }}" style="object-fit : cover;"></image>
-                        <image src="{{ $item.images2 }}" style="object-fit : cover;"></image>
-                        <image src="{{ $item.images3 }}" style="object-fit : cover;"></image>
+                        <image src="{{ $item.images1 }}" class="image-pic"></image>
+                        <image src="{{ $item.images2 }}" class="image-pic"></image>
+                        <image src="{{ $item.images3 }}" class="image-pic"></image>
                     </div>
                 </div>
             </div>
