@@ -4,19 +4,19 @@
     </div>
     <div class="add-address-input">
         <text>收货人</text>
-        <input>名字</input>
+        <input onchange="getNameInput">名字</input>
     </div>
     <div class="add-address-input">
         <text>手机号码</text>
-        <input>手机号</input>
+        <input onchange="getPhoneInput">手机号</input>
     </div>
     <div class="add-address-input">
         <text>所在地区</text>
-        <input>省、市、区、街道</input>
+        <input onchange="getMainInput">省、市、区、街道</input>
     </div>
     <div class="add-address-input" style="height: 120px;">
         <text>详细地址</text>
-        <input style="height: 100px;">小区楼栋/乡村名称</input>
+        <input style="height: 100px;" onchange="getDetailInput">小区楼栋/乡村名称</input>
     </div>
     <div class="add-address-m">
         <text>设为默认收货地址</text>
