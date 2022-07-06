@@ -1,0 +1,27 @@
+<div class="add-address">
+    <div class="add-address-title">
+        <text style="font-size: 20px;margin-start: 50px;">添加收货地址</text>
+    </div>
+    <div class="add-address-input">
+        <text>收货人</text>
+        <input>名字</input>
+    </div>
+    <div class="add-address-input">
+        <text>手机号码</text>
+        <input>手机号</input>
+    </div>
+    <div class="add-address-input">
+        <text>所在地区</text>
+        <input>省、市、区、街道</input>
+    </div>
+    <div class="add-address-input" style="height: 120px;">
+        <text>详细地址</text>
+        <input style="height: 100px;">小区楼栋/乡村名称</input>
+    </div>
+    <div class="add-address-m">
+        <text>设为默认收货地址</text>
+        <switch></switch>
+    </div>
+    <button style="background-color: orange;height: 50px;width: 80%;border-radius: 50px;margin-top: 45px;font-size: 16px;font-weight: 600;">保存</button>
+
+</div>

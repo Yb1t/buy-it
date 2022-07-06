@@ -15,13 +15,13 @@ export default {
                 "addressMain":"广西壮族自治区桂林市桂林电子科技大学",
             },{
                 "addressId":1,
-                "addressName":"龙冰柱",
-                "addressPhone":"18844602356",
-                "addressMain":"广西壮族自治区桂林市桂林电子科技大学",
+                "addressName":"hhh",
+                "addressPhone":"10044602356",
+                "addressMain":"广西壮族自治区桂林市桂林电子科技大学花江校区",
             }
         ]
     },
-    onInit() {
+    /*onInit() {
         // 每一个httpRequest对应一个http请求任务，不可复用
         let httpRequest = http.createHttp();
         httpRequest.request(
@@ -49,5 +49,5 @@ export default {
             }
         });
 
-    }
+    }*/
 }
