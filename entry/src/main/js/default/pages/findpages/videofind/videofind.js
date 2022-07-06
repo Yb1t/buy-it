@@ -93,6 +93,7 @@ export default {
 //    获取输入的信息
     inputChange(e){
         this.message = e.value
+        console.log("评论区内容："+e.value)
     },
 //    评论发布
     sentComment(){
