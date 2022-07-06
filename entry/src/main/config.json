@@ -67,7 +67,7 @@
     "js": [
       {
         "pages": [
-          "pages/chat/chat",
+          "pages/myOrder/myOrder",
           "pages/index/index",
           "pages/findpages/mainpages/mainpages",
           "pages/contectUserPage/contectUserPage",
@@ -77,10 +77,10 @@
           "pages/shoppingcar/shoppingcar",
           "pages/findpages/videofind/videofind",
           "pages/findpages/attentionpage/attentionpage",
-          "pages/myOrder/myOrder",
           "pages/account/account",
           "pages/myCollection/myCollection",
-          "pages/myAddress/myAddress"
+          "pages/myAddress/myAddress",
+          "pages/chat/chat"
         ],
         "name": "default",
         "window": {
