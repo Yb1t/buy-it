@@ -9,7 +9,7 @@ export default {
         },
         myOrder:[
             {
-                "orderId":1,
+                "orderId":9999,
                 "buyer":null,
                 "orderBuyer":{
                     "userId":1,
@@ -59,10 +59,13 @@ export default {
                     "proStatus":"在售",
                     "introduce":"暂无介绍"
                 }
-
-
             },
         ]
+    },
+    tabChange(e){
+
+        console.info("Tab index: " + e.index)
+
     },
     onInit() {
         // 每一个httpRequest对应一个http请求任务，不可复用
