@@ -1,95 +1,98 @@
 <div class="container">
-    <div class="div">
+    <div class="div1">
         <search hint="请输入搜索内容" searchbutton="搜索" @search="search">
         </search>
     </div>
-    <div class="div2" style="margin-bottom: 200px;">
-        <tabs style="width : 100%;" onchange="tabchange">
-            <tab-bar class="tab-bar" mode="scrollable" >
-                <div style=" height: 40px;" for="{{title}}">
-                    <text class="text">{{$item}}</text>
-                </div>
-                <text class="text">+</text>
-<!--                <text class="text"> 全部</text>-->
-<!--                <text class="text">美食</text>-->
-            </tab-bar>
-            <tab-content  scrollable="true">
-<!--                全部-->
-                <div class="divContent" >
-                    <div class="div3" for="{{ dynamic }}">
-                        <div class="div4">
-                            <image src="{{ $item.image }}" class="image"></image>
-                            <text class="text1">{{ $item.content }}</text>
-                        </div>
-                        <div class="div5">
-                            <image src="{{ $item.imagesrc }}"
-                                   class="image1"></image>
-                            <text class="text2">{{
-                                $item.name }}</text>
-                        </div>
+    <tabs onchange="tabchange" vertical="false">
+        <tab-bar mode="scrollable">
+            <text class="text3" for="{{ title }}">{{ $item }}</text>
+        </tab-bar>
+        <tab-content scrollable="true" style="margin-bottom: 80px;">
+        <!--                全部-->
+            <div class="div2">
+            <div class="divContent">
+                <div class="div3" for="{{ dynamic }}">
+                    <div class="div4">
+                        <image src="{{ $item.image }}" class="image"></image>
+                        <text class="text1">{{ $item.content }}</text>
+                    </div>
+                    <div class="div5">
+                        <image src="{{ $item.imagesrc }}"
+                               class="image1"></image>
+                        <text class="text2">{{
+                            $item.name }}</text>
                     </div>
                 </div>
-<!--                美食-->
-                <div class="divContent" >
-                    <div class="div3" for="{{ foodData }}">
-                        <div class="div4">
-                            <image src="{{ $item.image }}" class="image"></image>
-                            <text class="text1">{{ $item.content }}</text>
-                        </div>
-                        <div class="div5">
-                            <image src="{{ $item.imagesrc }}"
-                                   class="image1"></image>
-                            <text class="text2">{{
-                                $item.name }}</text>
-                        </div>
+            </div>
+            </div>
+        <!--                美食-->
+            <div class="div2">
+            <div class="divContent">
+                <div class="div3" for="{{ foodData }}">
+                    <div class="div4">
+                        <image src="{{ $item.image }}" class="image"></image>
+                        <text class="text1">{{ $item.content }}</text>
+                    </div>
+                    <div class="div5">
+                        <image src="{{ $item.imagesrc }}"
+                               class="image1"></image>
+                        <text class="text2">{{
+                            $item.name }}</text>
                     </div>
                 </div>
-<!--                音乐-->
-                <div class="divContent" >
-                    <div class="div3" for="{{ musicData }}">
-                        <div class="div4">
-                            <image src="{{ $item.image }}" class="image"></image>
-                            <text class="text1">{{ $item.content }}</text>
-                        </div>
-                        <div class="div5">
-                            <image src="{{ $item.imagesrc }}"
-                                   class="image1"></image>
-                            <text class="text2">{{
-                                $item.name }}</text>
-                        </div>
+            </div>
+            </div>
+        <!--                音乐-->
+        <div class="div2">
+            <div class="divContent">
+                <div class="div3" for="{{ musicData }}">
+                    <div class="div4">
+                        <image src="{{ $item.image }}" class="image"></image>
+                        <text class="text1">{{ $item.content }}</text>
+                    </div>
+                    <div class="div5">
+                        <image src="{{ $item.imagesrc }}"
+                               class="image1"></image>
+                        <text class="text2">{{
+                            $item.name }}</text>
                     </div>
                 </div>
-<!--                居家-->
-                <div class="divContent" >
-                    <div class="div3" for="{{ familyData }}">
-                        <div class="div4">
-                            <image src="{{ $item.image }}" class="image"></image>
-                            <text class="text1">{{ $item.content }}</text>
-                        </div>
-                        <div class="div5">
-                            <image src="{{ $item.imagesrc }}"
-                                   class="image1"></image>
-                            <text class="text2">{{
-                                $item.name }}</text>
-                        </div>
+            </div>
+            </div>
+        <!--                居家-->
+        <div class="div2">
+            <div class="divContent">
+                <div class="div3" for="{{ familyData }}">
+                    <div class="div4">
+                        <image src="{{ $item.image }}" class="image"></image>
+                        <text class="text1">{{ $item.content }}</text>
+                    </div>
+                    <div class="div5">
+                        <image src="{{ $item.imagesrc }}"
+                               class="image1"></image>
+                        <text class="text2">{{
+                            $item.name }}</text>
                     </div>
                 </div>
-<!--                穿搭-->
-                <div class="divContent" >
-                    <div class="div3" for="{{ clothesData }}">
-                        <div class="div4">
-                            <image src="{{ $item.image }}" class="image"></image>
-                            <text class="text1">{{ $item.content }}</text>
-                        </div>
-                        <div class="div5">
-                            <image src="{{ $item.imagesrc }}"
-                                   class="image1"></image>
-                            <text class="text2">{{
-                                $item.name }}</text>
-                        </div>
+            </div>
+            </div>
+        <!--                穿搭-->
+        <div class="div2">
+            <div class="divContent">
+                <div class="div3" for="{{ clothesData }}">
+                    <div class="div4">
+                        <image src="{{ $item.image }}" class="image"></image>
+                        <text class="text1">{{ $item.content }}</text>
+                    </div>
+                    <div class="div5">
+                        <image src="{{ $item.imagesrc }}"
+                               class="image1"></image>
+                        <text class="text2">{{
+                            $item.name }}</text>
                     </div>
                 </div>
-            </tab-content>
-        </tabs>
-    </div>
+            </div>
+        </div>
+        </tab-content>
+    </tabs>
 </div>

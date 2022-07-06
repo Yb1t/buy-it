@@ -1,6 +1,4 @@
 <div class="container">
-
-<!--    <stack class="stack">-->
     <swiper indicator="false" autoplay="false" duration="500" vertical="true" class="swiper">
         <div for="{{ textData }}">
             <stack class="stack">
@@ -9,7 +7,6 @@
                            style="object-fit : contain;" src="{{ $item.video }}" muted="{{ mute }}"></video>
                 </block>
 
-            <!--        </swiper>-->
             <!--        点赞收藏-->
                 <div class="div1">
 
@@ -41,7 +38,7 @@
                             <text style="font-size : 20px; color : white;">{{ $item.saveNum }}</text>
                         </div>
                         <div style="margin-top : 30px;" class="div2">
-                            <image src="/common/icons/comment1.png" class="image"></image>
+                            <image src="/common/icons/comment1.png" class="image" onclick="commentAdd({{$idx}})"></image>
                             <text style="font-size : 20px; color : white;">{{ $item.commentNum }}</text>
                         </div>
                         <div style="margin-top : 30px;" class="div2">
@@ -53,4 +50,74 @@
             </stack>
         </div>
     </swiper>
+    <panel id="commentPanel" type="foldable" mode="half" onsizechange="changeMode" miniheight="200px">
+        <div style="flex-direction : column; margin-bottom : 30px; height : 100%;">
+            <div style="flex-direction : column;" for="{{commentData}}">
+                <div style="width : 100%;flex-direction: row;">
+                    <text style="font-size: 20px;">{{$item.name}}:
+                    </text>
+                    <text style="font-size: 20px;">{{$item.comment}}
+                    </text>
+                </div>
+                <div>
+                    <text style="font-size: 10px;">发表于</text>
+                </div>
+            </div>
+            <div style="position : absolute; bottom : 0px; flex-direction : row; height : 50px;">
+                <button type="capsule" value="Close" onclick="panelClose"
+                        style="background-color : white; text-color : black; width : 80px;">关闭</button>
+                <input type="text" placeholder="请输入评论" onchange="inputChange" value="{{content}}"></input>
+                <button type="capsule" onclick="sentComment"
+                        style="background-color : white; text-color : black; width : 80px;">发布</button>
+            </div>
+        </div>
+    </panel>
+
+
+    <panel id="commentPanel1" type="foldable" mode="half" onsizechange="changeMode" miniheight="200px">
+        <div style="flex-direction : column; margin-bottom : 30px; height : 100%;">
+            <div style="flex-direction : column;" for="{{commentData1}}">
+                <div style="width : 100%;flex-direction: row;">
+                    <text style="font-size: 20px;">{{$item.name}}:
+                    </text>
+                    <text style="font-size: 20px;">{{$item.comment}}
+                    </text>
+                </div>
+                <div>
+                    <text style="font-size: 10px;">发表于</text>
+                </div>
+            </div>
+            <div style="position : absolute; bottom : 0px; flex-direction : row; height : 50px;">
+                <button type="capsule" value="Close" onclick="panelClose"
+                        style="background-color : white; text-color : black; width : 80px;">关闭</button>
+                <input type="text" placeholder="请输入评论" onchange="inputChange" value="{{content}}"></input>
+                <button type="capsule" onclick="sentComment1"
+                        style="background-color : white; text-color : black; width : 80px;">发布</button>
+            </div>
+        </div>
+    </panel>
+
+
+    <panel id="commentPanel2" type="foldable" mode="half" onsizechange="changeMode" miniheight="200px">
+        <div style="flex-direction : column; margin-bottom : 30px; height : 100%;">
+            <div style="flex-direction : column;" for="{{commentData2}}">
+                <div style="width : 100%;flex-direction: row;">
+                    <text style="font-size: 20px;">{{$item.name}}:
+                    </text>
+                    <text style="font-size: 20px;">{{$item.comment}}
+                    </text>
+                </div>
+                <div>
+                    <text style="font-size: 10px;">发表于</text>
+                </div>
+            </div>
+            <div style="position : absolute; bottom : 0px; flex-direction : row; height : 50px;">
+                <button type="capsule" value="Close" onclick="panelClose"
+                        style="background-color : white; text-color : black; width : 80px;">关闭</button>
+                <input type="text" placeholder="请输入评论" onchange="inputChange" value="{{content}}"></input>
+                <button type="capsule" onclick="sentComment2"
+                        style="background-color : white; text-color : black; width : 80px;">发布</button>
+            </div>
+        </div>
+    </panel>
 </div>
