@@ -7,7 +7,7 @@
         <div class="list" style="flex-direction: column;">
             <div>
                 <div style="height: 100px; padding-left: 20px;">
-                    <image src="/common/icons/user.png" style="width: 80px;object-fit: contain;"></image>
+                    <image src="{{target.avatar}}" style="width: 80px;object-fit: contain;border-radius: 40px;margin-right: 20px;"></image>
                     <text style="font-size: 24px;">{{target.username}}</text>
                 </div>
             </div>

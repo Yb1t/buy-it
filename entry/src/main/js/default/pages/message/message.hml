@@ -1,5 +1,5 @@
 <div class="container">
-    <div style="flex-direction: column;background-color: orange;position: fixed;top: 0px;height: {{topHeight}};padding: 10px;">
+    <div style="flex-direction: column;background-color: #EEEEEE;position: fixed;top: 0px;height: {{topHeight}};padding: 10px;">
         <div style="flex-direction: row;justify-content: space-between;width: 100%;">
             <div on:click="clear">
                 <text style="font-size: 24px;">消息</text>

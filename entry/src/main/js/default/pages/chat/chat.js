@@ -5,20 +5,20 @@ import http from '@ohos.net.http';
 
 export default {
     data: {
-        productId: "",//TODO 分享页面传参
+        productId: "",
         product: {},
         topHeight: "50px",
         bottomHeight: "50px",
         ws: null,
         url: "ws://huangrui.vaiwan.com/ws/",
         user: {
-            userId: null,
+            userId: 1,
             username: "",
             avatar: "/common/icons/user.png"
         },
         sendTo: {
             userId: 2,
-            username: "张三",
+            username: "",
             avatar: "/common/icons/user.png"
         },
         isFriend: false,
@@ -44,6 +44,8 @@ export default {
 //                    imgUrl: "https://gw.alicdn.com/bao/uploaded/i2/322940141/O1CN01PuDPhV1CucbmypVBU_!!0-saturn_solar.jpg_300x300q90.jpg_.webp",
 //                },
 //            },
+//            {type: 3},
+//            {type: 4}
         ],
 
     },
@@ -56,7 +58,6 @@ export default {
             this.initProduct();
         }
         this.initWS();
-//        this.sendRead();
     },
     initUsers(){
         let userHttpRequest = http.createHttp();
@@ -65,7 +66,6 @@ export default {
                 let user = JSON.parse(data.result).body;
                 this.user.username = user.userName;
                 this.user.avatar = user.headPhoto;
-                console.debug(this.user.headPhoto);
             }
         });
         let sendToHttpRequest = http.createHttp();
@@ -74,23 +74,12 @@ export default {
                 let sendTo = JSON.parse(data.result).body;
                 this.sendTo.username = sendTo.userName;
                 this.sendTo.avatar = sendTo.headPhoto;
-                console.debug(this.sendTo.username);
-                console.debug(this.sendTo.headPhoto);
-
             }
         });
     },
     changInput(e){
         this.input = e.value
     },
-//    sendRead(){
-//        this.send({
-//            sender: this.user.userId,
-//            target: this.sendTo.userId,
-//            type: 0,
-//            content: ''
-//        });
-//    },
     sendMessage(){
         this.send({
             sender: this.user.userId,
@@ -142,8 +131,7 @@ export default {
         }
 
         this.isSending = false;
-        //TODO
-//        this.$element('chatList').scrollBottom(true);  //滚动到底部，无效
+        //TODO this.$element('chatList').scrollBottom(true);  //滚动到底部，无效
     },
     goUser(){
         console.log("打开用户页面");
@@ -153,6 +141,7 @@ export default {
                 target: {
                     userId: this.sendTo.userId,
                     username: this.sendTo.username,
+                    avatar: this.sendTo.avatar
                 },
             }
         })

@@ -39,6 +39,7 @@
     width: 50px;
     margin-end: 10px;
     object-fit: contain;
+    border-radius: 25px;
 }
 
 .left-right-line{

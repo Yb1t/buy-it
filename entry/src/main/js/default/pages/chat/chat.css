@@ -1,6 +1,8 @@
 .container {
     flex-direction: column;
     width: 100%;
+    height: 100%;
+    background-color: #EEE;
 }
 
 .status-point{
@@ -30,14 +32,14 @@
 }
 
 .text-button {
-    background-color: orange;
+    background-color: orangered;
     text-color: black;
     border-color: black;
     border: 2px;
 }
 
 .circle-button{
-    background-color: orange;
+    background-color: orangered;
     icon-width: 24px;
     icon-height: 24px;
 }
@@ -66,17 +68,15 @@
 }
 .msg-text{
     max-width: 80%;
-    font-size: 20px;
+    font-size: 18px;
     border-radius: 10px;
     padding: 10px;
 }
 
-.msg-text image{
-/*    max-height: 100px;*/
-    max-width: 100px;
-    min-width: 100px;
-    min-height: 100px;
-}
+/*.msg-text image{*/
+/*!*    max-height: 100px;*!*/
+/*    max-width: 100px;*/
+/*}*/
 
 .msg-text text{
     padding-right: 20px;
@@ -86,9 +86,14 @@
 .img-avatar{
     width: 50px;
     height: 50px;
-    border-radius: 50px;
+    border-radius: 25px;
 }
 
 .img-product{
     border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    margin-right: 10px;
 }
