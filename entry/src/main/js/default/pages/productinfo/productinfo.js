@@ -173,5 +173,13 @@ export default {
             }
         });
 
+    },
+    share(){
+        router.push({
+            uri: "pages/chat/chat",
+            params:{
+                productId: this.productId
+            }
+        })
     }
 }

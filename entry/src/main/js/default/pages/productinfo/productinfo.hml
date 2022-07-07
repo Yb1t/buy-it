@@ -2,7 +2,7 @@
     <div style="flex-direction: row;height: 80px;background-color: white;">
     <image class="headimg" src="common/icons/leftblack.png"></image>
         <search style="width: 60%;"></search>
-    <image class="headimg" src="common/icons/shareTwo.png"></image>
+    <image class="headimg" src="common/icons/shareTwo.png" onclick="share"></image>
     <image class="headimg" src="common/icons/shoppingblack.png" onclick="addshopping"></image>
     <image class="headimg" src="common/icons/moreblack.png"></image>
     </div>
