@@ -1,10 +1,10 @@
 <div class="container">
     <tabs id="attentionPageTabs" onchange="tabChange1">
         <tab-bar>
-            <text style="font-size : 20px;">看过的人</text>
+            <text class="text1">看过的人</text>
 
         <!--            <image style="height: 20px;width: 20px;" src="/common/icons/help.png"></image>-->
-            <text style="font-size : 20px;">更多</text>
+            <text class="text1">更多</text>
         </tab-bar>
         <tab-content>
 
@@ -15,7 +15,7 @@
                 <div class="div2">
                     <image src="/common/images/more1.png" class="image">
                     </image>
-                    <text style="font-size : 20fp;">看过的人没有更多的内容</text>
+                    <text class="text1">看过的人没有更多的内容</text>
                     <text style="font-size : 15fp; color : darkgrey;">喜欢就多看看TA的内容，TA就会出现在这里</text>
                 </div>
 
@@ -26,14 +26,14 @@
                         <image src="{{ $item.image }}"
                                class="image1"></image>
                         <div style="flex-direction : column;">
-                            <text style="height : 50px; font-size : 20px;"> {{ $item.name }}</text>
+                            <text style="height : 50px; font-size : 18px;"> {{ $item.name }}</text>
                             <div class="div5">
                                 <text>{{ $item.certification }}</text>
                                 <text> | {{ $item.email }}</text>
                             </div>
                             <text style="height : 35px; font-size : 15px;">粉丝{{ $item.num }}万</text>
                         </div>
-                        <button class="button" style="background-color: beige;text-color: black;">看看TA</button>
+                        <button class="button" style="background-color: beige;text-color: black;font-size: 15px;margin-right: 5px;">看看TA</button>
                     </div>
                     <div class="div6">
                         <image src="{{ $item.images1 }}" class="image-pic"></image>
@@ -50,7 +50,7 @@
                 <div class="div2">
                     <image src="/common/images/more1.png" class="image">
                     </image>
-                    <text style="font-size : 20fp;">没有更多的内容哦</text>
+                    <text class="text1">没有更多的内容哦</text>
                     <text style="font-size : 15fp; color : darkgrey;">下面这些你可能会喜欢</text>
                 </div>
 
@@ -61,7 +61,7 @@
                         <image src="{{ $item.image }}"
                                class="image1"></image>
                         <div style="flex-direction : column;">
-                            <text style="height : 50px; font-size : 20px;"> {{ $item.name }}</text>
+                            <text style="height : 50px; font-size : 18px;"> {{ $item.name }}</text>
                             <div class="div5">
                                 <text>{{ $item.certification }}</text>
                                 <text> | {{ $item.email }}</text>

@@ -7,6 +7,8 @@
 
 }
 .div{
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
     width: 100%;
     height: 50px;
@@ -15,12 +17,14 @@
     flex-direction : column; align-items : center; justify-content : center; width : 100%;
 }
 .text1{
+    font-size: 22px;
     margin-right : 5px;color: red;
 }
 .text2{
+    font-size: 20px;
     margin-right : 5px;
 }
 .image{
-    border-radius : 50px; height : 50px; width : 50px;
+    border-radius : 15px; height : 30px; width : 30px;justify-content: center;align-items: center;
 }
 
