@@ -65,7 +65,7 @@ export default {
                     },
                     // 当使用POST请求时此字段用于传递内容
                     extraData: {
-                        "collectionUserid":123456,
+                        "collectionUserid":this.$app.$def.globalData.loginUser.userAccount,
                         "collectionProid":this.product.proId,
                     },
 
@@ -109,7 +109,7 @@ export default {
                 // 当使用POST请求时此字段用于传递内容
                 extraData: {
                     "carProid":this.product.proId,
-                    "carUserid":123456,
+                    "carUserid":this.$app.$def.globalData.loginUser.userAccount,
                     "proNum":1,
                      },
 

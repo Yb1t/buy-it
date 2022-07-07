@@ -56,7 +56,7 @@ export default {
             {
                 uri:"pages/productinfo/productinfo",
                 params:{
-                product:this.products[id]
+                productId:id
                 }
 
             }
