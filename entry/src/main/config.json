@@ -67,20 +67,23 @@
     "js": [
       {
         "pages": [
+          "pages/addAddress/addAddress",
+          "pages/personalPage/personalPage",
+          "pages/addAddress/addAddress",
           "pages/myOrder/myOrder",
+          "pages/myAddress/myAddress",
+          "pages/myCollection/myCollection",
           "pages/index/index",
           "pages/findpages/mainpages/mainpages",
           "pages/contectUserPage/contectUserPage",
-          "pages/personalPage/personalPage",
           "pages/message/message",
           "pages/findpages/find/find",
           "pages/shoppingcar/shoppingcar",
           "pages/findpages/videofind/videofind",
           "pages/findpages/attentionpage/attentionpage",
           "pages/account/account",
-          "pages/myCollection/myCollection",
-          "pages/myAddress/myAddress",
-          "pages/chat/chat"
+          "pages/chat/chat",
+          "pages/updateAddress/updateAddress"
         ],
         "name": "default",
         "window": {

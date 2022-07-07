@@ -12,7 +12,7 @@
             </div>
         </div>
         <div if="{{!isFriend}}" style="flex-direction: row;justify-content: space-around;width: 100%;">
-            <button value="加好友" type="capsule" class="text-button"></button>
+        <!--            <button value="加好友" type="capsule" class="text-button"></button>-->
             <button value="屏蔽消息" type="capsule" class="text-button"></button>
         </div>
     </div>
@@ -22,7 +22,8 @@
             <div style="flex-direction: column;">
 
                 <div style="justify-content: center;align-items: center;width: 100%;">
-                    <text class="date-text">{{$item.date}}</text>
+                    <text if="{{$item.type == 3}}" class="date-text">消息被对方屏蔽</text>
+<!--                    <text else class="date-text">{{$item.date}}</text>-->
                 </div>
 
                 <div if="{{$item.sender == sendTo.userId}}" style="flex-direction: row;">
@@ -38,10 +39,7 @@
                     <text if="{{$item.type==1}}" class="msg-text" style="background-color: orange;">{{$item.content}}</text>
                     <div elif="{{$item.type==2}}" class="msg-text" style=" background-color: orange;" onclick="goProduct({{$item.content.link}})">
                         <image class="img-product" src="{{$item.content.imgUrl}}"></image>
-                        <div style="flex-direction: column;">
-                            <text style="max-lines: {{maxLine}}">{{$item.content.title}}</text>
-                            <text style="color: blue;" onclick="expand">{{expandText}}</text>
-                        </div>
+                        <text>{{$item.content.title}}</text>
                     </div>
                     <image class="img-avatar" src="{{user.avatar}}"></image>
                 </div>
@@ -54,7 +52,7 @@
         <div class="search-item">
             <input class="search" type="text" enterkeytype="send" placeholder="输入消息" onchange="changInput">
             </input>
-            <button type="circle" icon="/common/icons/send.png" waiting="{{isSending}}" on:click="send" class="circle-button"></button>
+            <button type="circle" icon="/common/icons/send.png" waiting="{{isSending}}" on:click="sendMessage" class="circle-button"></button>
         </div>
     </div>
 
