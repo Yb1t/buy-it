@@ -2,7 +2,7 @@ import http from '@ohos.net.http';
 import router from '@system.router';
 export default {
     data: {
-        text:true,
+        text:false,
         title: 'World',
         nav:[
             {"image1":"common/icons/star2.png","image":"common/icons/stars.png","context":"收藏"},
@@ -51,46 +51,48 @@ export default {
 //    }
     onapply(){
         this.text = !this.text;
-        let httpRequest = http.createHttp();
-        httpRequest.request(
-        // 填写http请求的url地址，可以带参数也可以不带参数。URL地址需要开发者自定义。GET请求的参数可以在extraData中指定
-            "http://huangrui.vaiwan.com/collection" ,
-            {
-                method: http.RequestMethod.POST, // 可选，默认为http.RequestMethod.GET
-                // 开发者根据自身业务需要添加header字段
-                header: {
-                    'Content-Type': 'application/json'
-                },
-                // 当使用POST请求时此字段用于传递内容
-                extraData: {
-                    "collectionUserid":123456,
-                    "collectionProid":this.product.proId,
-                },
+        if (this.text) {
+            let httpRequest = http.createHttp();
+            httpRequest.request(
+            // 填写http请求的url地址，可以带参数也可以不带参数。URL地址需要开发者自定义。GET请求的参数可以在extraData中指定
+                "http://huangrui.vaiwan.com/collection" ,
+                {
+                    method: http.RequestMethod.POST, // 可选，默认为http.RequestMethod.GET
+                    // 开发者根据自身业务需要添加header字段
+                    header: {
+                        'Content-Type': 'application/json'
+                    },
+                    // 当使用POST请求时此字段用于传递内容
+                    extraData: {
+                        "collectionUserid":123456,
+                        "collectionProid":this.product.proId,
+                    },
 
-            }, (err, data) => {
-            if (!err) {
-                // data.result为http响应内容，可根据业务需要进行解析
-                console.info('Result:' + data.result);
-                console.info('code:' + data.responseCode);
-                // data.header为http响应头，可根据业务需要进行解析
-                console.info('header:' + data.header);
+                }, (err, data) => {
+                if (!err) {
+                    // data.result为http响应内容，可根据业务需要进行解析
+                    console.info('Result:' + data.result);
+                    console.info('code:' + data.responseCode);
+                    // data.header为http响应头，可根据业务需要进行解析
+                    console.info('header:' + data.header);
 
-                this.result = JSON.parse(data.result);
-                this.products = this.result.body;
+                    this.result = JSON.parse(data.result);
+                    this.products = this.result.body;
 
-                console.info("接受到的code数据: "+this.result.code)
-                console.info("接受到的msg数据: "+this.result.msg)
-                console.info("接受到的order数据: "+data.result)
+                    console.info("接受到的code数据: "+this.result.code)
+                    console.info("接受到的msg数据: "+this.result.msg)
+                    console.info("接受到的order数据: "+data.result)
 
-            } else {
-                console.info('error:' + err.message);
-            }
-        });
-        router.push(
-            {
-                uri:"pages/productinfo/productinfo",
-            }
-        )
+                } else {
+                    console.info('error:' + err.message);
+                }
+            });
+            router.push(
+                {
+                    uri:"pages/myCollection/myCollection",
+                }
+            )
+        }
     },
     addshopping(){
         let httpRequest = http.createHttp();
@@ -125,7 +127,9 @@ export default {
                 console.info('error:' + err.message);
             }
         });
-
+        router.push({
+            uri:'pages/shoppingcar/shoppingcar',
+        });
 
     },
     onInit() {
