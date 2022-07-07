@@ -2,12 +2,16 @@
 <element src="../findpages/mainpages/mainpages.hml" name="findPage"></element>
 <element src="../message/message.hml" name="messagePage"></element>
 <element src="../personalPage/personalPage.hml" name="personalPage"></element>
+<element src="../shoppingcar/shoppingcar.hml" name="shoppingCar"></element>
 <div class="container">
     <block if="{{selectedPage==1}}">
         <findpage></findpage>
     </block>
     <block if="{{selectedPage == 2}}">
         <messagePage></messagePage>
+    </block>
+    <block if="{{selectedPage == 3}}">
+        <shoppingcar></shoppingcar>
     </block>
     <block if="{{selectedPage==4}}">
         <personalpage></personalpage>
