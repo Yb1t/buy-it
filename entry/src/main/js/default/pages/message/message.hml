@@ -25,7 +25,6 @@
                                 <text class="name-text">{{$item.username}}</text>
                             </div>
                             <div class="left-right-line">
-                                <text class="msg-text">{{$item.msg}}</text>
                                 <div if="{{$item.msgCount>0}}" style="width: 16px;height: 16px;background-color: orange;border-radius: 8px;justify-content: center;align-items: center;">
                                     <text style="font-size: 10px;color: white;">{{$item.msgCount}}</text>
                                 </div>

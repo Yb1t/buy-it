@@ -5,7 +5,7 @@ import http from '@ohos.net.http';
 
 export default {
     data: {
-        productId: "10",//TODO 分享页面传参
+        productId: "",//TODO 分享页面传参
         product: {},
         topHeight: "50px",
         bottomHeight: "50px",
@@ -13,12 +13,12 @@ export default {
         url: "ws://huangrui.vaiwan.com/ws/",
         user: {
             userId: 1,
-            username: "hao",
+            username: "",
             avatar: "/common/icons/user.png"
         },
         sendTo: {
             userId: 2,
-            username: "other",
+            username: "张三",
             avatar: "/common/icons/user.png"
         },
         isFriend: false,
@@ -26,47 +26,70 @@ export default {
         isSending: false,
         input: "",
         array: [
-            {type:1, receiver: 1, sender: 2, content:"你好"},//, date: "22/06/29 12:00"},
-            {type:1, receiver: 2, sender: 1, content:"balbalba"},// date:"22/06/29 12:00"},
-            {type:1, receiver: 1, sender: 2, content:"你好你好你好"},// date:"22/06/29 00:00"},
-            {type:1, receiver: 2, sender: 1, content:"啦啦啦啦啦"},// date:"22/06/29 12:00"},
-            {type:2, receiver: 1, sender: 2,
-                content: {
-                    title:"中文测试我是老六老六老六老六",
-                    link: "https://item.taobao.com/item.htm?spm=a21bo.jianhua.201876.6.5af911d9JMzA3P&id=599695626728&scm=1007.40986.275655.0&pvid=27c7e238-02a6-400c-a907-92c0767cc23e",
-                    imgUrl: "https://gw.alicdn.com/bao/uploaded/i1/2261059285/O1CN01bLCsxK2ISa85jthDm_!!0-item_pic.jpg_300x300q90.jpg",
-                    }
-            },
-            {type:2, receiver: 2, sender: 1,
-                content: {
-                    title:"中英测试这是一条中eng商品标题测试测试测试shank you shank you shank you shank you shank you shank you",
-                    link: "https://item.taobao.com/item.htm?spm=a21bo.jianhua.201876.6.5af911d9JMzA3P&id=599695626728&scm=1007.40986.275655.0&pvid=27c7e238-02a6-400c-a907-92c0767cc23e",
-                    imgUrl: "https://gw.alicdn.com/bao/uploaded/i3/1624565934/O1CN01RTTRFy1thoztFTvWl_!!0-item_pic.jpg_300x300q90.jpg",
-                },
-            },
+//            {type:1, receiver: 1, sender: 2, content:"你好"},//, date: "22/06/29 12:00"},
+//            {type:1, receiver: 2, sender: 1, content:"你好"},// date:"22/06/29 12:00"},
+//            {type:1, receiver: 1, sender: 2, content:"给你分享一个好东西"},// date:"22/06/29 00:00"},
+//            {type:1, receiver: 2, sender: 1, content:"好的"},// date:"22/06/29 12:00"},
+//            {type:2, receiver: 1, sender: 2,
+//                content: {
+//                    title:"源氏木语全实木床现代简约橡木大床",
+//                    proId: "https://item.taobao.com/item.htm?spm=a21bo.jianhua.201876.6.5af911d9JMzA3P&id=599695626728&scm=1007.40986.275655.0&pvid=27c7e238-02a6-400c-a907-92c0767cc23e",
+//                    imgUrl: "https://gw.alicdn.com/bao/uploaded/i3/34255570/O1CN01HCtjGE1r16pm4cMO3_!!0-saturn_solar.jpg_300x300q90.jpg_.webp",
+//                    }
+//            },
+//            {type:2, receiver: 2, sender: 1,
+//                content: {
+//                    title:"青稞G7R华为智卡认证触控屏密码指纹锁家用防盗门智能锁",
+//                    proId: "https://item.taobao.com/item.htm?spm=a21bo.jianhua.201876.6.5af911d9JMzA3P&id=599695626728&scm=1007.40986.275655.0&pvid=27c7e238-02a6-400c-a907-92c0767cc23e",
+//                    imgUrl: "https://gw.alicdn.com/bao/uploaded/i2/322940141/O1CN01PuDPhV1CucbmypVBU_!!0-saturn_solar.jpg_300x300q90.jpg_.webp",
+//                },
+//            },
         ],
 
     },
 
     onInit(){
-        this.url = this.url + this.user.userId;
-//        if (this.productId!='') {
+        this.url = this.url + this.user.userId+"/"+this.sendTo.userId;
+        this.initUsers();
+        if (this.productId!='') {
             this.initProduct();
-//        }
+        }
         this.initWS();
-        this.sendRead();
+//        this.sendRead();
+    },
+    initUsers(){
+        let userHttpRequest = http.createHttp();
+        userHttpRequest.request("http://huangrui.vaiwan.com/users/id/"+this.user.userId, (err, data) => {
+            if (!err) {
+                let user = JSON.parse(data.result).body;
+                this.user.username = user.userName;
+                this.user.avatar = user.headPhoto;
+                console.debug(this.user.headPhoto);
+            }
+        });
+        let sendToHttpRequest = http.createHttp();
+        sendToHttpRequest.request("http://huangrui.vaiwan.com/users/id/"+this.sendTo.userId, (err, data) => {
+            if (!err) {
+                let sendTo = JSON.parse(data.result).body;
+                this.sendTo.username = sendTo.userName;
+                this.sendTo.avatar = sendTo.headPhoto;
+                console.debug(this.sendTo.username);
+                console.debug(this.sendTo.headPhoto);
+
+            }
+        });
     },
     changInput(e){
         this.input = e.value
     },
-    sendRead(){
-        this.send({
-            sender: this.user.userId,
-            target: this.sendTo.userId,
-            type: 0,
-            content: ''
-        });
-    },
+//    sendRead(){
+//        this.send({
+//            sender: this.user.userId,
+//            target: this.sendTo.userId,
+//            type: 0,
+//            content: ''
+//        });
+//    },
     sendMessage(){
         this.send({
             sender: this.user.userId,
@@ -74,7 +97,6 @@ export default {
             type: 1,
             content: this.input
         });
-        this.$app.$def.currentMsg[this.sendTo.userId] = this.input;
     },
     sendProduct(){
         this.send({
@@ -87,7 +109,6 @@ export default {
                 imgUrl: this.product.proMainPicture
             },
         });
-        this.$app.$def.currentMsg[this.sendTo.userId] = this.product.proName;
     },
     send(object){
         this.isSending = true;
@@ -120,14 +141,18 @@ export default {
         }
 
         this.isSending = false;
-        //TODO this.$element('chatList').scrollBottom(true);  //滚动到底部，无效
+        //TODO
+//        this.$element('chatList').scrollBottom(true);  //滚动到底部，无效
     },
     goUser(){
         console.log("打开用户页面");
         router.push({
             uri: 'pages/contectUserPage/contectUserPage',
             params: {
-                userId: this.sendTo.userId
+                target: {
+                    userId: this.sendTo.userId,
+                    username: this.sendTo.username,
+                },
             }
         })
     },
@@ -153,7 +178,9 @@ export default {
                         }
                     ],
                     success: (data)=>{
-                        this.sendProduct();
+                        if(data.index == 1){
+                            this.sendProduct();
+                        }
                     },
                     cancel: function() {
                         console.log('dialog cancel callback');
@@ -177,9 +204,7 @@ export default {
                 prompt.showToast({message: '对方已屏蔽您的消息'});
             }else if(object.type == 2) {
                 object.content = JSON.parse(object.content);
-                this.$app.$def.currentMsg[this.sendTo.userId] = object.content.proName;
             }else if(object.type == 1){
-                this.$app.$def.currentMsg[this.sendTo.userId] = object.content;
             }
             this.array.push(object);
         });
@@ -197,9 +222,17 @@ export default {
             }
         });
     },
-    goProduct(url){
-        console.log("跳转商品页面"+url);
-//        TODO 跳转
+    goProduct(productId){
+        console.log("跳转商品页面"+productId);
+        router.push(
+            {
+                uri:"pages/productinfo/productinfo",
+                params:{
+                    productId:productId
+                }
+
+            }
+        )
     }
 
 }

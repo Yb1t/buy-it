@@ -19,7 +19,7 @@
                 <div if="{{$item.sender == sendTo.userId}}" style="flex-direction: row;">
                     <image class="img-avatar" src="{{sendTo.avatar}}"></image>
                     <text if="{{$item.type==1}}" class="msg-text" style="background-color: cornsilk;">{{$item.content}}</text>
-                    <div elif="{{$item.type==2}}" class="msg-text" style="background-color: cornsilk;" onclick="goProduct({{$item.content.link}})">
+                    <div elif="{{$item.type==2}}" class="msg-text" style="background-color: cornsilk;" onclick="goProduct({{$item.content.proId}})">
                         <image class="img-product" src="{{$item.content.imgUrl}}"></image>
                         <text>{{$item.content.title}}</text>
                     </div>
@@ -27,7 +27,7 @@
 
                 <div else style="flex-direction: row;width: 100%;justify-content: flex-end;">
                     <text if="{{$item.type==1}}" class="msg-text" style="background-color: orange;">{{$item.content}}</text>
-                    <div elif="{{$item.type==2}}" class="msg-text" style=" background-color: orange;" onclick="goProduct({{$item.content.link}})">
+                    <div elif="{{$item.type==2}}" class="msg-text" style=" background-color: orange;" onclick="goProduct({{$item.content.proId}})">
                         <image class="img-product" src="{{$item.content.imgUrl}}"></image>
                         <text>{{$item.content.title}}</text>
                     </div>
