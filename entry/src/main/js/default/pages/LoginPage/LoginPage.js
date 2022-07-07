@@ -21,13 +21,13 @@ export default {
         this.username = e.value
     },
     inputPassword(e){
-        this.username = e.value
+        this.password = e.value
     },
     loginClick(){
         if(this.checkSrc== '/common/icons/check-one.png'){
             this.$element('popup').show();
             console.log("111")
-        }else{
+        }else{123
             // 每一个httpRequest对应一个http请求任务，不可复用
             let httpRequest = http.createHttp();
             httpRequest.request(
@@ -49,7 +49,10 @@ export default {
                     console.info("接受到的code数据: "+this.myResult.code)
                     console.info("接受到的msg数据: "+this.myResult.msg)
                     console.info("接受到的order数据: "+this.userData.toString())
-
+                    console.info("账号"+this.userData.userAccount)
+                    console.info("账号"+this.userData.userPassword)
+                    console.info("输入的账号"+this.username)
+                    console.info("输入的账号"+this.password)
 
                     if(this.username == this.userData.userAccount && this.password == this.userData.userPassword){
                                     router.push({
@@ -74,9 +77,11 @@ export default {
             uri:'pages/forgetPage/forgetPage'
         })
     },
-
-
-
+    registerClick(){
+        router.push({
+            uri:'pages/registerPage/registerPage'
+        })
+    },
     visibilitychange(e) {
         console.log("888")
         prompt.showToast({

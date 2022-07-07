@@ -1,0 +1,42 @@
+<div class="container">
+    <div style="height : 50px; justify-content : space-between; flex-direction : row; width : 100%; margin-top : 5px;">
+        <text style="margin-left : 5px;">X</text>
+        <text style="font-size : 18px; margin-right : 5px;">更多</text>
+    </div>
+    <div style="height : 100px; flex-direction : column; width : 100%; justify-content : center;">
+        <text>手机号注册</text>
+        <div style="flex-direction : row;">
+            <text style="font-size : 18px;color: red;background-color: orange;">注册买为账号，新人最高领取30元红包</text>
+        </div>
+
+    </div>
+    <div style="flex-direction : column; height : 250px; margin-bottom : 10px;">
+        <input placeholder="请输入账号" type="number" style="height : 50px; margin-bottom : 5px;" onchange="inputAccount"></input>
+        <input placeholder="请输入密码" type="password" style="height : 50px; margin-bottom : 5px;" onchange="inputPassword"></input>
+        <input placeholder="请输入邮箱" type="text" style="height : 50px; margin-bottom : 5px;" onchange="inputEmail"></input>
+        <input placeholder="请输入手机号码" type="text" style="height : 50px; margin-bottom : 5px;" onchange="inputPhone"></input>
+    </div>
+    <button style="height : 50px; width : 80%; background-color : orange;" onclick="loginClick">立即注册</button>
+    <div style="flex-direction : row; width : 100%; height : 80px; justify-content : center; align-items : center;">
+        <image style="height : 30px; width : 30px; margin-left : 10px;" src="{{ checkSrc }}" onclick="checkClick">
+        </image>
+        <text style="font-size : 12px; margin-right : 10px;">已阅读并同意以下协议：《买为平台服务协议》《隐私权政策》《买为注册相关协议》，未注册的手机号将自动完成注册
+        </text>
+    </div>
+<!--    弹出提示框-->
+    <popup id="popup" class="popup" target="text" placement="bottom" keepalive="false" clickable="true"
+           onvisibilitychange="visibilitychange" onclick="hidepopup">
+        <text >Text the pop-up</text>
+    </popup>
+    <div style="position : absolute; bottom : 0px; flex-direction : column; height : 160px; align-items : center;
+            justify-content : center;">
+        <div style="flex-direction : row; height : 70px; width : 100%; align-items : center; justify-content : center;">
+            <image src="/common/images/alipay.png" style="height : 50px; width : 50px;"></image>
+            <text style="font-size : 18px;">支付宝快捷登录</text>
+            <text style="font-size : 18px;">| 更多选项</text>
+        </div>
+        <text style="font-size: 18px;">遇到问题？</text>
+    </div>
+
+</div>
+

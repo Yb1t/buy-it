@@ -84,8 +84,8 @@
           "pages/findpages/attentionpage/attentionpage",
           "pages/account/account",
           "pages/chat/chat",
-          "pages/updateAddress/updateAddress"
-
+          "pages/updateAddress/updateAddress",
+          "pages/registerPage/registerPage"
         ],
         "name": "default",
         "window": {

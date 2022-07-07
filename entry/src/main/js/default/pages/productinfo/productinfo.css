@@ -23,3 +23,26 @@
     padding: 6px;
     object-fit: contain;
 }
+.hint{
+    background-color: bisque;
+    color: orange;
+    font-size: 14px;
+    margin-start: 10px;
+    margin-end: 10px;
+    border-radius: 4px;
+}
+.icon{
+    width: 32px;
+    height: 32px;
+    padding: 3px;
+}
+.shop{
+    width: 32px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 2px;
+    margin-start: 10px;
+    margin-top: 5px;
+}

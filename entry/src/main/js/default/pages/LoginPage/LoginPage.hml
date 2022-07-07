@@ -7,12 +7,12 @@
         <text>亲，欢迎登录</text>
         <div style="flex-direction : row;">
             <text style="font-size : 18px;">没有买为账号？</text>
-            <text style="font-size : 18px; color : orangered;">立即注册</text>
+            <text style="font-size : 18px; color : orangered;" onclick="registerClick">立即注册</text>
         </div>
 
     </div>
     <div style="flex-direction : column; height : 165px; margin-bottom : 10px;">
-        <input placeholder="请输入验证码" style="height : 50px; margin-bottom : 5px;" onchange="inputAccount"></input>
+        <input placeholder="请输入账号" style="height : 50px; margin-bottom : 5px;" onchange="inputAccount"></input>
         <input placeholder="请输入密码" type="password" style="height : 50px; margin-bottom : 5px;" onchange="inputPassword"></input>
         <div style="flex-direction : row; justify-content : space-between; align-items : center; width : 100%;">
             <text></text>
@@ -26,7 +26,7 @@
            onvisibilitychange="visibilitychange" onclick="hidepopup">
         <text >Text the pop-up</text>
     </popup>
-    <div style="position : fixed; bottom : 0px; flex-direction : column; height : 160px; align-items : center;
+    <div style="position : absolute; bottom : 0px; flex-direction : column; height : 160px; align-items : center;
             justify-content : center;">
 
         <div style="flex-direction : row; height : 70px; width : 100%; align-items : center; justify-content : center;">

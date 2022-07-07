@@ -1,11 +1,18 @@
 import http from '@ohos.net.http';
+import router from '@system.router';
 export default {
     data: {
+        text:true,
         title: 'World',
         nav:[
-            {"image":"common/icons/stars.png","context":"收藏"},
-            {"image":"","context":"帮我选"},
-            {"image":"common/icons/share.png","context":"分享"},
+            {"image1":"common/icons/star2.png","image":"common/icons/stars.png","context":"收藏"},
+            {"image1":"common/icons/peoples.png","image":"common/icons/peoples.png","context":"帮我选"},
+            {"image1":"common/icons/share.png","image":"common/icons/share.png","context":"分享"},
+        ],
+        navigation:[
+            {"image1":"common/icons/application.png","image":"common/icons/application.png","text":"店铺"},
+            {"image1":"common/icons/customer.png","image":"common/icons/customer.png","text":"客服"},
+            {"image1":"common/icons/star2.png","image":"common/icons/stars.png","text":"收藏"},
         ],
         result:{
             "body": [{}],
@@ -38,8 +45,87 @@ export default {
 
 
     },
+//
+//    onapply(){
+//        this.text = !this.text;
+//    }
+    onapply(){
+        this.text = !this.text;
+        let httpRequest = http.createHttp();
+        httpRequest.request(
+        // 填写http请求的url地址，可以带参数也可以不带参数。URL地址需要开发者自定义。GET请求的参数可以在extraData中指定
+            "http://huangrui.vaiwan.com/collection" ,
+            {
+                method: http.RequestMethod.POST, // 可选，默认为http.RequestMethod.GET
+                // 开发者根据自身业务需要添加header字段
+                header: {
+                    'Content-Type': 'application/json'
+                },
+                // 当使用POST请求时此字段用于传递内容
+                extraData: {
+                    "collectionUserid":123456,
+                    "collectionProid":this.product.proId,
+                },
 
+            }, (err, data) => {
+            if (!err) {
+                // data.result为http响应内容，可根据业务需要进行解析
+                console.info('Result:' + data.result);
+                console.info('code:' + data.responseCode);
+                // data.header为http响应头，可根据业务需要进行解析
+                console.info('header:' + data.header);
+
+                this.result = JSON.parse(data.result);
+                this.products = this.result.body;
+
+                console.info("接受到的code数据: "+this.result.code)
+                console.info("接受到的msg数据: "+this.result.msg)
+                console.info("接受到的order数据: "+data.result)
+
+            } else {
+                console.info('error:' + err.message);
+            }
+        });
+        router.push(
+            {
+                uri:"pages/productinfo/productinfo",
+            }
+        )
+    },
     addshopping(){
+        let httpRequest = http.createHttp();
+        httpRequest.request(
+        // 填写http请求的url地址，可以带参数也可以不带参数。URL地址需要开发者自定义。GET请求的参数可以在extraData中指定
+            "http://huangrui.vaiwan.com/car" ,
+            {
+                method: http.RequestMethod.POST, // 可选，默认为http.RequestMethod.GET
+                // 开发者根据自身业务需要添加header字段
+                header: {
+                    'Content-Type': 'application/json'
+                },
+                // 当使用POST请求时此字段用于传递内容
+                extraData: {
+                    "carProid":this.product.proId,
+                    "carUserid":123456,
+                    "proNum":1,
+                     },
+
+            }, (err, data) => {
+            if (!err) {
+                // data.result为http响应内容，可根据业务需要进行解析
+                console.info('Result:' + data.result);
+                console.info('code:' + data.responseCode);
+                // data.header为http响应头，可根据业务需要进行解析
+                console.info('header:' + data.header);
+                console.info("接受到的code数据: "+this.result.code)
+                console.info("接受到的msg数据: "+this.result.msg)
+                console.info("接受到的order数据: "+data.result)
+
+            } else {
+                console.info('error:' + err.message);
+            }
+        });
+
 
     },
     onInit() {
