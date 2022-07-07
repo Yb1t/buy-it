@@ -30,5 +30,6 @@
 }
 
 .image{
+    border-radius: 14px;
     height: 28px;width: 28px;
 }
