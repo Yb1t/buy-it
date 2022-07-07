@@ -28,6 +28,10 @@
                                class="image1"></image>
                         <text class="text2">{{
                             $item.name }}</text>
+                        <div style="flex-direction: row;margin-left: 5px;">
+                            <image class="image1" src="{{$item.likeImageSrc}}" onclick="findLikeClick({{$idx}})"></image>
+                            <text style="font-size: 12px;">{{$item.likeSum}}</text>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -45,6 +49,10 @@
                                class="image1"></image>
                         <text class="text2">{{
                             $item.name }}</text>
+                        <div style="flex-direction: row;margin-left: 5px;">
+                            <image class="image1" src="{{$item.likeImageSrc}}" onclick="foodLikeClick({{$idx}})"></image>
+                            <text style="font-size: 12px;">{{$item.likeSum}}</text>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -62,6 +70,10 @@
                                class="image1"></image>
                         <text class="text2">{{
                             $item.name }}</text>
+                        <div style="flex-direction: row;margin-left: 5px;">
+                            <image class="image1" src="{{$item.likeImageSrc}}" onclick="musicLikeClick({{$idx}})"></image>
+                            <text style="font-size: 12px;">{{$item.likeSum}}</text>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -79,6 +91,10 @@
                                class="image1"></image>
                         <text class="text2">{{
                             $item.name }}</text>
+                        <div style="flex-direction: row;margin-left: 5px;">
+                            <image class="image1" src="{{$item.likeImageSrc}}" onclick="homeLikeClick({{$idx}})"></image>
+                            <text style="font-size: 12px;">{{$item.likeSum}}</text>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -96,6 +112,10 @@
                                class="image1"></image>
                         <text class="text2">{{
                             $item.name }}</text>
+                        <div style="flex-direction: row;margin-left: 5px;">
+                            <image class="image1" src="{{$item.likeImageSrc}}" onclick="clothLikeClick({{$idx}})"></image>
+                            <text style="font-size: 12px;">{{$item.likeSum}}</text>
+                        </div>
                     </div>
                 </div>
             </div>

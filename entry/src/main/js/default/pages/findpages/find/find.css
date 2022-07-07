@@ -59,18 +59,22 @@
 .div5 {
     flex-direction: row;
     height: 50px;
+    justify-content: space-between;
 }
 
 .image1 {
+    margin-top: 7px;
     object-fit: cover;
-    height: 50px;
-    width: 50px;
-    border-radius: 25px;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
     margin-right: 5px;
+    justify-content: center;
+    align-items: center;
 }
 
 .text2 {
     justify-content: center;
     align-items: center;
-    font-size: 15px;
+    font-size: 12px;
 }
