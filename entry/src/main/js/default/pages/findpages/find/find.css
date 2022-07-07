@@ -32,7 +32,9 @@
 }
 
 .div3 {
-    width: 48%;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 46%;
     height: 350px;
     flex-direction: column;
     background-color: white;
@@ -54,28 +56,30 @@
 
 .text1 {
     height: 30px;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .div5 {
     flex-direction: row;
     height: 50px;
+    width: 100%;
     justify-content: space-between;
 }
 
 .image1 {
     margin-top: 7px;
     object-fit: cover;
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
-    margin-right: 5px;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    margin-right: 1px;
     justify-content: center;
     align-items: center;
 }
 
 .text2 {
+    margin-top: 5px;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
+    font-size: 10px;
 }

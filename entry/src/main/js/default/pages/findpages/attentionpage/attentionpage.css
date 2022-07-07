@@ -34,27 +34,31 @@
 }
 
 .div3 {
-    height: 300px;
+    height: 220px;
     width: 100%;
     flex-direction: column;
     margin-top: 10px;
 }
 
 .div4 {
+    height: 90px;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    margin-top: 10px;
+    align-items: center;
 }
 
 .image1 {
-    height: 80px;
-    width: 80px;
+    height: 50px;
+    width: 50px;
     object-fit: cover;
-    border-radius: 800px;
+    border-radius: 25px;
     margin-top: 20px;
 }
 
 .div5 {
+
     height: 35px;
     font-size: 15px;
     max-lines: 1;
@@ -63,14 +67,18 @@
 
 .button {
     height: 30px;
+    width: 50px;
+    font-size: 10px;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    background-color: white;
+    text-color: red;
 }
 
 .div6 {
+    margin-top: 5px;
     flex-direction: row;
-    height: 180px;
+    height: 120px;
     width: 100%;
 }
 .image-pic{
@@ -80,4 +88,7 @@
 }
 .text1{
     font-size : 18px;
+}
+.text2{
+    font-size: 12px;
 }

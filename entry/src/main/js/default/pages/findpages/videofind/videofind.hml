@@ -12,14 +12,14 @@
 
                 <!--            左部布局-->
                     <div class="div2">
-                        <image style="margin-top : 300px; height : 32px; width : 32px;" src="{{ voiceSrc }}"
+                        <image style="margin-top : 300px; height : 25px; width : 25px;" src="{{ voiceSrc }}"
                                onclick="voiceClick">
                         </image>
                         <div style="flex-direction : row; height : 50px;">
-                            <text style="font-size : 25fp; color : white;">{{ $item.name }}</text>
-                            <button style="background-color : yellow; text-color : black;">+关注</button>
+                            <text style="font-size : 18fp; color : white;">{{ $item.name }}</text>
+                            <button style="background-color : red; text-color : black;margin-left: 2px;">+关注</button>
                         </div>
-                        <text style="color : white; font-size : 20fp;">{{ $item.title }}</text>
+                        <text style="color : white; font-size : 15fp;">{{ $item.title }}</text>
                     </div>
 
                 <!--            右部布局-->

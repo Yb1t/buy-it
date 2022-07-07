@@ -23,17 +23,21 @@
                 <div class="div3"
                      for="{{ bloggerData }}">
                     <div class="div4">
+                        <div>
                         <image src="{{ $item.image }}"
                                class="image1"></image>
-                        <div style="flex-direction : column;">
-                            <text style="height : 50px; font-size : 18px;"> {{ $item.name }}</text>
-                            <div class="div5">
-                                <text>{{ $item.certification }}</text>
-                                <text> | {{ $item.email }}</text>
+                        <div style="flex-direction : column; margin-left: 20px;">
+                            <div style="flex-direction : column;">
+                                <text style="height : 50px; font-size : 15px;"> {{ $item.name }}</text>
+                                <div class="div5">
+                                    <text class="text2">{{ $item.certification }}</text>
+                                    <text class="text2"> | {{ $item.email }}</text>
+                                </div>
                             </div>
-                            <text style="height : 35px; font-size : 15px;">粉丝{{ $item.num }}万</text>
+                            <text class="text2">粉丝{{ $item.num }}万</text>
                         </div>
-                        <button class="button" style="background-color: beige;text-color: black;font-size: 15px;margin-right: 5px;">看看TA</button>
+                        </div>
+                        <button class="button" >看看TA</button>
                     </div>
                     <div class="div6">
                         <image src="{{ $item.images1 }}" class="image-pic"></image>
@@ -58,17 +62,19 @@
                 <div class="div3"
                      for="{{ bloggerData1 }}">
                     <div class="div4">
+                        <div>
                         <image src="{{ $item.image }}"
                                class="image1"></image>
-                        <div style="flex-direction : column;">
-                            <text style="height : 50px; font-size : 18px;"> {{ $item.name }}</text>
+                        <div style="flex-direction : column;margin-left: 20px;">
+                            <text style="height : 50px; font-size : 15px;"> {{ $item.name }}</text>
                             <div class="div5">
                                 <text>{{ $item.certification }}</text>
                                 <text> | {{ $item.email }}</text>
                             </div>
-                            <text style="height : 35px; font-size : 15px;">粉丝{{ $item.num }}万</text>
+                            <text class="text2">粉丝{{ $item.num }}万</text>
                         </div>
-                        <button class="button" style="background-color: beige;text-color: black;">看看TA</button>
+                        </div>
+                        <button class="button" >看看TA</button>
                     </div>
                     <div class="div6">
                         <image src="{{ $item.images1 }}" class="image-pic"></image>
