@@ -1,179 +1,173 @@
 <div class="container" style="background-color : #F7F8FA;;">
 
+    <menu id="apiMenu" onselected="onMenuSelected">
+        <option value="1" icon="/common/images/share-two.png">分享</option>
+        <option value="2" icon="/common/images/search.png">搜索</option>
+        <option value="3" icon="/common/images/category-management.png">管理</option>
+    </menu>
 
 <!--顶部导航-->
-    <div style="flex-direction : row; justify-content : space-between; height : 50px; background-color : antiquewhite;
+    <div style="flex-direction : row; justify-content : space-between; height : 50px; background-color : white;
             width : 100%; padding-top : 10px; position : fixed; top : 0px;">
-        <div style="justify-content : space-between; width : 60%;">
-            <div onclick="changemenu(0)">
-                <text style="font-size : {{ menusize }} px; font-weight : {{ menuweight }};">购物车</text>
-                <text style="font-size : 15px;">(1)</text>
+        <div style="justify-content : space-between; width : 60%; padding-left : 10px;">
+            <div for="{{ menu }}">
+                <div if="{{ $idx == 0 }}">
+                    <text style="font-size : {{ $item.size }} px; font-weight : {{ $item.weight }};"
+                          onclick="changeMenu($idx)">{{ $item.name }}</text>
+                    <text style="font-size : 15px;">(1)</text>
+                </div>
+                <div else>
+                    <text style="font-size : {{ $item.size }} px; font-weight : {{ $item.weight }};"
+                          onclick="changeMenu($idx)">{{ $item.name }}</text>
+                </div>
             </div>
-            <text style="font-size : {{ menusize1 }} px; font-weight : {{ menuweight1 }};" onclick="changemenu(1)">降价
-            </text>
-            <text style="font-size : {{ menusize2 }} px; font-weight : {{ menuweight2 }};" onclick="changemenu(2)">常购
-            </text>
         </div>
-        <menu id="apiMenu" onselected="onMenuSelected">
-            <option value="1" icon="/common/images/shopping-cart-one.png">分享</option>
-            <option value="2" icon="/common/images/shopping-cart-one.png">搜索</option>
-            <option value="3" icon="/common/images/shopping-cart-one.png">管理</option>
-        </menu>
-        <text class="textsize" onclick="onTextClick">更多</text>
+        <text class="textsize" onclick="onTextClick" style="margin-right : 10px;">更多</text>
     </div>
+
 <!--购物车主体-->
-    <div if="{{ menunum == 0 }}" style="flex-direction : column;">
+    <div if="{{ menuNum == 0 }}" style="flex-direction : column;">
 
     <!--购物车抄作业-->
-        <div style="height : 40px; background-color : aquamarine; margin-top : 60px;">
-            <div style="flex-wrap : wrap; padding-top : 5px;">
-                <image src="/common/images/shopping-cart-one.png"
-                       style="height : 20px; width : 20px; border-radius : 10px; background-color : chocolate;"></image>
-                <text style="font-size : 20px;">购物车抄作业</text>
-            </div>
-            <div style="flex-wrap : wrap; padding-top : 10px;">
-                <text style="font-size : 15px;">3000万人分享了购物车</text>
-                <image src="/common/images/right.png" style="height : 20px; width : 20px;"></image>
+        <div style="justify-content : center;">
+            <div style="height : 40px; background-color : white; margin-top : 60px; width : 99%;
+                    justify-content : space-between; border-radius : 10px;">
+                <div style="padding-top : 5px;">
+                    <image src="/common/images/shoppingLike.png"
+                           style="height : 30px; width : 30px; border-radius : 10px; margin-left : 5px;"></image>
+                    <text style="font-size : 20px; margin-left : 3px;">购物车抄作业</text>
+                </div>
+                <div style="padding-top : 10px;">
+                    <text style="font-size : 15px;">3000万人分享了购物车</text>
+                    <image src="/common/images/right.png" style="height : 15px; width : 15px; margin-top : 3px;">
+                    </image>
+                </div>
             </div>
         </div>
+
 
     <!--购物车主体-->
-        <div for="{{ business }}"
-             style="margin-top : 10px; flex-direction : column; background-color : antiquewhite; radius : 20px;">
-            <block>
-                <div style="height : 40px; background-color : cadetblue; justify-content : space-between;
-                        flex-wrap : wrap;">
-                    <div style="flex-wrap : wrap; width : 80%;">
-                        <image src="/common/images/shopping-cart-one.png"
-                               style="height : 30px; width : 25px; border-radius : 10px; background-color : chocolate;
-                                       margin-right : 5px;"></image>
-                        <image src="/common/images/shopping-cart-one.png"
-                               style="height : 30px; width : 25px; border-radius : 10px; background-color : chocolate;">
-                        </image>
-                        <text class="textsize">广西商店</text>
-                        <image src="/common/images/right.png" style="height : 20px; width : 20px;"></image>
+        <div style="justify-content : center; flex-direction : column;">
+            <div for="{{ shoppingCar }}"
+                 style="margin-top : 10px; flex-direction : column; background-color : white; width : 99%;
+                         border-radius : 10px;">
+                <block>
+                    <div style="height : 40px; justify-content : space-between;
+                            flex-wrap : wrap; padding-top : 8px;">
+                        <div style="margin-left : 10px;">
+                            <image src="{{ businessImages[$idx].images }}" onclick="selectBusiness($idx)" class="images-select"></image>
+                            <image src="/common/images/shop.png"
+                                   style="height : 25px; width : 25px; margin-left : 8px;"></image>
+                            <text style="font-size : 18px; font-weight : 500; margin-left : 5px;">{{
+                                $item.proBusinessName }}</text>
+                            <image src="/common/images/right.png"
+                                   style="height : 18px; width : 18px; margin-top : 3px;"></image>
+                        </div>
+                        <text style="font-size : 16px;">领卷</text>
                     </div>
-                    <text class="textsize">领卷</text>
-                </div>
-                <div for="goodsdata">
-                    <block>
-                        <div style="height : 110px; background-color : aqua; width : 100%;">
-                            <image src="/common/images/shopping-cart-one.png"
-                                   style="height : 30px; width : 25px; border-radius : 10px;
-                                           background-color : chocolate;
-                                           margin-right : 10px;"></image>
-                            <image src="/common/images/shopping-cart-one.png"
-                                   style="height : 100px; width : 100px; border-radius : 10px;
-                                           background-color : chocolate;
-                                           margin-right : 10px;">
+<!--                    商品-->
+                    <div for="{{ (id, item) in goodsdata }}">
+                        <div style="height : 110px; width : 100%;">
+                            <image src="{{ businessImages[$idx].images }}" onclick="selectBusiness($idx)" class="images-selectGoods">
                             </image>
-                            <div style="flex-direction : column; width : 50%;">
-                                <text style="font-size : 20px;">商品名</text>
-                                <text style="font-size : 20px;">商品类型</text>
+                            <image src="{{ $item.carPro.proMainPicture }}" class="images-goods"></image>
+                            <div style="flex-direction : column; width : 50%; margin-top : 5px;
+                                    margin-left : 10px;">
+                                <text style="font-size : 15px;">{{ $item.carPro.proName }}</text>
+                                <text style="font-size : 15px; margin-top : 5px;">{{ $item.carPro.proType }}</text>
                                 <div style="align-content : space-between; justify-content : space-between;
-                                        flex-wrap : wrap;">
-                                    <text style="font-size : 25px;">$35</text>
-                                    <text style="font-size : 20px;">数量</text>
+                                        flex-wrap : wrap; margin-top : 10px;">
+                                    <div>
+                                        <text style="font-size : 10px; color : orangered;">￥</text>
+                                        <text style="font-size : 20px; color : orangered;">{{ $item.carPro.price }}
+                                        </text>
+                                    </div>
+                                    <div>
+                                        <text style="font-size : 13px; border-color : black; border-width : 0.5px;
+                                                border-radius : 5px;">x1</text>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
-                    </block>
-                </div>
-            </block>
-
-        </div>
-
-    <!--你可能喜欢-->
-        <div style="justify-content : center; height : 25px; margin-top : 10px; background-color : cornflowerblue;">
-            <div style="background-color : red; height : 10%; width : 20px; margin-top : 10px;">
+                    </div>
+                </block>
 
             </div>
-            <image src="/common/images/shopping-cart-one.png"
-                   style="height : 25px; width : 20px; border-radius : 10px; background-color : chocolate;"></image>
-            <text style="font-size : 18px;">你可能还喜欢</text>
-            <div style="background-color : red; height : 10%; width : 20px; margin-top : 10px;">
+        </div>
+
+
+    <!--你可能喜欢-->
+        <div style="justify-content : center; height : 25px; margin-top : 10px;">
+            <div class="line" style="margin-right : 5px;"></div>
+            <image src="/common/images/like.png" class="images-like"></image>
+            <text style="font-size : 18px; color : coral; font-weight : 500;">你可能还喜欢</text>
+            <div class="line" style="margin-left : 5px;">
             </div>
 
         </div>
 
     <!--喜欢内容-->
-        <div style="flex-wrap : wrap; width : 100%; justify-content : space-between; margin-bottom : 80px;
-                margin-top : 5px;">
-            <div style="flex-direction : column; width : 48%; height : 250px; flex-wrap : wrap;
-                    background-color: aliceblue; margin-bottom : 5px;border-radius: 6px;">
-                <image src="/common/images/sp1.jpg"
-                       style="object-fit : cover; height : 180px; background-color : slategrey;"></image>
-                <text style="font-size : 17px;">帅气的男士工装裤</text>
-                <div style="justify-content : space-between;">
-                    <text style="font-size : 17px;color: red;margin-right: 2px;">￥45 </text>
-                    <text style="font-size : 10px;">1000+人已付款</text>
-                </div>
-                <div style="justify-content: space-between;flex-wrap: wrap;">
-                    <text style="font-size : 12px;">收藏上万</text>
-                    <text style="font-size : 17px;font-weight: 700;">...</text>
-                </div>
-            </div>
-            <div style="flex-direction : column; width : 48%; height : 270px; flex-wrap : wrap;
-                    background-color: aliceblue; margin-bottom : 5px;border-radius: 6px;">
-                <image src="/common/images/sp2.jpg"
-                       style="object-fit : cover; height : 180px; background-color : slategrey;"></image>
-                <text style="font-size : 16px;">欧美艺术印花短袖T恤男</text>
-                <div style="justify-content : space-between;">
-                    <text style="font-size : 17px;color: red;margin-right: 2px;">￥48 </text>
-                    <text style="font-size : 10px;">1000+人已付款</text>
-                </div>
-                <div style="justify-content: space-between;flex-wrap: wrap;">
-                    <text style="font-size : 12px;">收藏上千</text>
-                    <text style="font-size : 17px;font-weight: 700;">...</text>
-                </div>
-            </div>
-            <div style="flex-direction : column; width : 48%; height : 270px; flex-wrap : wrap;
-                    background-color: aliceblue; margin-bottom : 5px;border-radius: 6px;">
-                <image src="/common/images/sp3.jpg"
-                       style="object-fit : cover; height : 180px; background-color : slategrey;"></image>
-                <text style="font-size : 17px;">男士休闲套装夏季ins港</text>
-                <div style="justify-content : space-between;">
-                    <text style="font-size : 16px;color: red;margin-right: 2px;">￥59 </text>
-                    <text style="font-size : 10px;">100+人已付款</text>
-                </div>
-                <div style="justify-content: space-between;flex-wrap: wrap;">
-                    <text style="font-size : 12px;">店铺回头率远超同行</text>
-                    <text style="font-size : 17px;font-weight: 700;">...</text>
-                </div>
-            </div>
-            <div style="flex-direction : column; width : 48%; height : 250px; flex-wrap : wrap;
-                    background-color: aliceblue; margin-bottom : 5px;border-radius: 6px;">
-                <image src="/common/images/sp4.jpg"
-                       style="object-fit : cover; height : 180px; background-color : slategrey;"></image>
-                <text style="font-size : 16px;">ZOROHOM国潮满印写</text>
-                <div style="justify-content : space-between;">
-                    <text style="font-size : 17px;color: red;margin-right: 2px;">￥58 </text>
-                    <text style="font-size : 10px;">1000+人已付款</text>
-                </div>
-                <div style="justify-content: space-between;flex-wrap: wrap;">
-                    <text style="font-size : 12px;">收藏上万</text>
-                    <text style="font-size : 17px;font-weight: 700;">...</text>
-                </div>
-            </div>
+        <div style="justify-content : center;">
+            <div class="container-MaybeLike">
+                <div class="div-MaybeLike" for="{{ MaybeLike }}">
+                    <block>
+                        <image src="{{ $item.images }}" class="images-MaybeLike"></image>
+                        <div style="justify-content : center; width : 95%; margin-top : 5px;">
+                            <text style="font-size : 17px;">{{ $item.name }}</text>
+                        </div>
 
+                        <div style="margin-left : 4px; margin-top : 4px;">
+                            <text style="font-size : 17px; color : red; margin-right : 2px;">￥{{ $item.money }} </text>
+                            <text style="font-size : 10px;">{{ $item.payNum }}人已付款</text>
+                        </div>
+
+                        <div style="justify-content : space-between; flex-wrap : wrap;">
+                            <text style="font-size : 12px; padding-left : 5px; color : tan;">{{ $item.collection }}
+                            </text>
+                            <text style="font-size : 17px; font-weight : 700; padding-bottom : 3px;
+                                    padding-right : 5px;">...</text>
+                        </div>
+                    </block>
+                </div>
+            </div>
         </div>
+
 
     </div>
-<!--结算栏-->
-    <div style="height: 50px;background-color: azure;position: fixed;bottom: 50px;width: 100%;justify-content: space-between;">
-        <div style="margin-top: 7px;">
-            <image src="{{selall}}" onclick="selectall"
-                   style="height : 30px; width : 25px; border-radius : 10px; background-color: orangered;
-                           margin-right : 5px;border-width: 1fp;border-color: silver;object-fit: cover;"></image>
-            <text style="font-size: 15px;">全选</text>
+
+<!--降价-->
+    <div if="{{ menuNum == 1 }}" class="container-menu">
+        <image src="/common/images/shoppingNull.png" style="height : 120px; width : 120px; radius : 10px;"></image>
+        <div style="flex-direction : column; align-content : center; margin-top : 10px;">
+            <text style="text-align : center; font-size : 20px; margin-bottom : 15px;">最近没有降价的宝贝</text>
+            <text style="text-align : center; font-size : 12px; opacity : 0.9; margin-bottom : 280px;">降价的宝贝会出现在这里哦
+            </text>
         </div>
-        <div style="width: 45%;margin-top: 7px;">
-            <text style="font-size: 15px;">合计</text>
-            <text style="font-size: 10px;color: orangered;">￥</text>
-            <text style="font-size: 18px;color: orangered;">12</text>
-            <div style="justify-content :center;width: 60%;height:80%;background-color: orangered;border-radius: 20px;">
-                <text style="color: white;font-size: 20px;">结算</text>
-            </div>
+    </div>
+
+<!--常购-->
+    <div if="{{ menuNum == 2 }}" class="container-menu">
+        <image src="/common/images/shoppingNull.png" style="height : 120px; width : 120px; radius : 10px;"></image>
+        <div style="flex-direction : column; align-content : center; margin-top : 10px;">
+            <text style="text-align : center; font-size : 20px; margin-bottom : 15px;">最近没有常购买的宝贝</text>
+            <text style="text-align : center; font-size : 12px; opacity : 0.9; margin-bottom : 280px;">多次购买的宝贝会出现在这里哦
+            </text>
+        </div>
+    </div>
+
+
+<!--结算栏-->
+    <div class="container-bottom">
+        <div style="margin-top : 12px; margin-left : 5px;">
+            <image src="{{ selectAllImages }}" onclick="selectAll" class="images-select"></image>
+            <text style="font-size : 15px;">全选</text>
+        </div>
+        <div style="margin-top : 5px;">
+            <text style="font-size : 15px;">合计</text>
+            <text style="font-size : 10px; color : orangered;">￥</text>
+            <text style="font-size : 18px; color : orangered; margin-right : 3px;">{{total}}</text>
+            <button type="capsule" class="button-account" onclick="onRouter">结算</button>
         </div>
 
     </div>

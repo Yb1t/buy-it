@@ -2,6 +2,100 @@
     flex-direction: column;
     width: 100%;
 }
-.textsize{
+
+.textsize {
     font-size: 20px;
+}
+
+.div-MaybeLike {
+    flex-direction: column;
+    width: 49%;
+    height: 280px;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.container-MaybeLike {
+    flex-wrap: wrap;
+    width: 99%;
+    justify-content: space-between;
+    margin-bottom: 200px;
+    background-color: bisque;
+    margin-top: 5px;
+}
+
+.images-MaybeLike {
+    object-fit: cover;
+    height: 180px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.images-select {
+    height: 25px;
+    width: 25px;
+    border-radius: 10px;
+    background-color: orangered;
+    margin-right: 5px;
+    border-width: 1fp;
+    border-color: silver;
+    object-fit: cover;
+}
+
+.button-account {
+    text-align: center;
+    background-color: orangered;
+    width: 100px;
+    margin-right: 5px;
+}
+
+.container-bottom {
+    height: 50px;
+    background-color: azure;
+    position: fixed;
+    bottom: 50px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.line {
+    background-color: coral;
+    height: 8%;
+    width: 20px;
+    margin-top: 12px;
+}
+
+.images-like {
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    margin-top: 3px;
+    margin-right: 3px;
+}
+
+.images-selectGoods {
+    height: 25px;
+    width: 25px;
+    border-radius: 10px;
+    background-color: orangered;
+    border-width: 1fp;
+    border-color: silver;
+    object-fit: cover;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+.images-goods {
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: chocolate;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.container-menu{
+    flex-direction: column; justify-content: center;height: 100%;width: 100%; align-items: center;
 }
