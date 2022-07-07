@@ -14,7 +14,7 @@
                 </block>
             </div>
         </tab-bar>
-        <tab-content scrollable="true" style="margin-bottom: 80px;">
+        <tab-content scrollable="true">
         <!--                全部-->
             <div class="div2">
             <div class="divContent">

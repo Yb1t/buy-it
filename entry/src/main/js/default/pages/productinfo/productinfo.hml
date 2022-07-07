@@ -7,9 +7,9 @@
     <image class="headimg" src="common/icons/moreblack.png"></image>
     </div>
     <div style="flex-direction: column;width: 100%;height: 100%;overflow: scroll;">
-        <div style="width: 100%;height: 50%;margin: 5px;padding: 10px;">
-            <image src="{{product.proMainPicture}}"></image>
-        </div>
+        <swiper style="width: 100%;height: 50%;margin: 5px;padding: 10px;">
+            <image for="{{product.pictures}}" src="{{$item.picUrl}}"></image>
+        </swiper>
         <div  style="flex-direction: column;width: 100%;border: 1px lightgray;margin: 10px;border-radius: 12px;">
             <div style="width: 100%;height: 48px;justify-content: space-between;">
                 <text class="price" style="margin-start: 10px;font-size: 28px;color: orange;width: 100%;">￥{{product.price}}</text>
@@ -27,11 +27,11 @@
             <text class="introduce" style="margin-start: 10px;margin-top: 3px;margin-bottom: 3px;font-size: 24px;">{{product.proName}}</text>
             <div  style="flex-direction: row;position: relative;bottom: 0px;width: 100%;">
                 <div for="{{nav}}" onclick="onapply" style="flex-direction: row;font-size: 14px;width: 100%;margin-start: 10px;margin-end: 10px;">
-                    <block if="{{ text }}">
+                    <block if="{{ !text }}">
                         <image src="{{ $item.image }}" style="width: 32px;height: 32px;padding:6px;">
                         </image>
                     </block>
-                    <block if="{{ ! text }}">
+                    <block if="{{ text }}">
                         <image src="{{ $item.image1 }}" style="width: 32px;height: 32px;padding:6px;">
                         </image>
                     </block>
@@ -44,10 +44,10 @@
     </div>
     <div style="width: 100%;position: absolute;bottom: 0px;height: 60px;margin-bottom: 10px;align-items: center;justify-content: space-between;background-color: white;" >
         <div for="{{navigation}}" onclick="onapply" style="flex-direction: column;margin-start: 10px;margin-end: 6px;justify-content: center;align-items: center;">
-            <block if="{{ text }}">
+            <block if="{{ !text }}">
                 <image src="{{$item.image}} "style="width: 32px;height: 32px;padding: 3px;"></image>
                 </block>
-            <block if="{{ ! text }}">
+            <block if="{{ text }}">
                 <image src="{{$item.image1}} "style="width: 32px;height: 32px;padding: 3px;"></image>
             </block>
             <text style="font-size: 14px;">{{$item.text}}</text>

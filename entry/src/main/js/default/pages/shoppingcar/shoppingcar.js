@@ -60,15 +60,10 @@ export default {
         total: 0,
         businessImages: [{
                              images: "/common/images/white.png"
-                         }, {
-                             images: "/common/images/white.png"
-                         }, {
-                             images: "/common/images/white.png"
                          },],
-
+        businessImagesNum: 1,
     },
     onInit() {
-
         // 每一个httpRequest对应一个http请求任务，不可复用
         let httpRequest = http.createHttp();
         httpRequest.request(
@@ -90,7 +85,33 @@ export default {
             }
         }
         );
-        console.log(this.menuNum)
+
+        let httpR = http.createHttp();
+        httpR.request(
+        // 填写http请求的url地址，可以带参数也可以不带参数。URL地址需要开发者自定义。GET请求的参数可以在extraData中指定
+            "http://huangrui.vaiwan.com/car/num/123456",
+            {}, (err, data) => {
+            if (!err) {
+                // data.result为http响应内容，可根据业务需要进行解析
+                console.info('Result:' + data.result);
+                console.info('code:' + data.responseCode);
+                // data.header为http响应头，可根据业务需要进行解析
+                console.info('header:' + data.header);
+
+                this.businessImagesNum=data.result
+                for (var index = 1; index < this.businessImagesNum; index++) {
+                    this.businessImages.push({images:"/common/images/white.png"})
+                }
+                console.info(this.businessImagesNum)
+            } else {
+                console.info('error:' + err.message);
+            }
+        });
+
+
+
+        console.info("bus"+this.businessImagesNum)
+        console.info("bus"+this.businessImages.length)
     },
     onTextClick() {
         this.$element("apiMenu").show({
@@ -120,42 +141,46 @@ export default {
     selectAll() {
         if (this.selectAllImages == "/common/images/white.png") {
             this.selectAllImages = "/common/images/check.png"
-            this.total=0
+            this.total = 0
             for (var index = 0; index < this.shoppingCar.length; index++) {
-               this.total= this.shoppingCar[index].carPro.price+this.total
-                this.businessImages[index].images="/common/images/check.png"
+                this.total = this.shoppingCar[index].carPro.price + this.total
+                this.businessImages[index].images = "/common/images/check.png"
             }
         } else {
             for (index = 0; index < this.shoppingCar.length; index++) {
-                this.businessImages[index].images="/common/images/white.png"
+                this.businessImages[index].images = "/common/images/white.png"
             }
             this.selectAllImages = "/common/images/white.png"
-            this.total=0
+            this.total = 0
         }
     },
     selectBusiness(temp) {
         if (this.businessImages[temp].images == "/common/images/check.png") {
             this.businessImages[temp].images = "/common/images/white.png"
-            this.total=this.total-this.shoppingCar[temp].carPro.price
+            this.total = this.total - this.shoppingCar[temp].carPro.price
         } else {
             this.businessImages[temp].images = "/common/images/check.png"
-            this.total=this.total+this.shoppingCar[temp].carPro.price
+            this.total = this.total + this.shoppingCar[temp].carPro.price
         }
-        var r=0
+        var r = 0
         for (var index = 0; index < this.shoppingCar.length; index++) {
-            if(this.businessImages[index].images=="/common/images/check.png"){
-                r=r+1
+            if (this.businessImages[index].images == "/common/images/check.png") {
+                r = r + 1
             }
         }
-        console.info("r"+r)
-        if(r==this.shoppingCar.length){
+        console.info("r" + r)
+        if (r == this.shoppingCar.length) {
             this.selectAllImages = "/common/images/check.png"
-        }else{
+        } else {
             this.selectAllImages = "/common/images/white.png"
         }
     },
     onRouter() {
+
         router.push({
+            params: {
+                businessImages: this.businessImages
+            },
             uri: "pages/account/account"
         })
     }

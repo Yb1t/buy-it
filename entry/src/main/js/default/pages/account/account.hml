@@ -1,7 +1,7 @@
 <div class="container">
 
 <!-- 确认订单-->
-    <div class="container-top">
+    <div class="container-top" onclick="reBack">
         <image src="/common/images/left.png" class="images-top"></image>
         <text class="text-top">确认订单</text>
     </div>
@@ -21,63 +21,67 @@
     </div>
 
 <!--商品-->
-    <div class="container-body">
-        <div class="container-goods">
+    <div for="{{ (id, item) in businessImages }}">
+        <block if="{{ item.images == '/common/images/check.png' }}">
+            <div class="container-body">
+                <div class="container-goods">
 
-            <div style="margin-top : 20px;">
-                <image src="/common/images/shopping-cart-one.png" class="images-business"></image>
-                <text class="text-business">店铺名</text>
-            </div>
+                    <div style="margin-top : 20px;">
+                        <image src="/common/images/shop.png" class="images-business"></image>
+                        <text class="text-business">商店</text>
+                    </div>
 
-            <div>
-                <image src="/common/images/shopping-cart-one.png" class="images-goods"></image>
-                <div class="div-goods1">
-                    <div class="div-goods2">
-                        <text style="font-size : 18px;">商品名</text>
-                        <text style="font-size : 18px;">￥45</text>
+                    <div>
+                        <image src="/common/images/shop.png" class="images-goods"></image>
+                        <div class="div-goods1">
+                            <div class="div-goods2">
+                                <text style="font-size : 18px;">商品名</text>
+                                <text style="font-size : 18px;">￥价格</text>
+                            </div>
+                            <div class="div-goods2">
+                                <text style="font-size : 16px;">类型</text>
+                                <text style="font-size : 16px;">x1</text>
+                            </div>
+                            <text style="font-size : 15px;">公益宝贝</text>
+                            <text style="font-size : 13px;">可享先用后付</text>
+                        </div>
                     </div>
-                    <div class="div-goods2">
-                        <text style="font-size : 16px;">颜色:黑色;尺码:xl</text>
-                        <text style="font-size : 16px;">x5</text>
+
+
+                    <div class="container-condition1">
+                        <text class="text-condition2">配送服务</text>
+                        <div>
+                            <div class="div-condition1">
+                                <text class="text-condition1">快递 免邮</text>
+                                <text class="text-condition1">付款后7天内发货</text>
+                            </div>
+                            <image src="/common/images/right.png" class="images-condition"></image>
+                        </div>
                     </div>
-                    <text style="font-size : 15px;">公益宝贝</text>
-                    <text style="font-size : 13px;">可享先用后付</text>
+
+                    <div class="container-condition2">
+                        <text class="text-condition2">运费险</text>
+                        <div>
+                            <div class="div-condition1">
+                                <text class="text-condition1">未选择</text>
+                                <text style="font-size : 15px;">退换货可赔付10元</text>
+                            </div>
+                            <image src="/common/images/right.png" class="images-condition"></image>
+                        </div>
+                    </div>
+
+                    <div class="container-condition2">
+                        <text class="text-condition2">订单备注</text>
+                        <div>
+                            <div class="div-condition1">
+                                <text class="text-condition3">无备注</text>
+                            </div>
+                            <image src="/common/images/right.png" class="images-condition"></image>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-
-            <div class="container-condition1">
-                <text class="text-condition2">配送服务</text>
-                <div>
-                    <div class="div-condition1">
-                        <text class="text-condition1">快递 免邮</text>
-                        <text class="text-condition1">付款后7天内发货</text>
-                    </div>
-                    <image src="/common/images/right.png" class="images-condition"></image>
-                </div>
-            </div>
-
-            <div class="container-condition2">
-                <text class="text-condition2">运费险</text>
-                <div>
-                    <div class="div-condition1">
-                        <text class="text-condition1">未选择</text>
-                        <text style="font-size : 15px;">退换货可赔付10元</text>
-                    </div>
-                    <image src="/common/images/right.png" class="images-condition"></image>
-                </div>
-            </div>
-
-            <div class="container-condition2">
-                <text class="text-condition2">订单备注</text>
-                <div>
-                    <div class="div-condition1">
-                        <text class="text-condition3">无备注</text>
-                    </div>
-                    <image src="/common/images/right.png" class="images-condition"></image>
-                </div>
-            </div>
-        </div>
+        </block>
     </div>
 
 

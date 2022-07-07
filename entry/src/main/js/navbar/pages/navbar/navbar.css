@@ -3,6 +3,7 @@
     flex-direction: row;
     position: fixed;
     bottom: 0px;
+    background-color: white;
 }
 
 .navbar>div{
