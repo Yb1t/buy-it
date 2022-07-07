@@ -7,30 +7,30 @@ export default {
         message:'',
         content:'',
         textData: [{
-                       'likeNum': '1222',
-                       'saveNum': '14',
+                       'likeNum': 1222,
+                       'saveNum': 14,
                        'commentNum': '',
-                       'shareNum': '44',
+                       'shareNum': 44,
                        'likeSrc': '/common/icons/like1.png',
                        'saveSrc': '/common/icons/star1.png',
                        'name': '@跑酷达人',
                        'title': '今日一小伙在街头跑酷',
                        'video': '/common/video/video2.mp4'
                    }, {
-                       'likeNum': '12.1万',
-                       'saveNum': '14555',
+                       'likeNum': 12,
+                       'saveNum': 14555,
                        'commentNum': '',
-                       'shareNum': '442',
+                       'shareNum': 442,
                        'likeSrc': '/common/icons/like1.png',
                        'saveSrc': '/common/icons/star1.png',
                        'name': '@烟花达人',
                        'title': '今日一小伙在街头放烟花',
                        'video': '/common/video/video1.mp4'
                    }, {
-                       'likeNum': '17777',
-                       'saveNum': '577',
+                       'likeNum': 17777,
+                       'saveNum': 577,
                        'commentNum': '',
-                       'shareNum': '44',
+                       'shareNum': 44,
                        'likeSrc': '/common/icons/like1.png',
                        'saveSrc': '/common/icons/star1.png',
                        'name': '@玩具达人',
@@ -47,15 +47,19 @@ export default {
     likeClick(e) {
         if (this.textData[e].likeSrc == this.$t('/common/icons/like1.png')) {
             this.textData[e].likeSrc  = this.$t('/common/icons/like2.png')
+            this.textData[e].likeNum=this.textData[e].likeNum+1
         } else {
             this.textData[e].likeSrc  = this.$t('/common/icons/like1.png')
+            this.textData[e].likeNum=this.textData[e].likeNum-1
         }
     },
     saveClick(e) {
         if (this.textData[e].saveSrc == this.$t('/common/icons/star1.png')) {
             this.textData[e].saveSrc= this.$t('/common/icons/star2.png')
+            this.textData[e].saveNum=this.textData[e].saveNum+1
         } else {
             this.textData[e].saveSrc = this.$t('/common/icons/star1.png')
+            this.textData[e].saveNum=this.textData[e].saveNum-1
         }
     },
     shareClick() {
@@ -93,6 +97,7 @@ export default {
 //    获取输入的信息
     inputChange(e){
         this.message = e.value
+        console.log("评论区内容："+e.value)
     },
 //    评论发布
     sentComment(){

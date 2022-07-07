@@ -1,0 +1,61 @@
+<div style="flex-direction: column;justify-content: space-between;height: 100%;">
+    <div style="flex-direction: row;height: 80px;background-color: white;">
+    <image class="headimg" src="common/icons/leftblack.png"></image>
+        <search style="width: 60%;"></search>
+    <image class="headimg" src="common/icons/shareTwo.png"></image>
+    <image class="headimg" src="common/icons/shoppingblack.png" onclick="addshopping"></image>
+    <image class="headimg" src="common/icons/moreblack.png"></image>
+    </div>
+    <div style="flex-direction: column;width: 100%;height: 100%;overflow: scroll;">
+        <div style="width: 100%;height: 50%;margin: 5px;padding: 10px;">
+            <image src="{{product.proMainPicture}}"></image>
+        </div>
+        <div  style="flex-direction: column;width: 100%;border: 1px lightgray;margin: 10px;border-radius: 12px;">
+            <div style="width: 100%;height: 48px;justify-content: space-between;">
+                <text class="price" style="margin-start: 10px;font-size: 28px;color: orange;width: 100%;">￥{{product.price}}</text>
+                <text class="label" style="margin-end: 10px;width: 100%;font-size: 14px;text-align: end;color: gray;">10人付款</text>
+            </div>
+            <div style="flex-direction: row;width: 100%;justify-content: space-between;">
+                <text class="hint" >{{product.proType}}</text>
+                <text class="hint"></text>
+                <image class="icon" src="common/icons/right.png" style=""> </image>
+            </div>
+
+            <div>
+                <text class="shop">天猫</text>
+            </div>
+            <text class="introduce" style="margin-start: 10px;margin-top: 3px;margin-bottom: 3px;font-size: 24px;">{{product.proName}}</text>
+            <div  style="flex-direction: row;position: relative;bottom: 0px;width: 100%;">
+                <div for="{{nav}}" onclick="onapply" style="flex-direction: row;font-size: 14px;width: 100%;margin-start: 10px;margin-end: 10px;">
+                    <block if="{{ text }}">
+                        <image src="{{ $item.image }}" style="width: 32px;height: 32px;padding:6px;">
+                        </image>
+                    </block>
+                    <block if="{{ ! text }}">
+                        <image src="{{ $item.image1 }}" style="width: 32px;height: 32px;padding:6px;">
+                        </image>
+                    </block>
+                    <text>{{$item.context}}
+                    </text>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div style="width: 100%;position: absolute;bottom: 0px;height: 60px;margin-bottom: 10px;align-items: center;justify-content: space-between;background-color: white;" >
+        <div for="{{navigation}}" onclick="onapply" style="flex-direction: column;margin-start: 10px;margin-end: 6px;justify-content: center;align-items: center;">
+            <block if="{{ text }}">
+                <image src="{{$item.image}} "style="width: 32px;height: 32px;padding: 3px;"></image>
+                </block>
+            <block if="{{ ! text }}">
+                <image src="{{$item.image1}} "style="width: 32px;height: 32px;padding: 3px;"></image>
+            </block>
+            <text style="font-size: 14px;">{{$item.text}}</text>
+        </div>
+        <div style="width: 60%;height: 100%;align-items: center;color: white;">
+        <text onclick="addshopping" style="font-size: 16px;width: 50%;height: 44px;background-color: orange;border-bottom-left-radius: 25px;border-top-left-radius: 25px;text-align: center;">加入购物车</text>
+        <text style="font-size: 16px;width: 50%;;text-align: center;background-color: coral;height: 44px;border-bottom-right-radius: 25px;border-top-right-radius: 25px;">立即购买</text>
+        </div>
+    </div>
+    
+</div>

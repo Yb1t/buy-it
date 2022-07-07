@@ -4,8 +4,15 @@
         </search>
     </div>
     <tabs onchange="tabchange" vertical="false">
-        <tab-bar mode="scrollable">
-            <text class="text3" for="{{ title }}">{{ $item }}</text>
+        <tab-bar mode="scrollable" >
+            <div for="{{ title }}" >
+                <block if="{{defaultIndex==$idx}}">
+            <text class="text3" style="font-weight: 700;"  >{{ $item }}</text>
+                </block>
+                <block else>
+                    <text class="text3" >{{ $item }}</text>
+                </block>
+            </div>
         </tab-bar>
         <tab-content scrollable="true" style="margin-bottom: 80px;">
         <!--                全部-->
@@ -21,6 +28,10 @@
                                class="image1"></image>
                         <text class="text2">{{
                             $item.name }}</text>
+                        <div style="flex-direction: row;margin-left: 5px;">
+                            <image class="image1" src="{{$item.likeImageSrc}}" onclick="findLikeClick({{$idx}})"></image>
+                            <text style="font-size: 12px;">{{$item.likeSum}}</text>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -38,6 +49,10 @@
                                class="image1"></image>
                         <text class="text2">{{
                             $item.name }}</text>
+                        <div style="flex-direction: row;margin-left: 5px;">
+                            <image class="image1" src="{{$item.likeImageSrc}}" onclick="foodLikeClick({{$idx}})"></image>
+                            <text style="font-size: 12px;">{{$item.likeSum}}</text>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -55,6 +70,10 @@
                                class="image1"></image>
                         <text class="text2">{{
                             $item.name }}</text>
+                        <div style="flex-direction: row;margin-left: 5px;">
+                            <image class="image1" src="{{$item.likeImageSrc}}" onclick="musicLikeClick({{$idx}})"></image>
+                            <text style="font-size: 12px;">{{$item.likeSum}}</text>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -72,6 +91,10 @@
                                class="image1"></image>
                         <text class="text2">{{
                             $item.name }}</text>
+                        <div style="flex-direction: row;margin-left: 5px;">
+                            <image class="image1" src="{{$item.likeImageSrc}}" onclick="homeLikeClick({{$idx}})"></image>
+                            <text style="font-size: 12px;">{{$item.likeSum}}</text>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -89,6 +112,10 @@
                                class="image1"></image>
                         <text class="text2">{{
                             $item.name }}</text>
+                        <div style="flex-direction: row;margin-left: 5px;">
+                            <image class="image1" src="{{$item.likeImageSrc}}" onclick="clothLikeClick({{$idx}})"></image>
+                            <text style="font-size: 12px;">{{$item.likeSum}}</text>
+                        </div>
                     </div>
                 </div>
             </div>

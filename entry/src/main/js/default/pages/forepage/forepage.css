@@ -1,0 +1,47 @@
+.container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 0px;
+    top: 0px;
+    width: 454px;
+    height: 454px;
+}
+.imagebar{
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 160px;
+}
+.navigation {
+    flex-direction: row;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    background-color: white;
+
+}
+.navigation div{
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    width: 100%;
+    height: 72px;
+    border-color: red;
+    
+}
+.navigation image{
+    width: 36px;
+    height: 36px;
+}
+.navigation text{
+    text-align: center;
+    font-size: 14px;
+}
+
+.title {
+    font-size: 30px;
+    text-align: center;
+    width: 200px;
+    height: 100px;
+}

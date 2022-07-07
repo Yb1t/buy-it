@@ -1,4 +1,5 @@
 import http from '@ohos.net.http';
+import router from '@system.router';
 export default {
     data: {
         title: 'World',
@@ -14,14 +15,28 @@ export default {
                 "addressPhone":"18844602356",
                 "addressMain":"广西壮族自治区桂林市桂林电子科技大学",
             },{
-                "addressId":1,
+                "addressId":2,
                 "addressName":"hhh",
                 "addressPhone":"10044602356",
                 "addressMain":"广西壮族自治区桂林市桂林电子科技大学花江校区",
             }
         ]
     },
-    /*onInit() {
+    toUpdate(index){
+        router.push({
+            uri:"pages/updateAddress/updateAddress",
+            params:{
+                updateAddressDate:this.myAddress[index]
+            }
+        })
+        console.info("我的地址id:"+this.myAddress[index].addressId);
+    },
+    toAdd(){
+        router.push({
+            uri:"pages/addAddress/addAddress"
+        })
+    },
+    onInit() {
         // 每一个httpRequest对应一个http请求任务，不可复用
         let httpRequest = http.createHttp();
         httpRequest.request(
@@ -49,5 +64,5 @@ export default {
             }
         });
 
-    }*/
+    }
 }
