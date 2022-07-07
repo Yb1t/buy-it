@@ -12,7 +12,7 @@ export default {
         ws: null,
         url: "ws://huangrui.vaiwan.com/ws/",
         user: {
-            userId: 1,
+            userId: null,
             username: "",
             avatar: "/common/icons/user.png"
         },
@@ -49,7 +49,8 @@ export default {
     },
 
     onInit(){
-        this.url = this.url + this.user.userId+"/"+this.sendTo.userId;
+        this.user.userId = this.$app.$def.globalData.loginUser.userId
+        this.url = this.url + this.$app.$def.globalData.loginUser.userId +"/"+this.sendTo.userId;
         this.initUsers();
         if (this.productId!='') {
             this.initProduct();
