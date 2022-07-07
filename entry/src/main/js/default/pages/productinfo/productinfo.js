@@ -175,10 +175,22 @@ export default {
 
     },
     share(){
+        var sendTo
+        if(this.$app.$def.globalData.loginUser.userId==1){
+            sendTo = 2
+        }else{
+            sendTo = 1
+        }
         router.push({
             uri: "pages/chat/chat",
             params:{
-                productId: this.productId
+                productId: this.productId,
+                sendTo: {
+                    userId: sendTo,
+                    username: "",
+                    avatar: ""
+                },
+
             }
         })
     }
