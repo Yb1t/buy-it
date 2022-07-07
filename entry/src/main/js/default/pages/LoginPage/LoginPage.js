@@ -108,6 +108,7 @@ export default {
                         router.push({
                             uri:'pages/index/index'
                         })
+                        this.$app.$def.globalData.loginUser = this.userData;
                     }else{
                         prompt.showToast({
                             message:this.myResult.msg

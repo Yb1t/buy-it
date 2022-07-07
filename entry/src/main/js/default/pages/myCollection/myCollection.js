@@ -75,6 +75,7 @@ export default {
         console.info("我的收藏数据:"+this.myCollection[index].collectionPro);
 
     },
+
     onInit() {
         // 每一个httpRequest对应一个http请求任务，不可复用
         let httpRequest = http.createHttp();
