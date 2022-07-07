@@ -6,6 +6,7 @@
 <element src="../forepage/forepage.hml" name="forePage"></element>
 <div class="container">
     <block if="{{selectedPage == 0}}">
+        <forepage></forepage>
     </block>
     <block if="{{selectedPage == 1}}">
         <findpage></findpage>

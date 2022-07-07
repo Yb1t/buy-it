@@ -1,7 +1,7 @@
 export default {
     data: {
         title: "",
-        defaultIndex:2,
+        defaultIndex:0,
         menudata:[
             {icon:"/common/icons/home.png", title:"主页", iconActive:"/common/icons/home_active.png"},
             {icon:"/common/icons/boy.png", title:"发现", iconActive:"/common/icons/message_active.png"},

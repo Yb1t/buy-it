@@ -1,7 +1,7 @@
 export default {
     data: {
         title: "",
-        selectedPage: 2
+        selectedPage:0
     },
     changePage(e){
         console.log(e.detail.index)
