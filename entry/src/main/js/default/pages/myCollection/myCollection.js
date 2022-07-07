@@ -1,4 +1,5 @@
 import http from '@ohos.net.http';
+import router from '@system.router';
 export default {
     data: {
         title: 'World',
@@ -61,6 +62,18 @@ export default {
                 "collectionNum":1
             },
         ],
+    },
+
+    toProductDetail(index){
+
+        router.push({
+            uri:"pages/productinfo/productinfo",
+            params:{
+                product:this.myCollection[index].collectionPro
+            }
+        })
+        console.info("我的收藏数据:"+this.myCollection[index].collectionPro);
+
     },
     onInit() {
         // 每一个httpRequest对应一个http请求任务，不可复用

@@ -16,7 +16,6 @@ export default {
                        'name': '@跑酷达人',
                        'title': '今日一小伙在街头跑酷',
                        'video': '/common/video/video2.mp4',
-                      'commentData':[{'name':'李四','comment':'好看'}],
                    }, {
                        'likeNum': 12,
                        'saveNum': 14555,
