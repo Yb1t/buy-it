@@ -1,0 +1,94 @@
+<div style="flex-direction: column;width: 100%;height: 100%;justify-content:space-around;align-items: center;">
+
+    <div class="header" style="margin-left:3%;margin-right: 3%;align-items: baseline;font-size: 18fp; margin-top: 10px; width: 100%;height:48px;flex-direction: row;flex-wrap: nowrap;justify-content: space-between;">
+        <div style="width: 100%;background-color: cornsilk;height: 75%;">
+            <image style="width: 45%;height: 100%;background-color: white;margin: 2px;border-radius: 18px;"></image>
+        </div>
+        <div style="flex-direction: row;width: 100%;justify-content: space-between;">
+            <text style="text-align: center;width: 50%;">订阅</text>
+            <text style="text-align: center;width: 50%;">推荐</text>
+        </div>
+        <div style="width: 100%;background-color: cornsilk;height: 75%;justify-content: flex-end;">
+        <image style="width: 55%;height: 100%;background-color: white;margin: 2px;border-radius: 18px;"></image>
+        </div>
+    </div>
+    <search hint="搜索" style="position: relative;margin-right: 12px;margin-left: 12px;margin-bottom: 20px;"></search>
+    <swiper index="0"  style="width: 100%;height: 100%;">
+        <div class="body" style="width: 100%;height: 100%;flex-direction: column;justify-content: space-around;align-items: center;overflow: scroll;scrollbar-width: 0px;">
+            <swiper>
+                <div class="imagebar" style="width: 100%;height: 20%;margin-left: 3%;margin-right: 3%;border-radius: 12px;margin-bottom: 12px;flex-wrap: wrap;justify-content: space-between;">
+                    <div for="{{imagebar0}}" style="flex-direction: column;width: 16%;margin: 2%;height: 46%;font-size: 14fp;text-align: center;">
+                        <image src="{{$item.icon}}" style=""></image>
+                        <text>类型</text>
+                    </div>
+                </div>
+                <div class="imagebar" style="width: 100%;height: 20%;margin-left: 3%;margin-right: 3%;border-radius: 12px;margin-bottom: 12px;flex-wrap: wrap;justify-content: space-between;">
+                    <div for="{{imagebar1}}" style="flex-direction: column;width: 16%;margin: 2%;height: 46%;">
+                        <image></image>
+                        <text></text>
+                    </div>
+                </div>
+            </swiper>
+            <div class="MidBar" style="border-radius: 12px;background-color: gainsboro;flex-direction: row;justify-content: center;align-items: center; flex-wrap:wrap;margin-left:3%;margin-right: 3%;margin-bottom:12px;width: 100%;border-radius: 12px;background-color: aquamarine;" >
+                <div for="{{midcard}}" style="width: 50%;flex-direction: column;height:13%;" >
+
+                    <div style="flex-direction: row;width: 100%;margin: 2px;">
+                        <div style="flex-direction: column;">
+                            <div style="flex-direction: row;width: 100%;justify-content: space-between;margin-bottom: 4px;height: 20px;align-items: baseline;">
+                                <text style="font-size: 13px;">{{$item.label}}</text>
+                                <div class="tips" style="background-color: red;border-radius: 2px;font-size: 10px;text-color: white;width: 50%;">
+                                    <text>{{$item.tip}}</text>
+                                </div>
+                            </div>
+                            <image style="background-color: antiquewhite;"></image>
+                        </div>
+                        <image style="background-color: beige;"></image>
+                    </div>
+                </div>
+            </div>
+            <div class="gridBar">
+                <grid-container style="margin: 12px; background-color: gainsboro;"columns="1"  >
+                    <grid-row style="flex-direction: column;justify-content: space-between;height: 100%;width: 100%;flex-wrap:wrap;scrollbar-width: 0px;grid-auto-flow: row;background-color: aqua;">
+                        <grid-col style="background-color:gainsboro;width: 50%;justify-content: space-between;flex-wrap: wrap;">
+
+                            <swiper autoplay="true" style="width: 45%;height: 160px;background-color: white;margin: 8px;border-radius: 8px;">
+                                <div for="{{products}}" onclick="launch" style="flex-direction: column;border-radius: 8px;">
+                                    <image src="https://gd-hbimg.huaban.com/2114d7f7b3315e9b30cb2b1e874ea6677bc86a97affa3-x5XtHC_fw658" style="width: 100%;height: 100%;"> </image>
+                                </div>
+                            </swiper>
+                            <div for="{{products}}" onclick="launch" style="width: 45%; flex-direction: column; border-radius: 8px;background-color:white;margin: 8px;">
+                                <image src="{{$item.src}}" style="border-top-left-radius: 8px;border-top-right-radius: 8px;object-fit: cover;height: 128px;">
+                                </image>
+                                <div style="flex-direction: row;align-items: baseline;">
+                                    <text style="color: orange;font-size: 18px;">￥69</text>
+                                    <text style="color: lightgray;font-size: 8px;margin-start: 5px;">5人付款</text>
+                                </div>
+                                <div style="flex-direction: row;margin-bottom: 3px;">
+                                    <div style="flex-direction: row;width: 70%;">
+                                        <text style="margin-start: 5px;color: orange;border:1px orange;font-size: 8px;border-radius: 2px;">淘金币抵2.0元</text>
+                                        <text style="margin-start: 5px;color: orange;border:1px orange;font-size: 8px;border-radius: 2px;">包邮</text>
+                                    </div>
+                                    <image src="common/icons/moregray.png" style="width: 30%;height: 20px;object-fit: contain;"></image>
+                                </div>
+                                </div>
+                        </grid-col>
+
+                    </grid-row>
+                </grid-container>
+
+            </div>
+        </div>
+        <div style="width: 100%;height: 100%;">
+            <image src="https://gd-hbimg.huaban.com/2114d7f7b3315e9b30cb2b1e874ea6677bc86a97affa3-x5XtHC_fw658">
+            </image>
+        </div>
+
+    </swiper>
+    <div class="navigation" >
+        <div for="{{nav}}">
+            <image src="{{$item.image}}"></image>
+            <text>{{$item.title}}</text>
+        </div>
+    </div>
+
+</div>

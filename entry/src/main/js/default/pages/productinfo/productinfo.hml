@@ -1,0 +1,37 @@
+<div style="flex-direction: column;justify-content: space-between;">
+    <div style="flex-direction: row;height: 80px;background-color: white;">
+    <image class="headimg" src="common/icons/leftblack.png"></image>
+        <search style="width: 60%;"></search>
+    <image class="headimg" src="common/icons/shareTwo.png"></image>
+    <image class="headimg" src="common/icons/shoppingblack.png" onclick="addshopping"></image>
+    <image class="headimg" src="common/icons/moreblack.png"></image>
+    </div>
+    <div style="width: 100%;height: 50%;margin: 5px;padding: 10px;">
+    <image src="{{product.proMainPicture}}"></image>
+    </div>
+    <div  style="flex-direction: column;width: 100px;height: 100%;">
+    <div >
+    <text class="price" style="font-size: 28px;color: orange;">{{product.price}}</text>
+    <text class="label" style="width: 100%;font-size: 14px;text-align: end;color: gray;">10人付款</text>
+    </div>
+        <div style="flex-direction: row;">
+        <text class="hint">{{product.proType}}</text>
+        <text class="hint"></text>
+            <image class="icon"> </image>
+        </div>
+
+        <div>
+        <text class="shop">天猫</text>
+        <text class="number"></text>
+        </div>
+        <text class="introduce">{{product.proName}}</text>
+        <div style="flex-direction: row;">
+        <div for="{{nav}}" style="flex-direction: row;font-size: 14px;width: 100%;height: 100px;">
+            <image src="$item.image" style="width: 40px;height: 40px;">
+            </image>
+            <text>{{$item.context}}
+            </text>
+        </div>
+        </div>
+    </div>
+</div>
