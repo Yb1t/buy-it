@@ -52,7 +52,7 @@ export default {
             let httpRequest = http.createHttp();
             httpRequest.request(
             // 填写http请求的url地址，可以带参数也可以不带参数。URL地址需要开发者自定义。GET请求的参数可以在extraData中指定12
-                "http://localhost:8080/users/register",
+                "http://huangrui.vaiwan.com/users/register",
                 {
                     method: 'POST',
                     extraData: JSON.stringify(this.userData)
@@ -69,12 +69,16 @@ export default {
 
                     console.info("接受到的code数据: " + this.myResult.code)
                     console.info("接受到的msg数据: " + this.myResult.msg)
+
                     console.info("输入的账号" + this.userData.userAccount)
                     console.info("输入的密码" + this.userData.userPassword)
                     console.info("输入的邮箱" + this.userData.userEmail)
                     console.info("输入的手机号" + this.userData.headPhoto)
 
                     if (this.myResult.code == 2011) {
+                        router.push({
+                            uri:'/pages/LoginPage/LoginPage'
+                        })
                         prompt.showToast({
                             message: '注册成功'
                         })
