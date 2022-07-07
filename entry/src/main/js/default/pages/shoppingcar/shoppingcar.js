@@ -60,15 +60,19 @@ export default {
         total: 0,
         businessImages: [{
                              images: "/common/images/white.png"
+                         }, {
+                             images: "/common/images/white.png"
+                         }, {
+                             images: "/common/images/white.png"
                          },],
-        businessImagesNum: 1,
+        businessImagesNum: 3,
     },
     onInit() {
         // 每一个httpRequest对应一个http请求任务，不可复用
         let httpRequest = http.createHttp();
         httpRequest.request(
         // 填写http请求的url地址，可以带参数也可以不带参数。URL地址需要开发者自定义。GET请求的参数可以在extraData中指定
-            "http://huangrui.vaiwan.com/car/123456",
+            "http://huangrui.vaiwan.com/car/" + this.$app.$def.globalData.loginUser.userAccount,
             {}, (err, data) => {
             if (!err) {
                 // data.result为http响应内容，可根据业务需要进行解析
@@ -89,7 +93,7 @@ export default {
         let httpR = http.createHttp();
         httpR.request(
         // 填写http请求的url地址，可以带参数也可以不带参数。URL地址需要开发者自定义。GET请求的参数可以在extraData中指定
-            "http://huangrui.vaiwan.com/car/num/123456",
+            "http://huangrui.vaiwan.com/car/num/" + this.$app.$def.globalData.loginUser.userAccount,
             {}, (err, data) => {
             if (!err) {
                 // data.result为http响应内容，可根据业务需要进行解析
@@ -98,9 +102,11 @@ export default {
                 // data.header为http响应头，可根据业务需要进行解析
                 console.info('header:' + data.header);
 
-                this.businessImagesNum=data.result
-                for (var index = 1; index < this.businessImagesNum; index++) {
-                    this.businessImages.push({images:"/common/images/white.png"})
+                this.businessImagesNum = data.result
+                for (var index = 3; index < this.businessImagesNum; index++) {
+                    this.businessImages.push({
+                        images: "/common/images/white.png"
+                    })
                 }
                 console.info(this.businessImagesNum)
             } else {
@@ -109,9 +115,8 @@ export default {
         });
 
 
-
-        console.info("bus"+this.businessImagesNum)
-        console.info("bus"+this.businessImages.length)
+        console.info("bus" + this.businessImagesNum)
+        console.info("bus" + this.businessImages.length)
     },
     onTextClick() {
         this.$element("apiMenu").show({
@@ -180,7 +185,8 @@ export default {
         router.push({
             params: {
                 businessImages: this.businessImages,
-                totalNum: this.total
+                totalNum: this.total,
+                businessImagesNum: this.businessImagesNum
             },
             uri: "pages/account/account"
         })

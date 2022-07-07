@@ -29,7 +29,7 @@
     <div if="{{ menuNum == 0 }}" style="flex-direction : column;">
 
     <!--购物车抄作业-->
-        <div style="justify-content : center;">
+        <div style="flex-direction: row;">
             <div style="height : 40px; background-color : white; margin-top : 60px; width : 99%;
                     justify-content : space-between; border-radius : 10px;">
                 <div style="padding-top : 5px;">

@@ -12,7 +12,7 @@
             <div>
                 <image src="/common/images/local-two.png" class="images-address"></image>
                 <div class="div-address">
-                    <text class="text-address1">{{address}}</text>
+                    <text class="text-address1">{{ address }}</text>
                     <text class="text-address2">{{ username }} {{ number }}</text>
                 </div>
             </div>
@@ -28,18 +28,18 @@
 
                     <div style="margin-top : 20px;">
                         <image src="/common/images/shop.png" class="images-business"></image>
-                        <text class="text-business">{{item.proBusinessName}}</text>
+                        <text class="text-business">{{ item.proBusinessName }}</text>
                     </div>
 
                     <div>
-                        <image src="{{item.carPro.proMainPicture}}" class="images-goods"></image>
+                        <image src="{{ item.carPro.proMainPicture }}" class="images-goods"></image>
                         <div class="div-goods1">
                             <div class="div-goods2">
-                                <text style="font-size : 18px;">{{item.carPro.proName}}</text>
-                                <text style="font-size : 18px;">￥{{item.carPro.price}}</text>
+                                <text style="font-size : 18px;">{{ item.carPro.proName }}</text>
+                                <text style="font-size : 18px;">￥{{ item.carPro.price }}</text>
                             </div>
                             <div class="div-goods2">
-                                <text style="font-size : 16px;">{{item.carPro.proType}}</text>
+                                <text style="font-size : 16px;">{{ item.carPro.proType }}</text>
                                 <text style="font-size : 16px;">x1</text>
                             </div>
                             <text style="font-size : 15px;">公益宝贝</text>
@@ -95,7 +95,7 @@
                     <image src="/common/images/alipay.png" class="images-select"></image>
                     <text style="font-size : 20px; font-weight : 600; margin-left : 5px;">支付宝</text>
                 </div>
-                <image src="{{ selall }}" onclick="selectall" class="images-change"></image>
+                <image src="/common/images/check.png" onclick="selectall" class="images-change"></image>
             </div>
 
         <!--找朋友帮忙支付-->
@@ -166,11 +166,40 @@
             <text style="font-size : 10px; margin-right : 2px;">共1件</text>
             <text style="font-size : 15px;">合计</text>
             <text style="font-size : 10px; color : orangered;">￥</text>
-            <text style="font-size : 25px; color : orangered;">{{totalNum}}</text>
-            <div class="div-bottom">
+            <text style="font-size : 25px; color : orangered;">{{ totalNum }}</text>
+            <div class="div-bottom" onclick="showPanel">
                 <text style="color : white; font-size : 20px; margin-top : 2px;">提交订单</text>
             </div>
         </div>
-
     </div>
+
+    <panel id="simplepanel" type="foldable" mode="half" onsizechange="changeMode" miniheight="200px">
+        <div class="panel-div" style="padding-left: 10px;">
+            <div style="justify-content : space-between; flex-wrap : wrap;">
+                <div></div>
+                <text onclick="closePanel" style="font-size: 20px;">X</text>
+            </div>
+            <div class="inner-txt" style="margin-top : 20px;">
+                <text style="font-size : 20px;">￥</text>
+                <text style="font-size : 35px;">{{ totalNum }}</text>
+            </div>
+            <div style="justify-content : space-between; flex-wrap : wrap; margin-top : 10px;">
+                <text style="font-size : 15px;">支付宝账号</text>
+                <text style="font-size : 15px; font-weight : 500;">{{ account }}</text>
+            </div>
+            <div style="justify-content : space-between; flex-wrap : wrap; margin-top : 10px;">
+                <text style="font-size : 18px;">账号余额</text>
+                <text style="font-size : 18px;">{{ money }}</text>
+            </div>
+            <div class="inner-txt" style="flex-direction : column;">
+                <button type="capsule" class="button-account" onclick="confirm"
+                        style="background-color : dodgerblue; margin-top : 80px;">
+                    确认付款</button>
+                <button type="capsule" class="button-account" onclick="waive"
+                        style="background-color : red; margin-top : 10px;">放弃付款
+                </button>
+            </div>
+        </div>
+    </panel>
+
 </div>
