@@ -12,38 +12,38 @@
 
                 <!--            左部布局-->
                     <div class="div2">
-                        <image style="margin-top : 300px; height : 32px; width : 32px;" src="{{ voiceSrc }}"
+                        <image style="margin-top : 300px; height : 25px; width : 25px;" src="{{ voiceSrc }}"
                                onclick="voiceClick">
                         </image>
                         <div style="flex-direction : row; height : 50px;">
-                            <text style="font-size : 25fp; color : white;">{{ $item.name }}</text>
-                            <button style="background-color : yellow; text-color : black;">+关注</button>
+                            <text style="font-size : 18fp; color : white;">{{ $item.name }}</text>
+                            <button style="background-color : red; text-color : black;margin-left: 2px;">+关注</button>
                         </div>
-                        <text style="color : white; font-size : 20fp;">{{ $item.title }}</text>
+                        <text style="color : white; font-size : 15fp;">{{ $item.title }}</text>
                     </div>
 
                 <!--            右部布局-->
                     <div class="div2">
                         <div class="div2">
-                            <image src="/common/icons/people.png" id="like" class="image"></image>
+                            <image src="/common/findImage/imagesrc1.png" id="like" class="image"></image>
                         </div>
                         <div class="div2">
                             <image src="{{ $item.likeSrc }}" id="like" class="image" onclick="likeClick({{ $idx }})"
                                    style="margin-top : 30px;">
                             </image>
-                            <text style="font-size : 20px; color : white;">{{ $item.likeNum }}</text>
+                            <text style="font-size : 12px; color : white;">{{ $item.likeNum }}</text>
                         </div>
                         <div style="margin-top : 30px;" class="div2">
                             <image src="{{ $item.saveSrc }}" class="image" onclick="saveClick({{ $idx }})"></image>
-                            <text style="font-size : 20px; color : white;">{{ $item.saveNum }}</text>
+                            <text style="font-size : 12px; color : white;">{{ $item.saveNum }}</text>
                         </div>
                         <div style="margin-top : 30px;" class="div2">
                             <image src="/common/icons/comment1.png" class="image" onclick="commentAdd({{$idx}})"></image>
-                            <text style="font-size : 20px; color : white;">{{ $item.commentNum }}</text>
+                            <text style="font-size : 12px; color : white;">{{ $item.commentNum }}</text>
                         </div>
                         <div style="margin-top : 30px;" class="div2">
                             <image src="/common/icons/share-two.png" class="image" onclick="shareClick"></image>
-                            <text style="font-size : 20px; color : white;">{{ $item.shareNum }}</text>
+                            <text style="font-size : 12px; color : white;">{{ $item.shareNum }}</text>
                         </div>
                     </div>
                 </div>

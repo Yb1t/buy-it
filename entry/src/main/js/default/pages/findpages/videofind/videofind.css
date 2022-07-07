@@ -30,5 +30,6 @@
 }
 
 .image{
-    height: 32px;width: 32px;
+    border-radius: 14px;
+    height: 28px;width: 28px;
 }

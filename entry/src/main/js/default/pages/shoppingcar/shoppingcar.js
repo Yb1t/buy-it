@@ -179,7 +179,8 @@ export default {
 
         router.push({
             params: {
-                businessImages: this.businessImages
+                businessImages: this.businessImages,
+                totalNum: this.total
             },
             uri: "pages/account/account"
         })

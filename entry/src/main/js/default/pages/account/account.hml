@@ -12,7 +12,7 @@
             <div>
                 <image src="/common/images/local-two.png" class="images-address"></image>
                 <div class="div-address">
-                    <text class="text-address1">桂林电子科技大学</text>
+                    <text class="text-address1">{{address}}</text>
                     <text class="text-address2">{{ username }} {{ number }}</text>
                 </div>
             </div>
@@ -21,25 +21,25 @@
     </div>
 
 <!--商品-->
-    <div for="{{ (id, item) in businessImages }}">
-        <block if="{{ item.images == '/common/images/check.png' }}">
+    <div for="{{ (id, item) in shoppingCar }}">
+        <block if="{{ businessImages[id].images == '/common/images/check.png' }}">
             <div class="container-body">
                 <div class="container-goods">
 
                     <div style="margin-top : 20px;">
                         <image src="/common/images/shop.png" class="images-business"></image>
-                        <text class="text-business">商店</text>
+                        <text class="text-business">{{item.proBusinessName}}</text>
                     </div>
 
                     <div>
-                        <image src="/common/images/shop.png" class="images-goods"></image>
+                        <image src="{{item.carPro.proMainPicture}}" class="images-goods"></image>
                         <div class="div-goods1">
                             <div class="div-goods2">
-                                <text style="font-size : 18px;">商品名</text>
-                                <text style="font-size : 18px;">￥价格</text>
+                                <text style="font-size : 18px;">{{item.carPro.proName}}</text>
+                                <text style="font-size : 18px;">￥{{item.carPro.price}}</text>
                             </div>
                             <div class="div-goods2">
-                                <text style="font-size : 16px;">类型</text>
+                                <text style="font-size : 16px;">{{item.carPro.proType}}</text>
                                 <text style="font-size : 16px;">x1</text>
                             </div>
                             <text style="font-size : 15px;">公益宝贝</text>
@@ -166,8 +166,7 @@
             <text style="font-size : 10px; margin-right : 2px;">共1件</text>
             <text style="font-size : 15px;">合计</text>
             <text style="font-size : 10px; color : orangered;">￥</text>
-            <text style="font-size : 25px; color : orangered;">45</text>
-            <text style="font-size : 18px; color : orangered; margin-left : 5px;">.00</text>
+            <text style="font-size : 25px; color : orangered;">{{totalNum}}</text>
             <div class="div-bottom">
                 <text style="color : white; font-size : 20px; margin-top : 2px;">提交订单</text>
             </div>
