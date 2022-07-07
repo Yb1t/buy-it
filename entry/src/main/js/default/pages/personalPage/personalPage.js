@@ -102,6 +102,11 @@ export default {
         });
 
     },
+    toLogin(){
+        router.push({
+            uri: "pages/LoginPage/LoginPage"
+        })
+    },
     toMyOrder(){
         router.push({
             uri:"pages/myOrder/myOrder"

@@ -10,7 +10,7 @@
             <text style="font-size: 12px;margin-bottom: 5px;color: darkgray;">账号名：{{userData.userAccount}}</text>
             <text style="font-weight: 500;font-size: 12px;">关注：1  |   粉丝：0</text>
         </div>
-        <image src="/common/images/icon_config .png" style="width: 30px;height: 20px;"></image>
+        <image src="/common/images/icon_config .png" style="width: 30px;height: 20px;" onclick="toLogin"></image>
     </div>
     <!--收藏.....-->
     <div class="collction">

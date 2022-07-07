@@ -76,12 +76,13 @@ export default {
                     console.info("输入的手机号" + this.userData.headPhoto)
 
                     if (this.myResult.code == 2011) {
-                        router.push({
-                            uri:'/pages/LoginPage/LoginPage'
-                        })
                         prompt.showToast({
                             message: '注册成功'
+                        }),
+                        router.push({
+                            uri: "pages/LoginPage/LoginPage"
                         })
+
                     } else {
                         prompt.showToast({
                             message: "注册失败"
