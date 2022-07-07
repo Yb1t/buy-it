@@ -3,8 +3,11 @@
 <element src="../message/message.hml" name="messagePage"></element>
 <element src="../personalPage/personalPage.hml" name="personalPage"></element>
 <element src="../shoppingcar/shoppingcar.hml" name="shoppingCar"></element>
+<element src="../forepage/forepage.hml" name="forePage"></element>
 <div class="container">
-    <block if="{{selectedPage==1}}">
+    <block if="{{selectedPage == 0}}">
+    </block>
+    <block if="{{selectedPage == 1}}">
         <findpage></findpage>
     </block>
     <block if="{{selectedPage == 2}}">
@@ -13,7 +16,7 @@
     <block if="{{selectedPage == 3}}">
         <shoppingcar></shoppingcar>
     </block>
-    <block if="{{selectedPage==4}}">
+    <block if="{{selectedPage == 4}}">
         <personalpage></personalpage>
     </block>
     <navbar @on-change-menu="changePage"></navbar>
