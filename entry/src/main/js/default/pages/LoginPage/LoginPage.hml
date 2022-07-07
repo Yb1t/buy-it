@@ -12,8 +12,8 @@
 
     </div>
     <div style="flex-direction : column; height : 165px; margin-bottom : 10px;">
-        <input placeholder="请输入账号" style="height : 50px; margin-bottom : 5px;" onchange="inputAccount"></input>
-        <input placeholder="请输入密码" type="password" style="height : 50px; margin-bottom : 5px;" onchange="inputPassword"></input>
+        <input placeholder="请输入账号" style="height : 50px; margin-bottom : 10px; margin-start: 10px;margin-end: 10px;" onchange="inputAccount"></input>
+        <input placeholder="请输入密码" type="password" style="height : 50px; margin-bottom : 10px;margin-start: 10px;margin-end: 10px;" onchange="inputPassword"></input>
         <div style="flex-direction : row; justify-content : space-between; align-items : center; width : 100%;">
             <text></text>
             <text style="font-size : 18px;" onclick="forgetClick">忘记密码</text>
