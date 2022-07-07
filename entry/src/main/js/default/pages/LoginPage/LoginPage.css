@@ -11,3 +11,6 @@
     width: 200px;
     height: 100px;
 }
+.popup {
+    mask-color: gray;
+}
