@@ -51,6 +51,8 @@
     width: 100%;
     background-color: #fefefe;
     border-radius: 10px;
+    overflow: scroll;
+    scrollbar-width: 0px;
 }
 
 .my-collection-select{

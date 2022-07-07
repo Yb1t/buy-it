@@ -1,13 +1,15 @@
-
 <div class="navbar">
     <div for="{{menudata}}" onclick="changeMenu({{$idx}})">
+
         <block if="{{defaultIndex==$idx}}">
             <image src="{{$item.iconActive}}"></image>
             <text style="color: orange;">{{$item.title}}</text>
         </block>
+
         <block else>
             <image src="{{$item.icon}}"></image>
             <text>{{$item.title}}</text>
         </block>
+
     </div>
 </div>
