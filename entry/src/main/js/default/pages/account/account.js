@@ -5,6 +5,7 @@ export default {
     data: {
         username: "名字",
         number: 21345789,
+        address:"桂林",
         selall: "/common/images/white.png",
         businessImages:[],
         selectGoods:[{}],
@@ -14,6 +15,7 @@ export default {
             "msg": "街火速成功"
         },
         shoppingCar: {},
+        totalNum:0,
     },
     onInit(){
         // 每一个httpRequest对应一个http请求任务，不可复用
@@ -31,6 +33,9 @@ export default {
 
                 this.carResult = JSON.parse(data.result)
                 this.shoppingCar = this.carResult.body
+                this.address=this.shoppingCar[0].carUser.userAddress
+                this.number=this.shoppingCar[0].carUser.userPhone
+                this.username=this.shoppingCar[0].carUser.userName
                 console.info("message" + this.shoppingCar.toString())
             } else {
                 console.info('error:' + err.message);

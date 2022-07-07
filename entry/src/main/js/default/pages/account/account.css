@@ -79,7 +79,6 @@
     height: 30px;
     width: 30px;
     border-radius: 10px;
-    background-color: chocolate;
     margin-left: 5px;
 }
 
@@ -167,7 +166,7 @@
 .images-select {
     height: 25px;
     width: 25px;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .div-findfriend {
