@@ -16,23 +16,25 @@
 
     <div style="height: 1000px;margin-top: {{topHeight}};">
         <list class="list">
-            <list-item for="{{array}}" class="listItem">
-                <div>
-                    <image src="{{$item.avatar}}"></image>
-                    <div style="flex-direction: column;">
-                        <div class="left-right-line">
-                            <text class="name-text">{{$item.username}}</text>
-                            <text class="date-text">{{$item.date}}</text>
-                        </div>
-                        <div class="left-right-line">
-                            <text class="msg-text">{{$item.msg}}</text>
-                            <div if="{{$item.msgCount>0}}" style="width: 16px;height: 16px;background-color: orange;border-radius: 8px;justify-content: center;align-items: center;">
+            <block for="{{messages}}">
+                <list-item  class="listItem" onclick="goChat({{$item.userId}})">
+                    <div>
+                        <image src="{{$item.avatar}}"></image>
+                        <div style="flex-direction: column;">
+                            <div class="left-right-line">
+                                <text class="name-text">{{$item.username}}</text>
+                            </div>
+                            <div class="left-right-line">
+                                <text class="msg-text">{{$item.msg}}</text>
+                                <div if="{{$item.msgCount>0}}" style="width: 16px;height: 16px;background-color: orange;border-radius: 8px;justify-content: center;align-items: center;">
                                     <text style="font-size: 10px;color: white;">{{$item.msgCount}}</text>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </list-item>
+                </list-item>
+            </block>
+
         </list>
     </div>
     

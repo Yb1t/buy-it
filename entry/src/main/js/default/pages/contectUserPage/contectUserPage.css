@@ -1,31 +1,35 @@
 .container {
     flex-direction: column;
     width: 100%;
+    background-color: #EEEEEE;
 }
 
 .list{
     width: 100%;
-    columns: 1;
 /*    animation: Go 1s ;*/
 }
 
-.list list-item{
-    height: 100px;
-    padding: 20px;
-    border-bottom: 1px solid #DEDEDE;
-}
 
-.list list-item>div{
-    flex-direction: column;
-}
-
-.title{
-    color: orange;
-    font-size: 14px;
-}
-
-.content{
+.list>div{
+    margin: 20px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
     font-size: 16px;
+/*    padding: 20px;*/
+}
+
+.switchs{
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.switchs>div{
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
 }
 
 @keyframes Go

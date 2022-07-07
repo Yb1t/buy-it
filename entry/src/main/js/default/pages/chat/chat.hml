@@ -2,18 +2,8 @@
 
     <div style="flex-direction: column;background-color: orange;position: fixed;top: 0px;height: {{topHeight}};padding: 10px;">
         <div style="flex-direction: row;justify-content: space-between;width: 100%;">
-            <div style="align-items: center;">
-                <text style="font-size: 24px;">{{sendTo.username}}</text>
-                <div if="{{isOnline}}" class="status-point" style="background-color: greenyellow;"></div>
-                <div else class="status-point" style="background-color: tomato;"></div>
-            </div>
-            <div class="toolbar">
-                <image src="/common/icons/people.png" onclick="goUser"></image>
-            </div>
-        </div>
-        <div if="{{!isFriend}}" style="flex-direction: row;justify-content: space-around;width: 100%;">
-        <!--            <button value="加好友" type="capsule" class="text-button"></button>-->
-            <button value="屏蔽消息" type="capsule" class="text-button"></button>
+            <text style="font-size: 24px;">{{sendTo.username}}</text>
+            <image src="/common/icons/people.png" onclick="goUser" class="img-toolbar"></image>
         </div>
     </div>
 

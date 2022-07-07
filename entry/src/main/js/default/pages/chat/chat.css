@@ -9,7 +9,7 @@
     margin-start: 10px;
     border-radius: 8px;
 }
-.toolbar image{
+.img-toolbar{
     width: 24px;
     object-fit: contain;
 }
@@ -86,7 +86,7 @@
 
 .msg-text text{
     padding-right: 20px;
-    text-overflow: ellipsis;
+    text-overflow: clip;
 }
 
 .img-avatar{

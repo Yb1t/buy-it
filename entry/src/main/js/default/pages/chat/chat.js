@@ -7,7 +7,7 @@ export default {
     data: {
         productId: "10",//TODO 分享页面传参
         product: {},
-        topHeight: "100px",
+        topHeight: "50px",
         bottomHeight: "50px",
         ws: null,
         url: "ws://huangrui.vaiwan.com/ws/",
@@ -39,23 +39,33 @@ export default {
             },
             {type:2, receiver: 2, sender: 1,
                 content: {
-                    title:"中英测试这是一条中eng商品标题测试测试测试shank you shank you",
+                    title:"中英测试这是一条中eng商品标题测试测试测试shank you shank you shank you shank you shank you shank you",
                     link: "https://item.taobao.com/item.htm?spm=a21bo.jianhua.201876.6.5af911d9JMzA3P&id=599695626728&scm=1007.40986.275655.0&pvid=27c7e238-02a6-400c-a907-92c0767cc23e",
                     imgUrl: "https://gw.alicdn.com/bao/uploaded/i3/1624565934/O1CN01RTTRFy1thoztFTvWl_!!0-item_pic.jpg_300x300q90.jpg",
                 },
-            }
+            },
         ],
 
     },
+
     onInit(){
         this.url = this.url + this.user.userId;
 //        if (this.productId!='') {
             this.initProduct();
 //        }
         this.initWS();
+        this.sendRead();
     },
     changInput(e){
         this.input = e.value
+    },
+    sendRead(){
+        this.send({
+            sender: this.user.userId,
+            target: this.sendTo.userId,
+            type: 0,
+            content: ''
+        });
     },
     sendMessage(){
         this.send({
@@ -64,6 +74,7 @@ export default {
             type: 1,
             content: this.input
         });
+        this.$app.$def.currentMsg[this.sendTo.userId] = this.input;
     },
     sendProduct(){
         this.send({
@@ -75,14 +86,15 @@ export default {
                 proId: this.product.proId,
                 imgUrl: this.product.proMainPicture
             },
-        })
+        });
+        this.$app.$def.currentMsg[this.sendTo.userId] = this.product.proName;
     },
     send(object){
         this.isSending = true;
 //        object.set({name: 'sender'}, this.user.userId);
 //        object.set({name:'receiver'}, this.sendTo.userId);
         let sendObject = {}
-        if (object.type == 1){
+        if (object.type == 0 || object.type == 1){
             sendObject = object
         }else if(object.type == 2){
             sendObject = {
@@ -97,13 +109,15 @@ export default {
         if(this.ws!=null) {
             this.ws.send(jsonString, (err, value) => {
                 if (!err) {
+                    if (object.type!=0){
+                        this.array.push(object);
+                    }
                     console.log("send success");
                 } else {
                     console.log("send fail, err:" + JSON.stringify(err));
                 }
             });
         }
-        this.array.push(object);
 
         this.isSending = false;
         //TODO this.$element('chatList').scrollBottom(true);  //滚动到底部，无效
@@ -163,6 +177,9 @@ export default {
                 prompt.showToast({message: '对方已屏蔽您的消息'});
             }else if(object.type == 2) {
                 object.content = JSON.parse(object.content);
+                this.$app.$def.currentMsg[this.sendTo.userId] = object.content.proName;
+            }else if(object.type == 1){
+                this.$app.$def.currentMsg[this.sendTo.userId] = object.content;
             }
             this.array.push(object);
         });
@@ -184,6 +201,7 @@ export default {
         console.log("跳转商品页面"+url);
 //        TODO 跳转
     }
+
 }
 
 
