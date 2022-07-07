@@ -1,28 +1,28 @@
 <div class="update-updateress">
     <div class="update-updateress-title">
         <text style="font-size: 20px;margin-start: 50px;">编辑收货地址</text>
-        <text style="font-size: 14px;margin-end: 18px;color: orange;">删除</text>
+        <text style="font-size: 14px;margin-end: 18px;color: orange;" onclick="deleteAddress">删除</text>
     </div>
     <div class="update-updateress-input">
         <text>收货人</text>
-        <input>名字</input>
+        <input placeholder="名字" value="{{updateAddressDate.addressName}}" onchange="getNameInput"></input>
     </div>
     <div class="update-updateress-input">
         <text>手机号码</text>
-        <input>手机号</input>
+        <input placeholder="手机号" value="{{updateAddressDate.addressPhone}}" onchange="getPhoneInput"></input>
     </div>
     <div class="update-updateress-input">
         <text>所在地区</text>
-        <input>省、市、区、街道</input>
+        <input placeholder="省、市、区、街道" value="{{updateAddressDate.addressMain}}" onchange="getMainInput"></input>
     </div>
     <div class="update-updateress-input" style="height: 120px;">
         <text>详细地址</text>
-        <input style="height: 100px;">小区楼栋/乡村名称</input>
+        <input style="height: 100px;" placeholder="小区楼栋/乡村名称" value="{{updateAddressDate.addressDetail}}" onchange="getDetailInput"></input>
     </div>
     <div class="update-updateress-m">
         <text>设为默认收货地址</text>
         <switch></switch>
     </div>
-    <button style="background-color: orange;height: 50px;width: 80%;border-radius: 50px;margin-top: 45px;font-size: 16px;font-weight: 600;">保存</button>
+    <button style="background-color: orange;height: 50px;width: 80%;border-radius: 50px;margin-top: 45px;font-size: 16px;font-weight: 600;" onclick="updateAddress">保存</button>
 
 </div>

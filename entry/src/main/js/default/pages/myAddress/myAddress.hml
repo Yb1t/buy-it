@@ -16,7 +16,7 @@
                 </div>
                 <text style="font-size: 14px;font-weight: 400;">{{$item.addressMain}}</text>
             </div>
-            <image style="height: 20px;width: 20px;margin: 5px;"src="/common/icons/icon_edit.png"onclick="toUpdate"></image>
+            <image style="height: 20px;width: 20px;margin: 5px;"src="/common/icons/icon_edit.png"onclick="toUpdate($idx)"></image>
         </div>
         
         

@@ -1,8 +1,13 @@
 import http from '@ohos.net.http';
-
+import router from '@system.router';
+import prompt from '@system.prompt';
 export default {
     data: {
-
+        myResult:{
+            "body":[{}],
+            "code":100,
+            "msg":"街火速成功"
+        },
         addressDate:{
             "addressName": "狗蛋",
             "addressPhone": "1669903620",
@@ -54,6 +59,25 @@ export default {
                 // data.header为http响应头，可根据业务需要进行解析
                 console.info('header:' + JSON.stringify(data.header));
                 console.info('cookies:' + data.cookies); // 8+
+
+                this.myResult = JSON.parse(data.result);
+
+                console.info("接受到的code数据: "+this.myResult.code)
+                console.info("接受到的msg数据: "+this.myResult.msg)
+
+                if(this.myResult.code == 2011){
+                    router.push({
+                        uri:"pages/myAddress/myAddress",
+                    })
+                    prompt.showToast({
+                        message:"添加成功"
+                    })
+                }else{
+                    prompt.showToast({
+                        message:"添加失败，请重试"
+                    })
+                }
+
 
             } else {
                 console.info('error:' + JSON.stringify(err));
