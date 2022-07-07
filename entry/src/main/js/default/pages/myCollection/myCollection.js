@@ -69,7 +69,7 @@ export default {
         router.push({
             uri:"pages/productinfo/productinfo",
             params:{
-                product:this.myCollection[index].collectionPro
+                productId:index
             }
         })
         console.info("我的收藏数据:"+this.myCollection[index].collectionPro);
