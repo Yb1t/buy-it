@@ -40,7 +40,7 @@ export default {
     addAddress(){
         // 每一个httpRequest对应一个http请求任务，不可复用
         let httpRequest = http.createHttp();
-
+        //this.data.addressDate.userAccount = this.$app.$def.globalData.loginUser.userAccount
         console.info("添加的信息："+this.addressDate);
 
         httpRequest.request(

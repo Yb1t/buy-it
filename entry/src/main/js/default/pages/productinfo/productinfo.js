@@ -16,12 +16,14 @@ export default {
             {"image1":"common/icons/star2.png","image":"common/icons/stars.png","text":"收藏"},
         ],
         result:{
-            "body": [{}],
+            "body": [{
+
+                     }],
             "code":100,
             "msg":"没啥问题"
         },
         contents:"",
-        product: {"proId":1,
+        product: [{"proId":1,
                       "proType":"数码产品",
                       "proName":"Sony a6400",
                       "price":7299.0,
@@ -33,7 +35,17 @@ export default {
                                       "proId":1},
                                   {"picId":2,
                                       "picUrl":"http://huangrui.vaiwan.com546784ddfff",
-                                      "proId":1}],
+                                      "proId":1},
+                                  {"picId":2,
+                                      "picUrl":"http://huangrui.vaiwan.com546784ddfff",
+                                      "proId":1},
+                                  {"picId":2,
+                                      "picUrl":"http://huangrui.vaiwan.com546784ddfff",
+                                      "proId":1},
+                                  {"picId":2,
+                                      "picUrl":"http://huangrui.vaiwan.com546784ddfff",
+                                      "proId":1},
+                      ],
                       "business":{"businessId":1,
                           "businessName":"鱼龙混杂",
                           "businessAccount":123,
@@ -42,7 +54,7 @@ export default {
                       "proCreatetime":"2022-06-30T11:37:52.000+00:00",
                       "proBuytime":null,
                       "proStatus":"在售",
-                      "introduce":"该商品没有任何介绍"}
+                      "introduce":"该商品没有任何介绍"}]
 
 
     },

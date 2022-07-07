@@ -41,7 +41,7 @@ export default {
         let httpRequest = http.createHttp();
         httpRequest.request(
         // 填写http请求的url地址，可以带参数也可以不带参数。URL地址需要开发者自定义。GET请求的参数可以在extraData中指定
-            "http://huangrui.vaiwan.com/address/123456",
+            "http://huangrui.vaiwan.com/address/"+this.$app.$def.globalData.loginUser.userAccount,
             {
 
             }, (err, data) => {
