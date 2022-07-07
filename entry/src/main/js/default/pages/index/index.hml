@@ -1,5 +1,5 @@
 <element name="navbar" src="../../../navbar/pages/navbar/navbar.hml"></element>
-<element src="../findpages/find/find.hml" name="findPage"></element>
+<element src="../findpages/mainpages/mainpages.hml" name="findPage"></element>
 <element src="../message/message.hml" name="messagePage"></element>
 <element src="../personalPage/personalPage.hml" name="personalPage"></element>
 <div class="container">

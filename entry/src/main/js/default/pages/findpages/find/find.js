@@ -4,6 +4,7 @@ export default {
     data: {
         title: ['全部', '美食', '音乐', '居家', '穿搭'],
         value:0,
+        defaultIndex:0,
         dynamic: [{
                       "image": "/common/findImage/image11.png",
                       "content": "好吃的",
@@ -170,10 +171,10 @@ export default {
     },
     tabchange(e) {
                 console.info("Tab index: " + e.index )
-
+                this.defaultIndex = e.index
     },
 //    titleClick(e){
-//        this.value=e
+//        this.defaultIndex = e
 //        console.log(""+this.value)
 //    }
 }

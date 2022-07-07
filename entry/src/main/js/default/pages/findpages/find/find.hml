@@ -4,8 +4,15 @@
         </search>
     </div>
     <tabs onchange="tabchange" vertical="false">
-        <tab-bar mode="scrollable">
-            <text class="text3" for="{{ title }}">{{ $item }}</text>
+        <tab-bar mode="scrollable" >
+            <div for="{{ title }}" >
+                <block if="{{defaultIndex==$idx}}">
+            <text class="text3" style="font-weight: 700;"  >{{ $item }}</text>
+                </block>
+                <block else>
+                    <text class="text3" >{{ $item }}</text>
+                </block>
+            </div>
         </tab-bar>
         <tab-content scrollable="true" style="margin-bottom: 80px;">
         <!--                全部-->
