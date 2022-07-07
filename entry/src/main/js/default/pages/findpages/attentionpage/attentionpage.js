@@ -30,7 +30,7 @@ export default {
                       },],
         bloggerData1: [{
                           "image": "/common/findImage/imagesrc1.png",
-                          "name": "烽火数码",
+                          "name": "达人秀",
                           "certification": "时尚博主",
                           "email": " 时尚达人",
                           "num": "52.2",

@@ -2,6 +2,7 @@ import http from '@ohos.net.http';
 import router from '@system.router';
 export default {
     data: {
+        productId:10,
         text:false,
         title: 'World',
         nav:[
@@ -137,7 +138,7 @@ export default {
         let httpRequest = http.createHttp();
         httpRequest.request(
         // 填写http请求的url地址，可以带参数也可以不带参数。URL地址需要开发者自定义。GET请求的参数可以在extraData中指定
-            "http://huangrui.vaiwan.com/products/id/"+this.product.proId.toString(),
+            "http://huangrui.vaiwan.com/products/id/"+this.productId.toString(),
             {
 
             }, (err, data) => {
@@ -149,7 +150,7 @@ export default {
                 console.info('header:' + data.header);
 
                 this.result = JSON.parse(data.result);
-                this.products = this.result.body;
+                this.product = this.result.body;
 
                 console.info("接受到的code数据: "+this.result.code)
                 console.info("接受到的msg数据: "+this.result.msg)

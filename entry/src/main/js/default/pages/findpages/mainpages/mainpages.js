@@ -1,3 +1,4 @@
+import router from '@system.router';
 export default {
     data: {
         title: 'World',
@@ -6,6 +7,11 @@ export default {
     },
     click(e){
         this.local= e
+    },
+    myClick(){
+        router.push({
+            uri:'pages/personalPage/personalPage'
+        })
     }
 
 }

@@ -5,7 +5,7 @@
 <div class="container">
     <div class="div">
         <div style="width : 200px;">
-            <image src="/common/images/camera.png"></image>
+            <image src="/common/images/camera.png" class="image"></image>
         </div>
         <div class="div1" for="{{menu}}" onclick="click({{$idx}})">
             <block if="{{local==$idx}}">
@@ -16,7 +16,7 @@
             </block>
         </div>
         <div style="width : 200px;">
-            <image class="image" src="/common/icons/user.png"></image>
+            <image class="image" src="/common/icons/user.png" onclick="myClick"></image>
         </div>
     </div>
     <div>
