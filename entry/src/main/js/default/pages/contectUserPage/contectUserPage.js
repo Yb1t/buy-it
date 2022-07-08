@@ -19,7 +19,7 @@ export default {
                 let res = data.result;
                 if(res=="true"){
                     console.debug("屏蔽分享")
-                    this.isBlackShare = true
+//                    this.isBlackShare = true
                 }
             }
         });
@@ -29,7 +29,7 @@ export default {
                 let res = data.result;
                 if(res=="true"){
                     console.debug("屏蔽全部")
-                    this.isBlack = true
+//                    this.isBlack = true
                 }
             }
         });
