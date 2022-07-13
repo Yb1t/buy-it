@@ -72,28 +72,35 @@ Json可以完美地满足发送一个对象的需求，在前端（JavaScript）
 
 #### 我的地址
 我的地址包块两个子页面和三个模块组成，背景色为# f2f2f2，每个小模块背景色为#fefefe。
-    ![Alt](/readme-img/我的地址.png#pic_center)
+
+![Alt](/readme-img/我的地址.png#pic_center)
+
 - 模块1为顶部信息“我的收货地址”、“管理”两个文本组成；
 - 模块2 为收货地址内容，包含收货人，联系方式，详细地址，编辑按钮；
 - 模块3 为底部添加地址按钮；
 - 页面1 为修改收货地址页面；
- ![Alt](/readme-img/修改地址.png#pic_center)
+
+![Alt](/readme-img/修改地址.png#pic_center)
+
 - 页面2 为添加收货地址页面。
-   ![Alt](/readme-img/添加地址.png#pic_center)
+
+![Alt](/readme-img/添加地址.png#pic_center)
+
 #### 我的订单
 我的订单包括三个小模块，背景色为# f2f2f2。
 - 模块1 顶部搜索，由搜索框、“筛选”文本、两个按钮组成；
 - 模块2 tabs，由“全部”、“待付款”、“待发货”、“待收货”、“待评价”五个文本组成；
 - 模块3 订单，包含店铺名、商品状态、商品价格、商品状态、商品名等，背景色为#fefefe。
-   ![Alt](/readme-img/我的订单.png#pic_center)
+
+![Alt](/readme-img/我的订单.png#pic_center)
 
 #### 我的收藏
 我的收藏包括三个小模块，背景色为# f2f2f2。
 - 模块1 顶部信息，由“我的收藏”、收藏数量、搜索按钮、“管理”组成；
 - 模块2 tabs，由“宝贝”、“图文”、“视频”、“话题”、“清单”组成；
 - 模块3 收藏商品，包含商品名以及价格和商品图片，背景色为#fefefe。
-   ![Alt](/readme-img/我的收藏.png)
 
+![Alt](/readme-img/我的收藏.png)
 
 ### 页面功能
 #### 个人中心
